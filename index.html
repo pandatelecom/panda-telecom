@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>熊貓電訊 Panda Telecom — 手機維修 | FRP解鎖 | 爆Mon換電</title>
+<style>
+:root {
+  --bg: #fafaf9;
+  --card: #fff;
+  --text: #1a1a1a;
+  --muted: #6b6b6b;
+  --border: #e5e5e5;
+  --surface: #f5f5f4;
+  --green: #16a34a;
+  --red: #dc2626;
+  --shadow: 0 4px 24px rgba(0,0,0,0.06);
+  --radius: 10px;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Header ── */
+.header {
+  background: #1a1a1a; color: #fff;
+  position: sticky; top: 0; z-index: 100;
+}
+.header-inner {
+  max-width: 1100px; margin: 0 auto; padding: 14px 24px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.logo { display: flex; align-items: center; gap: 10px; cursor: pointer; }
+.logo-icon {
+  width: 40px; height: 40px; background: #fff; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px; color: #1a1a1a;
+}
+.logo-text h1 { font-size: 16px; font-weight: 700; }
+.logo-text p { font-size: 10px; color: #a3a3a3; letter-spacing: 0.5px; }
+.header-cta {
+  background: #fff; color: #1a1a1a; border: none;
+  padding: 10px 20px; border-radius: 20px; font-size: 14px;
+  font-weight: 600; cursor: pointer; text-decoration: none;
+  font-family: inherit;
+  transition: transform 0.15s;
+}
+.header-cta:hover { transform: scale(1.03); }
+
+/* ── Hero ── */
+.hero {
+  background: #1a1a1a; color: #fff; text-align: center;
+  padding: 64px 24px 72px;
+}
+.hero-badge {
+  display: inline-block; background: #333; padding: 5px 14px;
+  border-radius: 16px; font-size: 12px; letter-spacing: 0.5px;
+  margin-bottom: 20px;
+}
+.hero h2 { font-size: 38px; font-weight: 800; margin-bottom: 12px; letter-spacing: -0.5px; }
+.hero p { color: #a3a3a3; font-size: 16px; max-width: 520px; margin: 0 auto 24px; }
+.hero-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.btn-white {
+  background: #fff; color: #1a1a1a; padding: 12px 28px;
+  border-radius: 24px; font-size: 15px; font-weight: 600;
+  text-decoration: none; border: none; cursor: pointer;
+  font-family: inherit; transition: transform 0.15s;
+}
+.btn-white:hover { transform: scale(1.02); }
+.btn-outline {
+  background: none; color: #fff; padding: 12px 28px;
+  border-radius: 24px; font-size: 15px; font-weight: 600;
+  text-decoration: none; border: 1px solid #404040; cursor: pointer;
+  font-family: inherit; transition: all 0.15s;
+}
+.btn-outline:hover { border-color: #fff; }
+
+/* ── Brands Tabs ── */
+.section { max-width: 1100px; margin: 0 auto; padding: 60px 24px; }
+.section-title { font-size: 24px; font-weight: 700; margin-bottom: 6px; }
+.section-subtitle { color: var(--muted); font-size: 14px; margin-bottom: 32px; }
+
+.brand-tabs {
+  display: flex; gap: 4px; margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+.brand-tab {
+  padding: 10px 22px; border-radius: 22px; font-size: 14px;
+  font-weight: 600; cursor: pointer; border: 1px solid var(--border);
+  background: #fff; color: var(--muted); transition: all 0.2s;
+  font-family: inherit;
+}
+.brand-tab:hover { border-color: #a3a3a3; color: var(--text); }
+.brand-tab.active { background: #1a1a1a; color: #fff; border-color: #1a1a1a; }
+
+/* ── Price Table ── */
+.price-panel { display: none; }
+.price-panel.active { display: block; }
+
+.price-table {
+  width: 100%; border-collapse: separate; border-spacing: 0;
+  background: #fff; border-radius: var(--radius);
+  overflow: hidden; border: 1px solid var(--border);
+}
+.price-table thead { background: #1a1a1a; color: #fff; }
+.price-table th {
+  padding: 14px 16px; text-align: left; font-size: 13px;
+  font-weight: 600; letter-spacing: 0.3px;
+}
+.price-table th:last-child, .price-table th:first-child { text-align: center; }
+.price-table td {
+  padding: 12px 16px; border-bottom: 1px solid var(--border);
+  font-size: 14px;
+}
+.price-table td:first-child { font-weight: 700; text-align: center; }
+.price-table td:last-child { text-align: center; }
+.price-table tr:last-child td { border-bottom: none; }
+.price-table tr:hover td { background: #fafaf9; }
+
+.price-col {
+  font-weight: 600; color: var(--text); text-align: center;
+}
+.model-name { font-weight: 700; }
+.price-table .note { font-size: 11px; color: var(--muted); }
+
+/* Category header */
+.cat-row td {
+  background: #f5f5f4; font-weight: 700; font-size: 13px;
+  color: var(--text); padding: 10px 16px; text-align: left;
+  letter-spacing: 0.3px;
+}
+
+/* ── Services Grid ── */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+.service-card {
+  background: #fff; border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 24px;
+  transition: all 0.2s;
+}
+.service-card:hover { box-shadow: var(--shadow); transform: translateY(-1px); }
+.service-icon { font-size: 32px; margin-bottom: 12px; }
+.service-card h4 { font-size: 16px; margin-bottom: 6px; }
+.service-card p { font-size: 13px; color: var(--muted); }
+
+/* ── Contact ── */
+.contact-section {
+  background: #1a1a1a; color: #fff;
+}
+.contact-inner {
+  max-width: 1100px; margin: 0 auto; padding: 60px 24px;
+}
+.contact-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+}
+.contact-card {
+  background: rgba(255,255,255,0.06); border: 1px solid #333;
+  border-radius: var(--radius); padding: 24px;
+}
+.contact-card h4 {
+  font-size: 15px; margin-bottom: 12px;
+  display: flex; align-items: center; gap: 8px;
+}
+.contact-card p { font-size: 14px; color: #a3a3a3; line-height: 1.7; }
+.contact-card a {
+  color: #fff; text-decoration: none; border-bottom: 1px solid #404040;
+  transition: border-color 0.15s;
+}
+.contact-card a:hover { border-color: #fff; }
+
+/* ── Footer ── */
+.footer {
+  background: #111; color: #525252; text-align: center;
+  padding: 24px; font-size: 12px;
+}
+.footer strong { color: #a3a3a3; }
+
+@media (max-width: 768px) {
+  .hero h2 { font-size: 28px; }
+  .hero { padding: 48px 20px 56px; }
+  .section { padding: 40px 20px; }
+  .price-table th, .price-table td { padding: 10px 12px; font-size: 13px; }
+  .brand-tab { padding: 8px 16px; font-size: 13px; }
+}
+
+@media print {
+  .header,.hero,.contact-section,.footer,.brand-tabs { display:none !important; }
+  .price-panel { display:block !important; }
+  .price-table { border: 2px solid #000; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════ HEADER ═══════════ -->
+<header class="header">
+  <div class="header-inner">
+    <div class="logo" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+      <div class="logo-icon">🐼</div>
+      <div class="logo-text">
+        <h1>熊貓電訊</h1>
+        <p>PANDA TELECOM</p>
+      </div>
+    </div>
+    <a href="#contact" class="header-cta">📞 立即查詢</a>
+  </div>
+</header>
+
+<!-- ═══════════ HERO ═══════════ -->
+<section class="hero">
+  <div class="hero-badge">🔧 專業手機維修 | 九龍紅磡</div>
+  <h2>爆Mon？換電？搵熊貓</h2>
+  <p>即場維修 · 15分鐘搞掂 · 價錢透明 · 原廠零件優先</p>
+  <div class="hero-buttons">
+    <a href="#pricing" class="btn-white">查看價錢 ↓</a>
+    <a href="https://wa.me/85297667340" class="btn-outline">WhatsApp 查詢 →</a>
+  </div>
+</section>
+
+<!-- ═══════════ SERVICES ═══════════ -->
+<section class="section" id="services">
+  <div class="section-title">服務範圍</div>
+  <div class="section-subtitle">一站式手機維修，由爆Mon到解鎖，全部搞掂</div>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">📱</div>
+      <h4>爆Mon 維修</h4>
+      <p>iPhone / Samsung 爆玻璃面、爆液晶屏即場更換，15分鐘起貨</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🔋</div>
+      <h4>換電池</h4>
+      <p>手機電池老化、發脹？即場更換新電池，恢復全日續航</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🔓</div>
+      <h4>FRP 解鎖</h4>
+      <p>Samsung / Xiaomi 專業解鎖，唔使俾原廠屈錢，平靚正</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">⚡</div>
+      <h4>手機 Flash 刷機</h4>
+      <p>系統崩潰、變磚？刷機救機，資料盡量保留</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🔧</div>
+      <h4>主板維修</h4>
+      <p>底板故障、唔著機、入水，專業檢測同維修</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">📷</div>
+      <h4>鏡頭 / 零件更換</h4>
+      <p>鏡頭玻璃、喇叭、充電位、開關掣等零件更換</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ PRICE TABLES ═══════════ -->
+<section class="section" id="pricing">
+  <div class="section-title">維修價目表</div>
+  <div class="section-subtitle">原廠 LCD 優先，如缺貨會用高質代用，落單前可查詢 · 維修保養1個月（人為/入水除外）· 免費檢測，唔整唔收費</div>
+
+  <div class="brand-tabs">
+    <button class="brand-tab active" onclick="switchTab('iphone')">📱 iPhone</button>
+    <button class="brand-tab" onclick="switchTab('samsung')">📱 Samsung Galaxy S</button>
+    <button class="brand-tab" onclick="switchTab('samsung-z')">📱 Samsung Z Fold/Flip</button>
+    <button class="brand-tab" onclick="switchTab('samsung-a')">📱 Samsung A 系列</button>
+    <button class="brand-tab" onclick="switchTab('other')">📱 其他品牌</button>
+  </div>
+
+  <!-- iPhone Panel -->
+  <div class="price-panel active" id="panel-iphone">
+    <table class="price-table">
+      <thead>
+        <tr><th>型號</th><th>爆玻璃面</th><th>爆液晶屏</th><th>換電池</th><th>背面玻璃</th></tr>
+      </thead>
+      <tbody id="iphoneBody"></tbody>
+    </table>
+  </div>
+
+  <!-- Samsung S Panel -->
+  <div class="price-panel" id="panel-samsung">
+    <table class="price-table">
+      <thead>
+        <tr><th>型號</th><th>爆玻璃面</th><th>爆液晶屏</th><th>換電池</th><th>背面玻璃</th></tr>
+      </thead>
+      <tbody id="samsungBody"></tbody>
+    </table>
+  </div>
+
+  <!-- Samsung Z Panel -->
+  <div class="price-panel" id="panel-samsung-z">
+    <table class="price-table">
+      <thead>
+        <tr><th>型號</th><th>外Mon</th><th>內Mon</th><th>排線</th><th>備註</th></tr>
+      </thead>
+      <tbody id="samsungZBody"></tbody>
+    </table>
+  </div>
+
+  <!-- Samsung A Panel -->
+  <div class="price-panel" id="panel-samsung-a">
+    <table class="price-table">
+      <thead>
+        <tr><th>型號</th><th>爆玻璃面</th><th>爆液晶屏</th><th>換電池</th></tr>
+      </thead>
+      <tbody id="samsungABody"></tbody>
+    </table>
+  </div>
+
+  <!-- Other Brands Panel -->
+  <div class="price-panel" id="panel-other">
+    <table class="price-table">
+      <thead>
+        <tr><th>品牌 / 服務</th><th>詳情</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="model-name">Google Pixel</td><td>全系列維修，WhatsApp 查詢報價</td></tr>
+        <tr><td class="model-name">LG</td><td>G系列 / V系列 / Wing 維修</td></tr>
+        <tr><td class="model-name">Xiaomi 小米</td><td>爆Mon、換電、FRP解鎖，WhatsApp 查詢</td></tr>
+        <tr><td class="model-name">Huawei 華為</td><td>全系列維修，WhatsApp 查詢報價</td></tr>
+        <tr><td class="model-name">Honor</td><td>爆Mon、換電，WhatsApp 查詢</td></tr>
+        <tr><td class="model-name">OnePlus</td><td>全系列維修服務</td></tr>
+        <tr><td class="model-name">Sony Xperia</td><td>爆Mon、換電，WhatsApp 查詢</td></tr>
+        <tr><td class="model-name">iPad</td><td>爆Mon、換電、Touch ID 維修</td></tr>
+        <tr><td class="model-name">Apple Watch</td><td>爆Mon、換電池</td></tr>
+        <tr><td class="model-name">Samsung Tab</td><td>爆Mon、換電</td></tr>
+        <tr><td class="model-name">Motorola / Nokia</td><td>WhatsApp 查詢報價</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:13px;color:var(--muted);margin-top:16px;text-align:center;">⚠️ 以上未列出嘅型號，請 WhatsApp 查詢 · 所有維修免費檢測，唔整唔收費</p>
+  </div>
+</section>
+
+<!-- ═══════════ CONTACT ═══════════ -->
+<section class="contact-section" id="contact">
+  <div class="contact-inner">
+    <div class="section-title" style="color:#fff;">聯絡我哋</div>
+    <div class="section-subtitle" style="color:#a3a3a3;">即場維修 · 15分鐘取機 · 免費報價</div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h4>📍 地址</h4>
+        <p>九龍紅磡黃埔108<br>（黃埔地鐵站附近）</p>
+      </div>
+      <div class="contact-card">
+        <h4>🕐 營業時間</h4>
+        <p>星期一至日<br>09:00 - 19:00</p>
+      </div>
+      <div class="contact-card">
+        <h4>📞 聯絡方式</h4>
+        <p>電話：6855 7181<br>
+        WhatsApp：<a href="https://wa.me/85297667340">9766 7340</a><br>
+        FB：<a href="https://facebook.com/PandaTelecomHK">PandaTelecomHK</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <strong>🐼 熊貓電訊 Panda Telecom</strong> · 九龍紅磡黃埔108 · 電話 6855 7181<br>
+  © 2024 Panda Telecom. All rights reserved.
+</footer>
+
+<!-- ═══════════ SCRIPTS ═══════════ -->
+<script>
+// ── Brand Tab Switching ──
+function switchTab(brand) {
+  document.querySelectorAll('.brand-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.price-panel').forEach(p => p.classList.remove('active'));
+  event.target.closest('.brand-tab').classList.add('active');
+  document.getElementById('panel-' + brand).classList.add('active');
+}
+
+// ── iPhone Price Data ──
+const iphonePrices = [
+  // [Model, Glass, LCD, Battery, Back Glass]
+  {cat:'iPhone 17 系列', rows:[
+    ['17 Pro Max','$2,400','$2,900','查詢','$700'],
+    ['17 Pro','$2,200','$2,600','查詢','$700'],
+    ['17','$2,100','$2,500','查詢','$600'],
+    ['iPhone Air','$2,200','$2,600','查詢','—'],
+  ]},
+  {cat:'iPhone 16 系列', rows:[
+    ['16 Pro Max','$2,100','$2,600','查詢','$650'],
+    ['16 Pro','$1,600','$2,000','查詢','$650'],
+    ['16 Plus','$1,100','$1,500','查詢','$600'],
+    ['16','$1,200','$1,600','查詢','$600'],
+    ['16E','$600','$1,000','查詢','$600'],
+  ]},
+  {cat:'iPhone 15 系列', rows:[
+    ['15 Pro Max','$1,700','$2,100','$500','$600'],
+    ['15 Pro','$1,500','$1,900','$500','$600'],
+    ['15 Plus','$900','$1,350','$450','$500'],
+    ['15','$900','$1,350','$450','$500'],
+  ]},
+  {cat:'iPhone 14 系列', rows:[
+    ['14 Pro Max','$1,400','$1,700','$450','$550'],
+    ['14 Pro','$1,200','$1,500','$450','$550'],
+    ['14 Plus','$850','$1,200','$450','$500'],
+    ['14','$550','$850','$450','$500'],
+  ]},
+  {cat:'iPhone 13 系列', rows:[
+    ['13 Pro Max','$850','$1,250','$450','$500'],
+    ['13 Pro','$750','$1,100','$450','$500'],
+    ['13','$550','$900','$450','$450'],
+    ['13 Mini','$600','$1,050','$450','$450'],
+  ]},
+  {cat:'iPhone 12 系列', rows:[
+    ['12 Pro Max','$850','$1,250','$400','$450'],
+    ['12 Pro','$500','$950','$400','$450'],
+    ['12','$480','$850','$380','$400'],
+    ['12 Mini','$500','$850','$380','$400'],
+  ]},
+  {cat:'iPhone 11 系列', rows:[
+    ['11 Pro Max','$550','$850','$380','$350'],
+    ['11 Pro','$450','$800','$380','$350'],
+    ['11','$380','$480','$300','$300'],
+  ]},
+  {cat:'iPhone X 系列', rows:[
+    ['XS Max','$450','$780','$350','$300'],
+    ['XR','$350','$450','$300','$300'],
+    ['XS','$350','$580','$300','$300'],
+    ['X','$350','$580','$300','$300'],
+  ]},
+  {cat:'iPhone SE 系列', rows:[
+    ['SE3 (2022)','$400','$500','$350','$300'],
+    ['SE2 (2020)','$350','$450','$280','$300'],
+  ]},
+  {cat:'iPhone 8 及以下', rows:[
+    ['8 Plus','$350','$500','$280','$300'],
+    ['8','$300','$450','$280','$300'],
+    ['7 Plus','$350','$500','$250','—'],
+    ['7','$280','$400','$250','—'],
+    ['6s Plus','$280','$450','$220','—'],
+    ['6s','$280','$450','$220','—'],
+    ['6 Plus','$250','$450','$220','—'],
+    ['6','$200','$350','$220','—'],
+  ]},
+];
+
+function renderIPhone() {
+  let html = '';
+  iphonePrices.forEach(group => {
+    html += `<tr class="cat-row"><td colspan="5">${group.cat}</td></tr>`;
+    group.rows.forEach(r => {
+      html += `<tr>
+        <td class="model-name">${r[0]}</td>
+        <td class="price-col">${r[1]}</td>
+        <td class="price-col">${r[2]}</td>
+        <td class="price-col">${r[3]}</td>
+        <td class="price-col">${r[4]}</td>
+      </tr>`;
+    });
+  });
+  document.getElementById('iphoneBody').innerHTML = html;
+}
+
+// ── Samsung S Series ──
+const samsungPrices = [
+  {cat:'Galaxy S25 系列', rows:[
+    ['S25 Ultra','$1,200','$1,800','$450','$450'],
+    ['S25+','$900','$1,350','$400','$450'],
+    ['S25','$800','$1,250','$400','$450'],
+  ]},
+  {cat:'Galaxy S24 系列', rows:[
+    ['S24 Ultra','$1,450','$1,950','$350','$350'],
+    ['S24+','$1,100','$1,500','$350','$350'],
+    ['S24','$850','$1,150','$350','$350'],
+    ['S24 FE','$550','$850','$350','$350'],
+  ]},
+  {cat:'Galaxy S23 系列', rows:[
+    ['S23 Ultra','$1,250','$1,750','$350','$350'],
+    ['S23+','$600','$1,000','$350','$300'],
+    ['S23','$700','$1,150','$350','$300'],
+    ['S23 FE','$500','$900','$350','$300'],
+  ]},
+  {cat:'Galaxy S22 系列', rows:[
+    ['S22 Ultra','$1,150','$1,700','$300','$350'],
+    ['S22+','$600','$1,000','$300','$300'],
+    ['S22','$750','$1,150','$300','$300'],
+  ]},
+  {cat:'Galaxy S21 系列', rows:[
+    ['S21 Ultra','$900','$1,350','$300','$280'],
+    ['S21+','$600','$1,000','$300','$280'],
+    ['S21','$600','$1,000','$300','$280'],
+    ['S21 FE','$700','$1,150','$300','$280'],
+  ]},
+  {cat:'Galaxy S20 系列', rows:[
+    ['S20 Ultra','$900','$1,550','$280','$280'],
+    ['S20+','$900','$1,250','$280','$280'],
+    ['S20','$800','$1,200','$280','$280'],
+    ['S20 FE','$550','$900','$280','$280'],
+  ]},
+  {cat:'Galaxy S10 系列', rows:[
+    ['S10+','$800','$1,450','$280','$250'],
+    ['S10','$750','$1,250','$280','$250'],
+    ['S10e','$500','$800','$280','$250'],
+  ]},
+  {cat:'Galaxy S9/S8/S7', rows:[
+    ['S9+','$700','$1,150','$250','$250'],
+    ['S9','$650','$950','$250','$250'],
+    ['S8+','$600','$1,100','$250','$200'],
+    ['S8','$550','$900','$250','$200'],
+    ['S7 Edge','$600','$850','$200','$180'],
+    ['S7','$350','$600','$200','$180'],
+  ]},
+  {cat:'Galaxy S6 系列', rows:[
+    ['S6 Edge+','$650','$980','$200','$180'],
+    ['S6 Edge','$550','$850','$200','$180'],
+    ['S6','$300','$550','$200','$180'],
+  ]},
+];
+
+function renderSamsung() {
+  let html = '';
+  samsungPrices.forEach(group => {
+    html += `<tr class="cat-row"><td colspan="5">${group.cat}</td></tr>`;
+    group.rows.forEach(r => {
+      html += `<tr>
+        <td class="model-name">${r[0]}</td>
+        <td class="price-col">${r[1]}</td>
+        <td class="price-col">${r[2]}</td>
+        <td class="price-col">${r[3]}</td>
+        <td class="price-col">${r[4]}</td>
+      </tr>`;
+    });
+  });
+  document.getElementById('samsungBody').innerHTML = html;
+}
+
+// ── Samsung Z Fold/Flip ──
+const samsungZPrices = [
+  ['Fold7','$1,200','$3,800','查詢',''],
+  ['Flip7','$1,050','$2,200','查詢',''],
+  ['Flip6','$750','$2,100','$1,300',''],
+];
+function renderSamsungZ() {
+  let html = '';
+  samsungZPrices.forEach(r => {
+    html += `<tr>
+      <td class="model-name">${r[0]}</td>
+      <td class="price-col">${r[1]}</td>
+      <td class="price-col">${r[2]}</td>
+      <td class="price-col">${r[3]}</td>
+      <td>${r[4]}</td>
+    </tr>`;
+  });
+  document.getElementById('samsungZBody').innerHTML = html;
+}
+
+// ── Samsung A Series ──
+const samsungAPrices = [
+  ['A35','$600','$850','$300'],
+  ['A34','$550','$900','$300'],
+  ['A33','$450','$750','$300'],
+  ['A32','查詢','查詢','查詢'],
+];
+function renderSamsungA() {
+  let html = '';
+  samsungAPrices.forEach(r => {
+    html += `<tr>
+      <td class="model-name">${r[0]}</td>
+      <td class="price-col">${r[1]}</td>
+      <td class="price-col">${r[2]}</td>
+      <td class="price-col">${r[3]}</td>
+    </tr>`;
+  });
+  document.getElementById('samsungABody').innerHTML = html;
+}
+
+// ── Init ──
+renderIPhone();
+renderSamsung();
+renderSamsungZ();
+renderSamsungA();
+</script>
+
+</body>
+</html>
