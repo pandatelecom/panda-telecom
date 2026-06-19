@@ -204,6 +204,16 @@ body{
 .footer{background:#0a0a0a;color:#444;text-align:center;padding:24px;font-size:12px}
 .footer strong{color:#888}
 
+/* ── SIGMA Banner ── */
+.sigma-banner{background:linear-gradient(135deg,#1a1a1a,#222);border:1px solid #333;border-radius:16px;padding:28px 24px;margin:0 0 4px}
+.sigma-banner-content{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.sigma-icon{font-size:36px;flex-shrink:0}
+.sigma-banner h3{font-size:18px;font-weight:700;margin-bottom:4px}
+.sigma-banner p{font-size:13px;color:var(--muted);line-height:1.5}
+.sigma-btn{background:var(--green);color:#fff;padding:12px 24px;border-radius:20px;font-size:14px;font-weight:600;text-decoration:none;white-space:nowrap;transition:transform .15s;margin-left:auto}
+.sigma-btn:hover{transform:scale(1.03)}
+@media(max-width:600px){.sigma-banner-content>*{flex:1 1 100%;text-align:center}.sigma-btn{margin-left:0;text-align:center}}
+
 /* ── Floating WhatsApp Button ── */
 .whatsapp-float{
   position:fixed;bottom:80px;right:24px;z-index:99;
@@ -463,6 +473,20 @@ body{
       <div class="review-stars">⭐⭐⭐⭐⭐</div>
       <div class="review-text">「FRP解鎖搞得好快，之前問過幾間都話要等幾日，呢度即日搞掂，價錢仲平過人哋，推介！」</div>
       <div class="review-author">— 阿強 <span class="review-source">（來自 WhatsApp）</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SIGMA PRODUCTS PROMO ═══════════ -->
+<section class="sec" id="sigma-promo" style="margin-top:0;border-top:none;padding-top:10px">
+  <div class="sigma-banner">
+    <div class="sigma-banner-content">
+      <div class="sigma-icon">🛒</div>
+      <div>
+        <h3 data-i18n="sigma_title">SIGMA 獨家代理產品</h3>
+        <p data-i18n="sigma_desc">充電配件 · 耳機 · 風扇 · 健康產品 · 智能科技 — 批發零售價，歡迎選購</p>
+      </div>
+      <a href="sigma.html" class="sigma-btn" data-i18n="sigma_btn">瀏覽全部產品 →</a>
     </div>
   </div>
 </section>
@@ -804,7 +828,10 @@ const i18n = {
   cont_info_zh:'Phone: 6855 7181<br>WhatsApp: 6855 7181<br>FB: PandaTelecomHK<br>Email: pandatelecomhk@gmail.com',cont_info_en:'Phone: 6855 7181<br>WhatsApp: 6855 7181<br>FB: PandaTelecomHK<br>Email: pandatelecomhk@gmail.com',
   footer_zh:'🐼 Panda Telecom · Shop 54, 25 Man Tai, Hung Hom · Tel 6855 7181 · © 2024',footer_en:'🐼 Panda Telecom · Shop 54, 25 Man Tai, Hung Hom · Tel 6855 7181 · © 2024',
   wa_label_zh:'WhatsApp 查詢',wa_label_en:'WhatsApp Enquiry',
-  warn_zh:'⚠️ 以上未列出嘅型號請 WhatsApp 查詢 · 免費檢測唔整唔收費',warn_en:'⚠️ Models not listed — WhatsApp for enquiry · Free inspection, no obligation'
+  warn_zh:'⚠️ 以上未列出嘅型號請 WhatsApp 查詢 · 免費檢測唔整唔收費',warn_en:'⚠️ Models not listed — WhatsApp for enquiry · Free inspection, no obligation',
+  sigma_title_zh:'SIGMA 獨家代理產品',sigma_title_en:'SIGMA Exclusive Products',
+  sigma_desc_zh:'充電配件 · 耳機 · 風扇 · 健康產品 · 智能科技 — 批發零售價，歡迎選購',sigma_desc_en:'Chargers · Earphones · Fans · Health · Smart Tech — Wholesale & Retail',
+  sigma_btn_zh:'瀏覽全部產品 →',sigma_btn_en:'Browse All Products →'
 };
 function switchLang(lang){
   document.getElementById('langZh').className='lang-btn'+(lang==='zh'?' active':'');
