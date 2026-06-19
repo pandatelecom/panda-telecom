@@ -111,10 +111,11 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans T
 <div class="count" id="count"></div>
 <div class="products" id="products"></div>
 
+<script src="images/img_data.js"></script>
 <script>
 let products = [];
 let currentCat = 'all';
-const imgMap = {"argo-kc240":"p-1-10.jpg","argo-cc140":"p-1-13.jpg","argo-3in2-cable":"p-1-14.jpeg","argo-bu70":"p-1-15.jpg","argo-magnetic-powerbank-5000":"p-1-16.jpeg","argo-5in1-powerbank-10000":"p-1-17.jpeg","argo-w19":"p-1-18.jpeg","ssb5-solid-state":"p-1-19.jpeg","argo-tfc10-5in1":"p-1-20.jpg","pq001":"p-1-3.jpeg","sincos-sc-am02":"p-2-10.jpg","sincos-sc-dc06":"p-3-1.jpeg","sincos-sc-g3":"p-4-1.jpeg","sincos-s15-lte":"p-6-2.jpg","sincos-a40-lite":"p-2-11.jpg","sincos-eb01":"p-3-12.jpeg","qd-688":"p-4-14.jpg","sincos-sc-pscc":"p-6-21.jpeg","sincos-sc-mb650":"p-2-19.jpeg","sincos-sc-bp03c":"p-3-13.jpeg","sincos-sc-y4000":"p-4-15.jpeg","sincos-sc-nm360":"p-6-6.jpg","smartcoby-pro-30w":"p-3-14.jpeg","smartcoby-pro-slim-35w":"p-3-15.jpeg","smartcoby-pro-slim-35w-sakura":"p-3-16.jpeg","smartcoby-trio-67w":"p-3-17.jpeg","smartcoby-duo-40w":"p-3-18.jpeg","smartcoby-pro-slim-cable-35w":"p-3-19.jpg","10denki-jd-d1":"p-3-2.jpeg","10denki-j1-d2":"p-3-3.jpeg","t9-kids-watch":"p-4-18.jpeg","eb-con-24":"p-4-19.jpeg","eb-con-23":"p-4-23.jpeg","co-20-anc":"p-4-24.jpeg","co-21":"p-4-25.jpeg","smartbuds":"p-4-7.jpg","free-pods":"p-4-8.jpg","revolution-headphones":"p-5-1.jpeg","xspace-earphones":"p-5-11.jpeg","inspire-headphones":"p-5-12.jpg","leap-earbuds":"p-5-16.jpg","lonzuer-leap-speaker":"p-2-20.jpeg","cs-pd100":"p-5-3.jpeg","flashmini-stand":"p-5-4.jpeg","tl166":"p-5-5.jpeg","is-pps23":"p-5-7.jpeg","ismartdigi-sq15":"p-5-8.jpeg","ismartdigi-sq16":"p-5-9.jpeg","ismartdigi-40w-charger":"p-6-7.jpeg","ismartdigi-65w-charger":"p-2-3.jpg","ismartdigi-is-cll201":"p-2-4.jpg","ismartdigi-3in1-cable":"p-2-9.jpg","is-cc301-100w":"p-3-0.jpg","is-cc501-60w":"p-3-4.jpeg","tf-01":"p-1-6.jpg","rhythm-breeze-25":"p-1-7.jpeg","rhythm-silky-wind-mini":"p-1-8.jpeg","sincos-3d-circulator-fan":"p-1-9.jpeg","smart-wind-fan":"p-1-0.jpeg","heal-force-b01":"p-3-5.jpeg","motorola-mbp66n":"p-3-7.jpg","pe03-stylus":"p-3-8.jpg","smartcoby-pro-slim-cable-35w-purple":"p-5-16.jpg","argo-gd80":"p-4-1.jpeg","argo-md10-plus":"p-6-21.jpeg"};
+// imgMap is defined in images/img_data.js (base64 embedded)
 
 fetch('sigma_products.json')
   .then(r => r.json())
@@ -158,7 +159,7 @@ function renderProducts(){
   grid.innerHTML = filtered.map(p => {
     const emoji = getCatEmoji(p.category);
     const msg = encodeURIComponent(`你好，我想查詢產品：${p.name}（HKD $${p.price}）`);
-    const pimg = imgMap[p.id] ? `https://pandatelecom.github.io/images/${imgMap[p.id]}` : '';
+    const pimg = imgMap[p.id] || '';
     return `<div class="product-card">
       ${pimg ? `<div class="p-img"><div class="p-img-bg" style="background:linear-gradient(135deg,#2a2a2a,#333);width:100%;height:200px;display:flex;align-items:center;justify-content:center;font-size:48px;border-bottom:1px solid var(--border)">${emoji}</div><img src="${pimg}" alt="${p.name}" loading="lazy" onerror="this.previousElementSibling.style.display='flex';this.style.display='none'" onload="this.previousElementSibling.style.display='none';this.style.display='block'" style="display:none;width:100%;height:200px;object-fit:contain;padding:16px;background:#222"></div>` : `<div class="p-img" style="display:flex;align-items:center;justify-content:center;font-size:48px">${emoji}</div>`}
       <div class="p-body">
