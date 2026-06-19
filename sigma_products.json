@@ -68,7 +68,7 @@
       "id": "argo-magnetic-powerbank-5000",
       "name": "ARGO 多功能Magnetic Power Bank 5000mAh",
       "brand": "ARGO",
-      "category": "行動電源",
+      "category": "充電寶",
       "price": 278,
       "desc": "多合一磁吸行動電源，內置5000mAh電量，配備便攜折疊式充電座。可同時為iPhone、AirPods、iWatch充電，支援USB-C有線充電最高22.5W。",
       "features": [
@@ -84,7 +84,7 @@
       "id": "argo-5in1-powerbank-10000",
       "name": "ARGO 5合1磁吸快充王者 10,000mAh多功能數顯Power Bank",
       "brand": "ARGO",
-      "category": "行動電源",
+      "category": "充電寶",
       "price": 298,
       "desc": "5合1磁吸快充10000mAh行動電源，全港首發半固態電池技術。支援Qi2 15W無線快充+20W PD自帶線，TFT高清數顯實時監控電量，航空級鋰聚合物電芯五重防護。",
       "features": [
@@ -113,7 +113,7 @@
       "id": "ssb5-solid-state",
       "name": "SSB5 固態電池行動電源",
       "brand": "ARGO",
-      "category": "行動電源",
+      "category": "充電寶",
       "price": 99,
       "desc": "SSB5固態電池行動電源，採用固態電池技術，安全高效，效能大幅提升。",
       "features": [
@@ -126,7 +126,7 @@
       "id": "argo-tfc10-5in1",
       "name": "ARGO 5in1 Power Bank TFC10",
       "brand": "ARGO",
-      "category": "行動電源",
+      "category": "充電寶",
       "price": 118,
       "desc": "ARGO 5in1多功能行動電源TFC10，5合1設計滿足多種充電需求。",
       "features": [
@@ -149,7 +149,7 @@
       "id": "sincos-sc-am02",
       "name": "Sincos SC-AM02 智能無線AI翻譯滑鼠 第二代",
       "brand": "Sincos",
-      "category": "智能翻譯設備",
+      "category": "智能科技",
       "price": 299,
       "desc": "2025年最新第二代AI翻譯滑鼠，2.4GHz + 藍牙雙模式，可同時連接三個裝置。內置ChatGPT無需VPN永久免費，支援語音打字、截圖翻譯、語音搜尋，兼容Windows/Mac雙系統。",
       "features": [
@@ -202,7 +202,7 @@
       "id": "sincos-s15-lte",
       "name": "Sincos S15-LTE 4G全網通智能AI多功能翻譯機",
       "brand": "Sincos",
-      "category": "智能翻譯設備",
+      "category": "智能科技",
       "price": 788,
       "desc": "4G全網通智能AI多功能翻譯機，支援ChatGPT智能錄音及138種語言翻譯。可插SIM卡4G在線使用，19種語言離線精準翻譯（含廣東話），74種在線拍照翻譯語言，內置2000mAh鋰電可持續約11小時。",
       "features": [
@@ -221,7 +221,7 @@
       "id": "sincos-a40-lite",
       "name": "Sincos A40 Lite AI智能翻譯機",
       "brand": "Sincos",
-      "category": "智能翻譯設備",
+      "category": "智能科技",
       "price": 399,
       "desc": "A40 Lite AI智能翻譯機，支援離線廣東話翻譯，5寸屏幕，翻譯139種不同語言。內置鏡頭拍照翻譯75種語言，17種離線翻譯語言同聲傳譯，1500mAh鋰電可使用約7小時。",
       "features": [
@@ -256,7 +256,7 @@
       "id": "qd-688",
       "name": "QD-688 自發電無線門鈴",
       "brand": "Sincos",
-      "category": "智能家居",
+      "category": "智能科技",
       "price": 128,
       "desc": "自發電無線門鈴，按鍵瞬間發電無需電池，4檔音量適合不同人士。內置閃燈配搭響鈴雙重提醒，傳輸距離最大200米，內置58首鈴聲，獲得多項國際認證。",
       "features": [
@@ -290,7 +290,7 @@
       "id": "sincos-sc-mb650",
       "name": "Sincos SC-MB650 不鏽鋼磁吸運動保溫壺650ml",
       "brand": "Sincos",
-      "category": "水壺/保溫",
+      "category": "配件",
       "price": 398,
       "desc": "可磁吸不鏽鋼運動保溫壺650ml，外殼及內殼均採用304食品級不鏽鋼。已通過SGS/BPA FREE認證，支援Magsafe磁吸功能，12小時熱度保溫及24小時凍感。",
       "features": [
@@ -307,7 +307,7 @@
       "id": "sincos-sc-bp03c",
       "name": "Sincos SC-BP03C 廣東話語音手臂式血壓計",
       "brand": "Sincos",
-      "category": "醫療健康",
+      "category": "健康產品",
       "price": 299,
       "desc": "少有廣東話語音血壓計，全自動充氣排氣一鍵測量。智能語音提示，高清大屏幕，雙99組記錄，支援USB充電或AAA電池兩用。",
       "features": [
@@ -323,7 +323,7 @@
       "id": "sincos-sc-y4000",
       "name": "Sincos SC-Y4000 復古便攜式閃光燈智能相機",
       "brand": "Sincos",
-      "category": "相機",
+      "category": "配件",
       "price": 399,
       "desc": "復古便攜式閃光燈智能相機，1080p高清鏡頭可錄影或拍照。內置180mAh電池附380mAh續航底座，1.44吋高清屏幕，自帶90度可旋轉閃光燈，內置6種濾鏡。",
       "features": [
@@ -340,7 +340,7 @@
       "id": "sincos-sc-nm360",
       "name": "Sincos SC-NM360 智能恆溫四手頸部按摩儀",
       "brand": "Sincos",
-      "category": "按摩器",
+      "category": "健康產品",
       "price": 299,
       "desc": "智能恆溫四手頸部按摩儀，全身可用（肩頸、背部、腰部到大小腿）。智能恆溫熱敷搭配柔軟親膚布料，四點揉捏按摩仿人體工學設計，三種智能模式，最長使用約90分鐘。",
       "features": [
@@ -355,7 +355,7 @@
       "id": "smartcoby-pro-30w",
       "name": "SMARTCOBY PRO 30W 10000mAh 外置充電器",
       "brand": "SMARTCOBY",
-      "category": "行動電源",
+      "category": "充電寶",
       "price": 298,
       "desc": "全港極細30W超級快充10000mAh外置充電器日本品牌。支援PD、QC4+、PPS輸出，電量百分比顯示屏，黑白色可選。",
       "features": [
@@ -371,7 +371,7 @@
       "id": "smartcoby-pro-slim-35w",
       "name": "SMARTCOBY PRO SLIM 35W 10000mAh",
       "brand": "SMARTCOBY",
-      "category": "行動電源",
+      "category": "充電寶",
       "price": 299,
       "desc": "超薄35W輸出10000mAh外置充電器，LED數字顯示，防刮花物料花紋設計。2C1U同時支援三個裝置，超薄身16mm重量180g，支援iPhone/Galaxy/MacBook Air。",
       "features": [
@@ -388,7 +388,7 @@
       "id": "smartcoby-pro-slim-35w-sakura",
       "name": "SMARTCOBY PRO SLIM 35W (SAKURA Ver.)",
       "brand": "SMARTCOBY",
-      "category": "行動電源",
+      "category": "充電寶",
       "price": 298,
       "desc": "櫻花限定版SMARTCOBY PRO SLIM 35W，超薄設計內置LED顯示。防刮花物料花紋，2C1U三裝置同時充電，重量180g。",
       "features": [
@@ -405,7 +405,7 @@
       "id": "smartcoby-trio-67w",
       "name": "SMARTCOBY TRIO 67W 20000mAh",
       "brand": "SMARTCOBY",
-      "category": "行動電源",
+      "category": "充電寶",
       "price": 449,
       "desc": "最大67W輸出20000mAh大容量外置充電器，LED數字顯示，防刮花物料花紋設計。2C1U同時支援三個裝置，重量333g，提供數位電量顯示。",
       "features": [
@@ -422,7 +422,7 @@
       "id": "smartcoby-duo-40w",
       "name": "SMARTCOBY DUO 40W 10000mAh",
       "brand": "SMARTCOBY",
-      "category": "行動電源",
+      "category": "充電寶",
       "price": 268,
       "desc": "大容量10000mAh同時充電時輸出40W，每兩個連接保持20W輸出。高輸出緊湊設計，LED顯示器顯示電量，為兩部智慧型手機快速充電。",
       "features": [
@@ -436,7 +436,7 @@
       "id": "smartcoby-pro-slim-cable-35w",
       "name": "SMARTCOBY Pro Slim Cable 35W 10000mAh",
       "brand": "SMARTCOBY",
-      "category": "行動電源",
+      "category": "充電寶",
       "price": 368,
       "desc": "超薄35W輸出內置Type-C線10000mAh行動電源，支援iPhone 16快充。新款LED數量顯示燈，防刮花物料花紋設計，超薄身17.8mm重量189g。",
       "features": [
@@ -452,7 +452,7 @@
       "id": "10denki-jd-d1",
       "name": "10Denki JD-D1 45W 10000mAh磁吸無線快充行動電源",
       "brand": "10Denki",
-      "category": "行動電源",
+      "category": "充電寶",
       "price": 298,
       "desc": "提供最大15W磁吸無線快充，內置可拆式Type-C線，PD快充提供最高45W輸出輸入。極速45W輸入約1.5小時充滿，支援同時為三個裝置充電。",
       "features": [
@@ -469,7 +469,7 @@
       "id": "10denki-j1-d2",
       "name": "10Denki J1-D2 PD45W 10000mAh 3C頭快充移動電源",
       "brand": "10Denki",
-      "category": "行動電源",
+      "category": "充電寶",
       "price": 268,
       "desc": "PD45W 10000mAh 3C頭快充移動電源，同時支援3部裝置快充。內嵌式LED電量顯示，激輕薄設計，附60W C to C網纖扁線，符合國際航班上機標準。",
       "features": [
@@ -485,7 +485,7 @@
       "id": "t9-kids-watch",
       "name": "T9 多功能定位兒童智能手錶",
       "brand": "Sincos",
-      "category": "智能手錶",
+      "category": "智能科技",
       "price": 499,
       "desc": "最新定位技術兒童智能手錶，前鏡頭可視訊通話。CPU雙核1GB RAM+8G ROM，Android 9.0系統，1.83寸特大高清IPS屏幕，800mAh大容量電池，生活防水聲波排水系統。",
       "features": [
@@ -678,7 +678,7 @@
       "id": "lonzuer-leap-speaker",
       "name": "Lonzuer Leap 迷你藍牙喇叭",
       "brand": "Lonzuer",
-      "category": "喇叭",
+      "category": "音響",
       "price": 399,
       "desc": "迷你藍牙喇叭10W單元帶來震撼低音，IPX7 1米深防水防塵。一次充電可播放長達7小時，TWS真無線立體聲配對可連接兩個喇叭達20W音量，配有自行車支架。",
       "features": [
@@ -694,7 +694,7 @@
       "id": "cs-pd100",
       "name": "CS-PD100 100W PD行動電源",
       "brand": "Ismartdigi",
-      "category": "行動電源",
+      "category": "充電寶",
       "price": 368,
       "desc": "100W PD大功率行動電源，尺寸約130×77×26mm淨重約360g。可同時輸出三部裝置，支援Macbook Pro 65W、iPhone 30W、iPad Pro 40W、Switch TV MODE 45W，Type-C PD最高輸出100W。",
       "features": [
@@ -712,7 +712,7 @@
       "id": "flashmini-stand",
       "name": "FlashMini (Stand) 磁吸無線快充行動電源",
       "brand": "Ismartdigi",
-      "category": "行動電源",
+      "category": "充電寶",
       "price": 298,
       "desc": "Tempo紙巾大小的磁吸無線快充行動電源，15W無線快充PD3.0 QC4.0+。最大PD20W Type-C急速充電，電量數字LED顯示，配備金屬製折疊式支架可邊充電邊使用。",
       "features": [
@@ -728,7 +728,7 @@
       "id": "tl166",
       "name": "TL166 磁吸無線充電行動電源",
       "brand": "Ismartdigi",
-      "category": "行動電源",
+      "category": "充電寶",
       "price": 388,
       "desc": "支援5部裝置同時充電的磁吸行動電源，N52磁吸圈夠實淨。15W磁吸無線充電，PD35W快充兼容大部分手機，內置Type-C及Lightning線，UV亮面材質不怕黏。",
       "features": [
@@ -746,7 +746,7 @@
       "id": "is-pps23",
       "name": "IS-PPS23 30W 10000mAh 外置充電器",
       "brand": "Ismartdigi",
-      "category": "行動電源",
+      "category": "充電寶",
       "price": 298,
       "desc": "SMARTCOBY同款同廠出品30W 10000mAh外置充電器，支援PD QC4+ PPS輸出。電量百分比顯示屏，紫粉兩色，小巧輕便。",
       "features": [
@@ -761,7 +761,7 @@
       "id": "ismartdigi-sq15",
       "name": "Ismartdigi SQ15 8000mAh 行動電源",
       "brand": "Ismartdigi",
-      "category": "行動電源",
+      "category": "充電寶",
       "price": 198,
       "desc": "8000mAh輕巧行動電源，總輸出最大15W。140g超輕量，91.5×65×14.5mm超薄設計，1 Type-C + 1 USB輸出，1 Type-C + 1 Lightning輸入，多色可選。",
       "features": [
@@ -778,7 +778,7 @@
       "id": "ismartdigi-sq16",
       "name": "Ismartdigi SQ16 8000mAh 行動電源",
       "brand": "Ismartdigi",
-      "category": "行動電源",
+      "category": "充電寶",
       "price": 198,
       "desc": "8000mAh輕巧行動電源，總輸出最大15W。140g超輕量超薄設計，多色選擇，Type-C+USB輸出，Type-C+Lightning輸入。",
       "features": [
@@ -971,7 +971,7 @@
       "id": "heal-force-b01",
       "name": "Heal Force B01 手臂式血壓計",
       "brand": "Heal Force",
-      "category": "醫療健康",
+      "category": "健康產品",
       "price": 450,
       "desc": "廣東話/英文真人語音血壓計，雙人各90組記憶功能。心律不齊監測，大屏LCD顯示，三次平均值分析，一鍵使用智能加壓，本港醫療機構使用。",
       "features": [
@@ -989,7 +989,7 @@
       "id": "motorola-mbp66n",
       "name": "MOTOROLA MBP66N 3合1非接觸式額溫計",
       "brand": "MOTOROLA",
-      "category": "醫療健康",
+      "category": "健康產品",
       "price": 299,
       "desc": "MOTOROLA 3合1非接觸式額溫計，可測量體溫、水溫、物溫。夜間模式可關閉聲響，高溫警示紅燈/正常綠燈，快速測量僅需1秒。AgeSmart年齡選擇按鈕，食物及洗澡水測溫。",
       "features": [
@@ -1023,7 +1023,7 @@
       "id": "smartcoby-pro-slim-cable-35w-purple",
       "name": "SMARTCOBY Pro Slim Cable 35W Purple Ver. 10000mAh",
       "brand": "SMARTCOBY",
-      "category": "行動電源",
+      "category": "充電寶",
       "price": 368,
       "desc": "紫色限定版SMARTCOBY Pro Slim Cable 35W，超薄35W輸出內置Type-C線10000mAh行動電源。新款LED數量顯示燈，防刮花物料花紋設計，超薄身17.8mm，支援iPhone 16快充。",
       "features": [
