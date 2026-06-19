@@ -85,7 +85,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans T
 <div class="hero">
   <a href="https://pandatelecom.github.io/" class="back-link">← 返回主頁</a>
   <h2>🛒 SIGMA 產品總覽</h2>
-  <p>熊貓電訊獨家代理 SIGMA 精選產品 — 充電配件、耳機、音響、風扇、健康產品、智能科技，批發零售價，歡迎查詢訂購</p>
+  <p>熊貓電訊獨家代理 SIGMA 精選產品 — 充電配件、耳機、音響、風扇、健康產品、智能科技，充電配件、耳機、影音、手機配件、智能家居等 — 批發零售價，歡迎查詢訂購</p>
 </div>
 
 <!-- ═══ CONTROLS ═══ -->
@@ -105,6 +105,10 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans T
     <button class="cat-tab" data-cat="智能科技" onclick="setCategory('智能科技')">🤖 智能</button>
     <button class="cat-tab" data-cat="配件" onclick="setCategory('配件')">📱 配件</button>
     <button class="cat-tab" data-cat="工具" onclick="setCategory('工具')">🧰 工具</button>
+    <button class="cat-tab" data-cat="手機配件" onclick="setCategory('手機配件')">📱 手機配件</button>
+    <button class="cat-tab" data-cat="影音器材" onclick="setCategory('影音器材')">🎬 影音器材</button>
+    <button class="cat-tab" data-cat="生活電器" onclick="setCategory('生活電器')">🏠 生活電器</button>
+    <button class="cat-tab" data-cat="智能家居" onclick="setCategory('智能家居')">🔧 智能家居</button>
   </div>
 </div></div>
 
@@ -192,6 +196,10 @@ function getCatEmoji(cat){
   if(c.includes('智能')||c.includes('翻譯')||c.includes('mouse')||c.includes('手錶')) return '🤖';
   if(c.includes('配件')||c.includes('掛繩')||c.includes('保溫')) return '📱';
   if(c.includes('工具')||c.includes('螺絲')||c.includes('門鈴')) return '🧰';
+  if(c.includes('手機配件')||c.includes('手機')||c.includes('保護貼')||c.includes('保護殼')||c.includes('掛繩')) return '📱';
+  if(c.includes('影音器材')||c.includes('投影')||c.includes('收音')||c.includes('麥克風')||c.includes('咪')) return '🎬';
+  if(c.includes('生活電器')||c.includes('空氣')||c.includes('吸塵')||c.includes('煮食')||c.includes('電暖')||c.includes('熨斗')||c.includes('濾芯')) return '🏠';
+  if(c.includes('智能家居')||c.includes('路由')||c.includes('WiFi')||c.includes('ip cam')||c.includes('插座')||c.includes('router')) return '🔧';
   return '📦';
 }
 </script>

@@ -1056,6 +1056,2073 @@
       "features": [
         "ARGO品牌產品"
       ]
+    },
+    {
+      "id": "sony-wh-ch520",
+      "name": "Sony WH-CH520 無線藍牙耳罩式耳機",
+      "brand": "Sony",
+      "category": "耳機",
+      "price": 399,
+      "desc": "Sony WH-CH520 無線藍牙耳機，長達 50 小時電池使用時間，充電 3 分鐘即可有 1.5 小時聆聽時間。內置麥克風提供免提通話，可同時配對兩個藍牙裝置。",
+      "features": [
+        "長達 50 小時電池使用時間",
+        "充電 3 分鐘即可有 1.5 小時聆聽時間",
+        "內置麥克風免提通話",
+        "可同時配對兩個藍牙裝置",
+        "旋轉耳罩穿脫輕鬆",
+        "驅動器單元：30mm 動態"
+      ]
+    },
+    {
+      "id": "sony-mdr-zx110ap",
+      "name": "Sony MDR-ZX110AP 耳罩式耳機",
+      "brand": "Sony",
+      "category": "耳機",
+      "price": 199,
+      "desc": "Sony MDR-ZX110AP 耳罩式耳機，輕量化設計，旋轉式耳罩方便收納。內置麥克風及線控。",
+      "features": [
+        "30mm 驅動單元",
+        "封閉式動態設計",
+        "旋轉耳罩",
+        "內置麥克風及線控",
+        "阻抗 24 ohm",
+        "頻率響應 12-22,000Hz"
+      ]
+    },
+    {
+      "id": "sony-mdr-ex15ap",
+      "name": "Sony MDR-EX15AP 入耳式耳機",
+      "brand": "Sony",
+      "category": "耳機",
+      "price": 138,
+      "desc": "Sony MDR-EX15AP 入耳式耳機，9mm 驅動單元。內置麥克風及線控，僅 3g 輕巧設計。",
+      "features": [
+        "9mm 動態驅動單元",
+        "阻抗 16 ohm",
+        "靈敏度 100dB/mW",
+        "頻率響應 8-22,000Hz",
+        "線控麥克風",
+        "重量僅 3g"
+      ]
+    },
+    {
+      "id": "jbl-wave-buds-2",
+      "name": "JBL Wave Buds 2 真無線耳機",
+      "brand": "JBL",
+      "category": "耳機",
+      "price": 499,
+      "desc": "JBL Wave Buds 2，8mm 動態驅動單元提供 JBL Pure Bass 音效。4 個麥克風清晰通話，IP54 防水，總共 40 小時播放時間。",
+      "features": [
+        "JBL Pure Bass 音效",
+        "8mm 動態驅動單元",
+        "4 個麥克風清晰通話",
+        "IP54 防水防塵",
+        "總共 40 小時播放時間",
+        "快速充電功能"
+      ]
+    },
+    {
+      "id": "jbl-wave-beam-2",
+      "name": "JBL Wave Beam 2 真無線耳機",
+      "brand": "JBL",
+      "category": "耳機",
+      "price": 549,
+      "desc": "JBL Wave Beam 2，8mm 動態驅動單元，JBL Pure Bass 音效。IP54 防水，總共 40 小時播放時間。",
+      "features": [
+        "JBL Pure Bass 音效",
+        "8mm 動態驅動單元",
+        "4 個麥克風清晰通話",
+        "IP54 防水",
+        "總共 40 小時播放時間"
+      ]
+    },
+    {
+      "id": "jbl-wave-flex-2",
+      "name": "JBL Wave Flex 2 真無線耳機",
+      "brand": "JBL",
+      "category": "耳機",
+      "price": 549,
+      "desc": "JBL Wave Flex 2，12mm 大尺寸動圈單元支援 Pure Bass Sound。4 個麥克風，IP54 防水。",
+      "features": [
+        "JBL Pure Bass 音效",
+        "12mm 大尺寸動圈單元",
+        "4 個麥克風清晰通話",
+        "IP54 防水",
+        "總共 40 小時播放時間"
+      ]
+    },
+    {
+      "id": "jbl-tune-buds-2-ghost",
+      "name": "JBL Tune Buds 2 Ghost Edition 真無線耳機",
+      "brand": "JBL",
+      "category": "耳機",
+      "price": 798,
+      "desc": "透明設計展現內部精密構造，主動降噪技術。藍牙 5.3，音樂播放最長 12 小時。",
+      "features": [
+        "主動降噪技術",
+        "透明材質設計",
+        "藍牙 5.3",
+        "音樂播放最長 12 小時",
+        "Type-C 充電",
+        "支援信息通知"
+      ]
+    },
+    {
+      "id": "jbl-tune-beam-2-ghost",
+      "name": "JBL Tune Beam 2 Ghost Edition 真無線耳機",
+      "brand": "JBL",
+      "category": "耳機",
+      "price": 798,
+      "desc": "透明設計，數字主動降噪及環境感知。10mm 高品質驅動單元。",
+      "features": [
+        "數字主動降噪",
+        "環境感知功能",
+        "10mm 高品質驅動單元",
+        "哈曼聲學調教",
+        "藍牙 5.3",
+        "音樂播放最長 12 小時"
+      ]
+    },
+    {
+      "id": "jbl-tune-flex-2-ghost",
+      "name": "JBL Tune Flex 2 Ghost Edition 真無線耳機",
+      "brand": "JBL",
+      "category": "耳機",
+      "price": 899,
+      "desc": "透明設計，數字主動降噪。12mm 大尺寸動圈單元，Pure Bass Sound。",
+      "features": [
+        "數字主動降噪",
+        "12mm 大尺寸動圈單元",
+        "Pure Bass Sound 技術",
+        "藍牙 5.2",
+        "音樂播放最長 12 小時"
+      ]
+    },
+    {
+      "id": "jbl-t110",
+      "name": "JBL T110 入耳式耳機",
+      "brand": "JBL",
+      "category": "耳機",
+      "price": 99,
+      "desc": "JBL T110 入耳式耳機，9mm 動圈單元 JBL Pure Bass 聲音。3.5mm 插頭，線控一鍵控制，帶麥克風。多色選擇。",
+      "features": [
+        "9mm 動圈單元",
+        "JBL Pure Bass 聲音",
+        "3.5mm 插頭",
+        "線控一鍵控制",
+        "多色：黑/藍/白/紅"
+      ]
+    },
+    {
+      "id": "jbl-endurance-run-2",
+      "name": "JBL Endurance Run 2 入耳式運動耳機",
+      "brand": "JBL",
+      "category": "耳機",
+      "price": 199,
+      "desc": "FlipHook 設計適合入耳或耳後佩戴。FlexSoft + TwistLock 技術，IPX5 防水，10 小時播放。",
+      "features": [
+        "FlipHook 設計",
+        "FlexSoft 耳塞 TwistLock",
+        "IPX5 防水",
+        "10 小時播放時間",
+        "嵌入式麥克風遙控"
+      ]
+    },
+    {
+      "id": "jbl-tune-520c",
+      "name": "JBL Tune 520C 頭戴式耳機",
+      "brand": "JBL",
+      "category": "耳機",
+      "price": 249,
+      "desc": "支援高解析度音訊 96kHz/24bit DSP，JBL Pure Bass 音效。",
+      "features": [
+        "高解析度音訊",
+        "96kHz/24bit DSP",
+        "JBL Pure Bass 音效"
+      ]
+    },
+    {
+      "id": "jbl-t520-bt",
+      "name": "JBL T520 BT 無線藍牙耳機",
+      "brand": "JBL",
+      "category": "耳機",
+      "price": 499,
+      "desc": "JBL T520 BT 無線藍牙耳機，高解析度音訊，JBL Pure Bass 音效。",
+      "features": [
+        "高解析度音訊",
+        "JBL Pure Bass 音效",
+        "無線藍牙連接"
+      ]
+    },
+    {
+      "id": "plantronics-voyager-5200",
+      "name": "Plantronics Voyager 5200 藍牙單耳耳機",
+      "brand": "Plantronics",
+      "category": "耳機",
+      "price": 550,
+      "desc": "四個 DSP 麥克風消除噪音，WindSmart 技術多點連接。P2i 防汗納米塗層，7 小時通話。",
+      "features": [
+        "4 個 DSP 麥克風",
+        "WindSmart 技術",
+        "多點連接",
+        "P2i 防汗塗層",
+        "7 小時通話時間",
+        "藍牙 4.1"
+      ]
+    },
+    {
+      "id": "plantronics-legend-50",
+      "name": "Plantronics Legend 50 藍牙耳機",
+      "brand": "Plantronics",
+      "category": "耳機",
+      "price": 750,
+      "desc": "AI 降噪 NoiseBlockAI + WindSmart。四麥克風空氣動力學設計，智能感應戴上自動接聽。",
+      "features": [
+        "AI 降噪 NoiseBlockAI",
+        "WindSmart 技術",
+        "四麥克風設計",
+        "智能感應",
+        "藍牙多設備連接"
+      ]
+    },
+    {
+      "id": "plantronics-legend-30",
+      "name": "Plantronics Legend 30 藍牙耳機",
+      "brand": "Plantronics",
+      "category": "耳機",
+      "price": 500,
+      "desc": "4 個降噪麥克風，6 層 WindSmart 風噪技術。智能傳感器戴上接聽摘下靜音。",
+      "features": [
+        "4 個降噪麥克風",
+        "人體工學設計",
+        "6 層 WindSmart 風噪",
+        "智能傳感器",
+        "單耳設計"
+      ]
+    },
+    {
+      "id": "mf01c",
+      "name": "MF01C Type-C 入耳式耳機 (DAC解碼)",
+      "brand": "MF Series",
+      "category": "耳機",
+      "price": 149,
+      "desc": "高品質 DAC 解碼晶片支援 32bit/384kHz。10mm 重低音複合動圈單元，純銅絞線。",
+      "features": [
+        "DAC 解碼晶片",
+        "支援 32bit/384kHz",
+        "10mm 重低音複合動圈",
+        "純銅絞線",
+        "Type-C 接口",
+        "線控控制"
+      ]
+    },
+    {
+      "id": "mf01l",
+      "name": "MF01L Lightning 入耳式耳機",
+      "brand": "MF Series",
+      "category": "耳機",
+      "price": 179,
+      "desc": "原廠 Lightning 晶片不受 IOS 升級影響。10mm 重低音單元，無底噪電流聲。",
+      "features": [
+        "原廠 Lightning 晶片",
+        "不受 IOS 升級影響",
+        "10mm 重低音複合動圈",
+        "無底噪電流聲",
+        "線控控制"
+      ]
+    },
+    {
+      "id": "mf01j",
+      "name": "MF01J 3.5mm 入耳式耳機",
+      "brand": "MF Series",
+      "category": "耳機",
+      "price": 99,
+      "desc": "L 型鍍金插頭增強耐用性。10mm 重低音複合動圈單元，純銅絞線。",
+      "features": [
+        "L 型鍍金插頭",
+        "10mm 重低音單元",
+        "純銅絞線",
+        "線控控制"
+      ]
+    },
+    {
+      "id": "s31-pro",
+      "name": "S31 Pro 藍牙 5.4 APP 自設音效耳機",
+      "brand": "S Series",
+      "category": "耳機",
+      "price": 299,
+      "desc": "藍牙 5.4，13mm 複合動圈。APP 設定音效按鍵功能遊戲模式。電量顯示，5-6 小時使用。",
+      "features": [
+        "藍牙 5.4",
+        "13mm 複合動圈",
+        "APP 自設音效",
+        "電量顯示",
+        "5-6 小時+充電盒 23 小時",
+        "經典色：黑/白"
+      ]
+    },
+    {
+      "id": "l320ap",
+      "name": "L320AP BT5.4 APP 自設音效耳機",
+      "brand": "L Series",
+      "category": "耳機",
+      "price": 368,
+      "desc": "藍牙 5.4，APP 設定音效及按鍵功能。超輕巧 Type-C 快充，5-6 小時使用。",
+      "features": [
+        "藍牙 5.4",
+        "APP 自設音效",
+        "超輕巧設計",
+        "Type-C 快充",
+        "充電盒 24 小時備用"
+      ]
+    },
+    {
+      "id": "ack-s2",
+      "name": "ACK S2 (C/L) 耳機",
+      "brand": "ACK",
+      "category": "耳機",
+      "price": 299,
+      "desc": "Lightning & Type-C 插頭，C100 晶片即插即用。9.2mm 大單元鋁合金外殼。",
+      "features": [
+        "Lightning/Type-C",
+        "C100 晶片",
+        "9.2mm 大單元",
+        "鋁合金外殼",
+        "可通話調音飛歌"
+      ]
+    },
+    {
+      "id": "g12-elite",
+      "name": "G12 ELITE 電競藍牙耳機",
+      "brand": "G Series",
+      "category": "耳機",
+      "price": 499,
+      "desc": "藍牙 5.3 自動配對，雙耳通話降噪。發光 Logo，8 小時使用，支援無線充電。",
+      "features": [
+        "藍牙 5.3 自動配對",
+        "雙耳通話降噪",
+        "發光 Logo",
+        "8 小時使用",
+        "支援無線充電",
+        "Type-C 快充"
+      ]
+    },
+    {
+      "id": "e12-ultra",
+      "name": "E12 ULTRA 電競耳機",
+      "brand": "E Series",
+      "category": "耳機",
+      "price": 398,
+      "desc": "藍牙 5.0 音樂/電競雙模式，40ms 超低延遲。Hi-Fi 6D 環迴音效，10mm 生物纖維單元。",
+      "features": [
+        "藍牙 5.0",
+        "音樂/電競雙模式",
+        "40ms 超低延遲",
+        "Hi-Fi 6D 環迴音效",
+        "10mm 生物纖維單元",
+        "6 小時+充電倉 4 次"
+      ]
+    },
+    {
+      "id": "x12pro-2024",
+      "name": "X12PRO 2024 Ver. 真無線耳機",
+      "brand": "X Series",
+      "category": "耳機",
+      "price": 499,
+      "desc": "DIRECTIN TONE 定向傳音，PeakSlroy 防漏音。藍牙 5.3，續航 6+20 小時。IPX5 防水。",
+      "features": [
+        "DIRECTIN TONE 定向傳音",
+        "PeakSlroy 防漏音",
+        "藍牙 5.3",
+        "續航 6+20 小時",
+        "智能觸控",
+        "IPX5 防水"
+      ]
+    },
+    {
+      "id": "x12-ultra",
+      "name": "X12 ULTRA 真無線耳機",
+      "brand": "X Series",
+      "category": "耳機",
+      "price": 399,
+      "desc": "藍牙 5.0 半入耳式設計。內置降噪麥克風，8 小時播放+充電盒 4 次。自動配對。",
+      "features": [
+        "藍牙 5.0",
+        "半入耳式設計",
+        "內置降噪麥克風",
+        "8 小時+充電盒 4 次",
+        "自動配對"
+      ]
+    },
+    {
+      "id": "samsung-akg-ic100",
+      "name": "三星 AKG 入耳式耳機 EO-IC100",
+      "brand": "Samsung",
+      "category": "耳機",
+      "price": 168,
+      "desc": "三星專用 AKG 耳機，Type-C 連接。3 按鍵操控，織繩線 1.2m。",
+      "features": [
+        "三星專用",
+        "AKG 音質",
+        "3 按鍵操控",
+        "Type-C 連接",
+        "織繩式耳機線"
+      ]
+    },
+    {
+      "id": "ae5-smart-earbuds",
+      "name": "AE5 最新 ANC 智能觸控屏幕耳機",
+      "brand": "AE Series",
+      "category": "耳機",
+      "price": 388,
+      "desc": "藍牙 5.4 充電盒智能觸控屏幕。ANC+ENC 降噪，遊戲/電影/音樂三模式。",
+      "features": [
+        "藍牙 5.4",
+        "充電盒智能觸控屏幕",
+        "ANC+ENC 降噪",
+        "遊戲/電影/音樂三模式",
+        "5 種音效風格",
+        "10mm 重低音"
+      ]
+    },
+    {
+      "id": "nx7-mk4",
+      "name": "NX7 MK4 三單元雙動圈+動鐵耳機",
+      "brand": "NX Series",
+      "category": "耳機",
+      "price": 238,
+      "desc": "1 極高頻動鐵 + 10mm 石墨烯鍍鈦球頂同軸覆合雙動圈。可換線 CM0.78。",
+      "features": [
+        "1 動鐵+2 動圈",
+        "10mm 石墨烯鍍鈦球頂",
+        "可換線 CM0.78",
+        "鋁合金導音嘴",
+        "頻率 10-22000Hz",
+        "靈敏度 106dB/mW"
+      ]
+    },
+    {
+      "id": "eva-earphone-01",
+      "name": "EVA EARPHONE - 01 聯乘 Evangelion 耳機",
+      "brand": "EVA",
+      "category": "耳機",
+      "price": 899,
+      "desc": "EVA 聯乘耳機，手工編織線材鋁合金面板初號機色彩。2 動圈 1 動鐵，16Ω。",
+      "features": [
+        "Evangelion 聯乘",
+        "手工編織線材",
+        "鋁合金面板初號機色",
+        "2 動圈 1 動鐵",
+        "106dB/mW",
+        "16Ω",
+        "可選 3.5/4.4mm"
+      ]
+    },
+    {
+      "id": "eva-dac-pro",
+      "name": "EVA-DAC 01/02 PRO 解碼耳機",
+      "brand": "EVA",
+      "category": "耳機",
+      "price": 599,
+      "desc": "鋁合金+氧化+噴漆技術，複合單元 0.78cm 母座可換線。全人手組裝。",
+      "features": [
+        "鋁合金+氧化+噴漆",
+        "複合單元",
+        "0.78cm 母座可換線",
+        "全人手組裝",
+        "屏蔽編織線材"
+      ]
+    },
+    {
+      "id": "db3-earphone",
+      "name": "DB3 三單元雙動圈+動鐵耳機",
+      "brand": "DB Series",
+      "category": "耳機",
+      "price": 388,
+      "desc": "三種材質面板（湖水綠），鍍鈹震膜雙動圈，四單元動鐵，七層壓電陶瓷，單晶銅鍍銀線。",
+      "features": [
+        "三種材質面板",
+        "鍍鈹震膜雙動圈",
+        "四單元動鐵",
+        "七層壓電陶瓷",
+        "單晶銅鍍銀編線"
+      ]
+    },
+    {
+      "id": "gran-board-3s",
+      "name": "Gran Board 3S 電子飛鏢靶",
+      "brand": "Gran Board",
+      "category": "影音器材",
+      "price": 1980,
+      "desc": "2.4GHz 無線麥克風套裝，Android Type-C 插頭。充電盒開蓋開機一鍵配對。",
+      "features": [
+        "2.4GHz 無線麥克風",
+        "Android Type-C",
+        "充電盒開蓋開機",
+        "一鍵配對"
+      ]
+    },
+    {
+      "id": "gran-board-dash",
+      "name": "Gran Board Dash 電子飛鏢靶",
+      "brand": "Gran Board",
+      "category": "影音器材",
+      "price": 780,
+      "desc": "2.4GHz 無線麥克風套裝，IOS Lightning 插頭。充電盒開蓋開機。",
+      "features": [
+        "2.4GHz 無線麥克風",
+        "IOS Lightning",
+        "充電盒開蓋開機",
+        "一鍵配對"
+      ]
+    },
+    {
+      "id": "gran-board-stand",
+      "name": "Gran Board Portable Stand 便攜三腳架",
+      "brand": "Gran Board",
+      "category": "影音器材",
+      "price": 780,
+      "desc": "支援所有 Gran Board 系列鏢機。便攜設計，安裝簡單。",
+      "features": [
+        "支援所有 Gran Board 系列",
+        "便攜設計",
+        "安裝簡單"
+      ]
+    },
+    {
+      "id": "boya-mm1",
+      "name": "BOYA MM1 專業收音咪",
+      "brand": "BOYA",
+      "category": "影音器材",
+      "price": 290,
+      "desc": "心形指向收音，3.5mm 通用接口。適合攝影錄影使用。",
+      "features": [
+        "心形指向收音",
+        "3.5mm 通用接口"
+      ]
+    },
+    {
+      "id": "boya-m1-pro",
+      "name": "BOYA M1 PRO 領夾式收音咪",
+      "brand": "BOYA",
+      "category": "影音器材",
+      "price": 230,
+      "desc": "雙咪頭領夾設計，3.5mm 通用接口。適合採訪錄影直播。",
+      "features": [
+        "雙咪頭領夾",
+        "3.5mm 通用接口"
+      ]
+    },
+    {
+      "id": "boya-m1dm",
+      "name": "BOYA M1DM 桌上型咪高峰",
+      "brand": "BOYA",
+      "category": "影音器材",
+      "price": 280,
+      "desc": "USB 即插即用，360° 全向收音半徑 6 米。適合會議使用。",
+      "features": [
+        "USB 即插即用",
+        "360° 全向收音",
+        "半徑 6 米",
+        "電容收音咪"
+      ]
+    },
+    {
+      "id": "boya-vg350",
+      "name": "BOYA VG350 拍攝套裝",
+      "brand": "BOYA",
+      "category": "影音器材",
+      "price": 499,
+      "desc": "包含 MM1+防震架+手機支架+三腳架+防風毛。可旋轉球形雲台。",
+      "features": [
+        "可旋轉球形雲台",
+        "包含 MM1+防震支架",
+        "手機支架+三腳架+防風毛"
+      ]
+    },
+    {
+      "id": "boya-vg380",
+      "name": "BOYA VG380 收音套裝",
+      "brand": "BOYA",
+      "category": "影音器材",
+      "price": 80,
+      "desc": "通用型迷你麥克風加大增強版，3.5mm 通用接口。",
+      "features": [
+        "迷你麥克風",
+        "3.5mm 通用接口"
+      ]
+    },
+    {
+      "id": "boya-pm300",
+      "name": "BOYA PM300 桌上型會議麥克風",
+      "brand": "BOYA",
+      "category": "影音器材",
+      "price": 580,
+      "desc": "兼容 Windows/Mac，心型拾音，3.5mm 耳機監聽孔。",
+      "features": [
+        "Windows/Mac 兼容",
+        "心型拾音",
+        "3.5mm 耳機監聽孔",
+        "附支架"
+      ]
+    },
+    {
+      "id": "boya-mc2",
+      "name": "BOYA MC2 桌面會議咪",
+      "brand": "BOYA",
+      "category": "影音器材",
+      "price": 406,
+      "desc": "電容收音咪，3.5mm 通用接口，適合小型會議室。",
+      "features": [
+        "電容收音咪",
+        "3.5mm 通用接口"
+      ]
+    },
+    {
+      "id": "boya-pm700sp",
+      "name": "BOYA PM700SP 專業錄音咪",
+      "brand": "BOYA",
+      "category": "影音器材",
+      "price": 820,
+      "desc": "大振膜電容麥克風錄音室等級，3.5mm 通用接口。",
+      "features": [
+        "大振膜電容",
+        "錄音室等級",
+        "3.5mm 通用接口"
+      ]
+    },
+    {
+      "id": "boya-m1000",
+      "name": "BOYA M1000 專業收音咪",
+      "brand": "BOYA",
+      "category": "影音器材",
+      "price": 1180,
+      "desc": "高品質收音，3.5mm 通用接口，適合專業拍攝。",
+      "features": [
+        "3.5mm 通用接口",
+        "高品質收音",
+        "專業拍攝使用"
+      ]
+    },
+    {
+      "id": "boya-boyalink",
+      "name": "BOYALINK 無線降噪收音系統",
+      "brand": "BOYA",
+      "category": "影音器材",
+      "price": 880,
+      "desc": "雙發射器+接收器，三種連接器 Type-C/Lightning/3.5mm。全面覆蓋手機相機電腦。",
+      "features": [
+        "雙發射器+接收器",
+        "3 種連接器",
+        "手機/相機/電腦通用",
+        "充電盒便攜"
+      ]
+    },
+    {
+      "id": "boya-boyamic",
+      "name": "BOYAMIC 無線降噪收音咪",
+      "brand": "BOYA",
+      "category": "影音器材",
+      "price": 1280,
+      "desc": "REC 雙機錄音內置 8GB 記憶體 15 小時錄音。OLED 顯示器，三種連接器。",
+      "features": [
+        "REC 雙機錄音",
+        "8GB 記憶體 15 小時錄音",
+        "OLED 顯示器",
+        "雙發射器+接收器",
+        "三種連接器"
+      ]
+    },
+    {
+      "id": "sigma-glass-japan",
+      "name": "2.5D 全覆蓋透明 9H 玻璃貼 (日本製)",
+      "brand": "SIGMA",
+      "category": "手機配件",
+      "price": 198,
+      "desc": "日本旭硝子 2.5D 鋼化玻璃貼，9H 硬度。特殊 AB 膠減少溢膠，超薄觸控靈敏。",
+      "features": [
+        "日本旭硝子",
+        "2.5D 弧邊貼合",
+        "特殊 AB 膠",
+        "黑色絲印邊框",
+        "精工倒角",
+        "iPhone 14-17 全系列"
+      ]
+    },
+    {
+      "id": "amg-ct-anti-blue",
+      "name": "AMG-CT 防藍光保護貼 (韓國製)",
+      "brand": "AMG",
+      "category": "手機配件",
+      "price": 328,
+      "desc": "韓國 Dr.Glass 防藍光貼，隔絕 95% 有害藍光。SGS 認證，80g 鉛球防爆。",
+      "features": [
+        "韓國 Dr.Glass 製",
+        "隔絕 95% 有害藍光",
+        "SGS 認證",
+        "80g 鉛球防爆",
+        "0.26mm 超薄"
+      ]
+    },
+    {
+      "id": "amg-ultra-hd",
+      "name": "AMG-CT 超高清保護貼 (韓國製)",
+      "brand": "AMG",
+      "category": "手機配件",
+      "price": 298,
+      "desc": "LG High Alumina 高鋁玻璃，等離子塗層 3000 次耐磨。80g 鉛球防爆。",
+      "features": [
+        "LG High Alumina 玻璃",
+        "3000 次耐磨",
+        "80g 鉛球防爆",
+        "0.26mm 超薄",
+        "無色差"
+      ]
+    },
+    {
+      "id": "amg-gorilla-glass",
+      "name": "三鏡頭 9H 康寧玻璃貼 (美國製)",
+      "brand": "AMG",
+      "category": "手機配件",
+      "price": 178,
+      "desc": "3D 全覆蓋康寧玻璃 9H 硬度，三鏡頭專用設計。",
+      "features": [
+        "美國康寧玻璃",
+        "3D 全覆蓋",
+        "9H 硬度",
+        "三鏡頭專用"
+      ]
+    },
+    {
+      "id": "amg-iphone16-case",
+      "name": "AMG iPhone 16 系列磁吸保護套",
+      "brand": "AMG",
+      "category": "手機配件",
+      "price": 99,
+      "desc": "高強度耐磨抗刮塗層，加厚背蓋+防撞邊框。支援磁吸無線充電，吊飾孔。",
+      "features": [
+        "耐磨抗刮塗層",
+        "加厚背蓋防撞邊框",
+        "支援磁吸無線充電",
+        "吊飾孔設計",
+        "深藍/淺金/銀/灰"
+      ]
+    },
+    {
+      "id": "metal-phone-lanyard-36cm",
+      "name": "金屬吊飾手機防丟掛繩 36cm",
+      "brand": "SIGMA",
+      "category": "手機配件",
+      "price": 99,
+      "desc": "超薄夾片充電不卡卡，市面手機殼通用。最高承載 3 公斤。",
+      "features": [
+        "超薄夾片",
+        "手機殼通用",
+        "最高 3 公斤",
+        "自由調整長度"
+      ]
+    },
+    {
+      "id": "metal-phone-lanyard-160cm",
+      "name": "金屬吊飾扣環長背帶 160cm",
+      "brand": "SIGMA",
+      "category": "手機配件",
+      "price": 128,
+      "desc": "可肩背掛胸前，金屬吊飾造型。超薄夾片充電不卡卡。",
+      "features": [
+        "160cm 長背帶",
+        "肩背掛胸前",
+        "金屬吊飾",
+        "超薄夾片",
+        "最高 3 公斤"
+      ]
+    },
+    {
+      "id": "iphone16-cartoon-case",
+      "name": "iPhone 16 卡通磁吸保護殼",
+      "brand": "SIGMA",
+      "category": "手機配件",
+      "price": 328,
+      "desc": "Chiikawa/Sanrio/Mofusand/蠟筆小新系列。高強度耐磨，支援磁吸無線充電。",
+      "features": [
+        "Chiikawa/Sanrio/Mofusand",
+        "高強度耐磨",
+        "支援磁吸無線充電",
+        "實機開模"
+      ]
+    },
+    {
+      "id": "airpods-pro-case",
+      "name": "AirPods Pro/Pro2 保護套",
+      "brand": "SIGMA",
+      "category": "手機配件",
+      "price": 209,
+      "desc": "雙料減震防摔，實機開模完美貼合。保護刮傷摔傷。",
+      "features": [
+        "雙料減震防摔",
+        "實機開模",
+        "防止刮傷摔傷"
+      ]
+    },
+    {
+      "id": "airpods-4-case",
+      "name": "AirPods 4 保護套",
+      "brand": "SIGMA",
+      "category": "手機配件",
+      "price": 209,
+      "desc": "Chiikawa/Sanrio/Mofusand 卡通系列。雙料減震防摔。",
+      "features": [
+        "卡通系列",
+        "雙料減震防摔",
+        "實機開模"
+      ]
+    },
+    {
+      "id": "airpods-pro-stereo-case",
+      "name": "立體款 AirPods Pro/Pro2 保護套",
+      "brand": "SIGMA",
+      "category": "手機配件",
+      "price": 209,
+      "desc": "立體柔軟矽膠材質，經典立體造型。保護刮傷摔傷。",
+      "features": [
+        "立體柔軟矽膠",
+        "實機開模",
+        "立體造型設計"
+      ]
+    },
+    {
+      "id": "sanrio-lanyard-mofusand",
+      "name": "Mofusand 正版授權手機掛繩",
+      "brand": "Sanrio",
+      "category": "手機配件",
+      "price": 168,
+      "desc": "Mofusand 正版授權，公仔頭造型。觸感細緻，超薄夾片充電不卡卡。",
+      "features": [
+        "Mofusand 正版授權",
+        "公仔頭造型",
+        "超薄夾片",
+        "手機殼通用",
+        "可肩背掛胸前"
+      ]
+    },
+    {
+      "id": "sanrio-leather-lanyard",
+      "name": "Sanrio 可愛皮革吊飾手機掛繩",
+      "brand": "Sanrio",
+      "category": "手機配件",
+      "price": 141,
+      "desc": "Sanrio 正版授權皮革吊飾，自由調整長度可肩背掛胸前。",
+      "features": [
+        "Sanrio 正版授權",
+        "皮革吊飾",
+        "超薄夾片",
+        "自由調整長度"
+      ]
+    },
+    {
+      "id": "foldable-wireless-charger-stand",
+      "name": "折疊無線充電支架",
+      "brand": "SIGMA",
+      "category": "手機配件",
+      "price": 295,
+      "desc": "多角度調整視角折疊升降，手機/平板/Switch 通用。四角止滑墊片。",
+      "features": [
+        "多角度調整",
+        "折疊便攜",
+        "可升降",
+        "四角止滑",
+        "手機/平板/Switch 通用"
+      ]
+    },
+    {
+      "id": "car-magsafe-wireless-charger",
+      "name": "車用磁吸無線充電支架",
+      "brand": "SIGMA",
+      "category": "手機配件",
+      "price": 118,
+      "desc": "車用磁吸無線充電，環形光設計。升級出風口勾式，需用 QC3.0 車充。",
+      "features": [
+        "磁吸無線充電",
+        "環形光設計",
+        "出風口勾式",
+        "需 QC3.0 車充"
+      ]
+    },
+    {
+      "id": "sanrio-plush-phone-stand",
+      "name": "Sanrio 布偶吊飾手機支架",
+      "brand": "Sanrio",
+      "category": "手機配件",
+      "price": 145,
+      "desc": "Sanrio 正版授權絨毛布偶，吊飾+手機支架雙用。超吸睛可愛！",
+      "features": [
+        "Sanrio 正版授權",
+        "絨毛布偶",
+        "吊飾+支架雙用",
+        "紅/粉"
+      ]
+    },
+    {
+      "id": "sanrio-10000-magsafe-5in1",
+      "name": "Sanrio 10000mAh 磁吸帶線五合一行動電源",
+      "brand": "Sanrio",
+      "category": "充電寶",
+      "price": 428,
+      "desc": "磁吸+自帶線設計，可當手機支架。MagSafe 15W 無線充電。BSMI+NCC 雙認證。",
+      "features": [
+        "Sanrio 正版授權",
+        "磁吸+自帶線",
+        "可當手機支架",
+        "MagSafe 15W 無線充",
+        "BSMI+NCC 雙認證"
+      ]
+    },
+    {
+      "id": "sanrio-5000-magsafe-thin",
+      "name": "Sanrio Magsafe 5000mAh 磁吸超薄行動電源",
+      "brand": "Sanrio",
+      "category": "充電寶",
+      "price": 349,
+      "desc": "僅 9.5mm 超薄設計完美貼合手機。穩固磁吸充電不脫落。",
+      "features": [
+        "Sanrio 正版授權",
+        "9.5mm 超薄",
+        "完美貼合",
+        "穩固磁吸",
+        "BSMI+NCC 雙認證"
+      ]
+    },
+    {
+      "id": "sanrio-10000-digital-cable",
+      "name": "Sanrio 10000mAh 數顯帶線行動電源",
+      "brand": "Sanrio",
+      "category": "充電寶",
+      "price": 268,
+      "desc": "自帶雙線 Type-C & Lightning，數顯電量。BSMI 認證輕薄便攜。",
+      "features": [
+        "Sanrio 正版授權",
+        "自帶 Type-C & Lightning",
+        "數顯電量",
+        "BSMI 認證",
+        "輕薄小巧"
+      ]
+    },
+    {
+      "id": "shinchan-10000-cable-pb",
+      "name": "蠟筆小新 10000mAh 數顯帶線行動電源",
+      "brand": "蠟筆小新",
+      "category": "充電寶",
+      "price": 298,
+      "desc": "蠟筆小新正版授權，自帶線設計方便充電。數字顯示電量。",
+      "features": [
+        "蠟筆小新正版授權",
+        "數顯電量",
+        "自帶線",
+        "輕巧便攜"
+      ]
+    },
+    {
+      "id": "sanrio-tap-light",
+      "name": "Sanrio 拍拍燈盲盒 馬卡龍系列",
+      "brand": "Sanrio",
+      "category": "智能科技",
+      "price": 118,
+      "desc": "Sanrio 正版授權拍拍燈，柔光護眼節能續航。6+1 隱藏款式隨機出。",
+      "features": [
+        "Sanrio 正版授權",
+        "拍拍燈柔光護眼",
+        "節能續航",
+        "6+1 隱藏款",
+        "隨機款"
+      ]
+    },
+    {
+      "id": "kids-camera-cartoon",
+      "name": "卡通兒童數碼相機",
+      "brand": "SIGMA",
+      "category": "智能科技",
+      "price": 298,
+      "desc": "前後雙鏡頭拍照錄影，內建授權圖框。2.8 吋觸屏，MP3 播放。",
+      "features": [
+        "前後雙鏡頭",
+        "授權圖框",
+        "2.8 吋觸屏",
+        "MP3 播放",
+        "Type-C 充電"
+      ]
+    },
+    {
+      "id": "kids-camera-smartphone",
+      "name": "卡通兒童數碼相機 (智能手機款)",
+      "brand": "SIGMA",
+      "category": "智能科技",
+      "price": 328,
+      "desc": "台灣迪士尼授權，2 吋螢幕 720P 錄影 1200 萬像素。內建可愛圖框。",
+      "features": [
+        "迪士尼授權",
+        "720P 錄影",
+        "1200 萬像素",
+        "可愛圖框",
+        "支援 32GB microSD"
+      ]
+    },
+    {
+      "id": "sanrio-wireless-earbuds",
+      "name": "Sanrio 原裝正版真無線耳機",
+      "brand": "Sanrio",
+      "category": "耳機",
+      "price": 398,
+      "desc": "藍牙 v5.4 低延遲，人體工學設計。充電盒 24 小時續航，可愛立體耳朵設計。",
+      "features": [
+        "Sanrio 正版授權",
+        "藍牙 5.4",
+        "24 小時續航",
+        "立體耳朵設計 LED 燈"
+      ]
+    },
+    {
+      "id": "disney-hand-warmer",
+      "name": "Disney 隨身暖蛋 三眼仔/史迪仔",
+      "brand": "Disney",
+      "category": "配件",
+      "price": 128,
+      "desc": "台灣 Disney 授權造型暖蛋，表面 55°C。可用 AA 電池或 USB 供電。",
+      "features": [
+        "Disney 授權",
+        "55°C 溫控",
+        "AA 電池/USB 供電",
+        "輕巧 42g"
+      ]
+    },
+    {
+      "id": "sanrio-water-flosser",
+      "name": "Sanrio 360° 水牙線機",
+      "brand": "Sanrio",
+      "category": "健康產品",
+      "price": 299,
+      "desc": "噴洗力度 80-120 PSI，3 個噴咀。充滿電可用 1 個月，8 個款式。",
+      "features": [
+        "Sanrio 正版授權",
+        "80-120 PSI",
+        "3 個噴咀",
+        "可用 1 個月",
+        "8 款式"
+      ]
+    },
+    {
+      "id": "sanrio-electric-cooker",
+      "name": "Sanrio 智能電煮鍋",
+      "brand": "Sanrio",
+      "category": "生活電器",
+      "price": 198,
+      "desc": "煮粥/煮飯/煲湯/火鍋/炒餸 5 大功能。不沾鍋易潔，700W 安全低功率。",
+      "features": [
+        "Sanrio 授權",
+        "5 大烹飪功能",
+        "不沾鍋",
+        "700W 安全",
+        "雙層隔熱"
+      ]
+    },
+    {
+      "id": "sanrio-10000-lanyard-pb",
+      "name": "Sanrio 10000mAh 掛繩 Power Bank",
+      "brand": "Sanrio",
+      "category": "充電寶",
+      "price": 268,
+      "desc": "內置 Lightning + Type-C 線，僅 178g。3C/CE 認證阻燃物料，可上機。",
+      "features": [
+        "Sanrio 授權",
+        "內置 Lightning+Type-C",
+        "178g 超輕",
+        "3C/CE 認證",
+        "可上飛機"
+      ]
+    },
+    {
+      "id": "lithium-battery-safety-bag",
+      "name": "Sanrio 鋰電池防爆袋",
+      "brand": "Sanrio",
+      "category": "配件",
+      "price": 88,
+      "desc": "防火布製成耐高溫，魔鬼氈密封設計隔絕空氣。可保護文件現金。",
+      "features": [
+        "Sanrio 授權",
+        "防火布耐高溫",
+        "魔鬼氈密封",
+        "保護文件現金"
+      ]
+    },
+    {
+      "id": "wax-melt-lamp",
+      "name": "Sanrio 卡通融燭燈",
+      "brand": "Sanrio",
+      "category": "生活電器",
+      "price": 298,
+      "desc": "燈泡加熱蠟燭表面均勻融化，香氣持久純粹。不用點明火安全。",
+      "features": [
+        "Sanrio 授權",
+        "燈泡加熱",
+        "香氣持久",
+        "不用明火安全",
+        "四腳防滑"
+      ]
+    },
+    {
+      "id": "cartoon-luggage-15inch",
+      "name": "小燦 x Mone 15 吋手提行李喼",
+      "brand": "Sanrio",
+      "category": "配件",
+      "price": 398,
+      "desc": "手帶便攜大容量，拉鏈開關背帶設計。32x28x17cm，700g。",
+      "features": [
+        "手帶便攜",
+        "大容量",
+        "拉鏈開關",
+        "背帶設計",
+        "32x28x17cm"
+      ]
+    },
+    {
+      "id": "cluebox-cb-pbl1",
+      "name": "Clue Box CB-PBL1 5000mAh 連強光電筒",
+      "brand": "Clue Box",
+      "category": "充電寶",
+      "price": 199,
+      "desc": "直接插件模式不須電線，內置強光電筒。送編織手機背帶。Sanrio 多款。",
+      "features": [
+        "直接插件",
+        "內置強光電筒",
+        "LED 顯示",
+        "送編織背帶",
+        "Sanrio 多款"
+      ]
+    },
+    {
+      "id": "cluebox-cb-pbl2",
+      "name": "Clue Box CB-PBL2 6800mAh 快速充電池",
+      "brand": "Clue Box",
+      "category": "充電寶",
+      "price": 239,
+      "desc": "Lightning+USB-C 同時雙充，直插式快充輕巧手掌心大小。Sanrio 2D 設計。",
+      "features": [
+        "Lightning+USB-C 雙充",
+        "直插式",
+        "輕巧手掌心",
+        "6800mAh",
+        "Sanrio 2D"
+      ]
+    },
+    {
+      "id": "cluebox-cb-pbl3",
+      "name": "Clue Box CB-PBL3-CR 充電池",
+      "brand": "Clue Box",
+      "category": "充電寶",
+      "price": 89,
+      "desc": "Lightning+USB-C 獨立或同時充電。內置高速 SD 讀卡器。",
+      "features": [
+        "Lightning+USB-C",
+        "內置 SD 讀卡器",
+        "無需網絡傳輸相片"
+      ]
+    },
+    {
+      "id": "texas-sonic-mini-10",
+      "name": "Texas Sonic Mini 10 迷你投影機",
+      "brand": "Texas Sonic",
+      "category": "影音器材",
+      "price": 3580,
+      "desc": "僅 480g 內置 8000mAh 電池最長 240 分鐘。4K 解碼最大 150 吋投影。",
+      "features": [
+        "480g 輕巧",
+        "8000mAh 240 分鐘",
+        "4K 解碼",
+        "最大 150 吋",
+        "HDMI 2.0/藍牙 5.0"
+      ]
+    },
+    {
+      "id": "pj212-pro",
+      "name": "PJ212 Pro 智能投影機",
+      "brand": "SIGMA",
+      "category": "影音器材",
+      "price": 1699,
+      "desc": "270 ANSI 流明 1920x1080P 支援 4K。Android TV 9.0+Google Play。",
+      "features": [
+        "270 ANSI",
+        "1080P 支援 4K",
+        "Android TV 9.0",
+        "Google Play",
+        "2.4/5G WiFi",
+        "無線投影"
+      ]
+    },
+    {
+      "id": "pj210-pro",
+      "name": "PJ210 Pro 智能投影機",
+      "brand": "SIGMA",
+      "category": "影音器材",
+      "price": 1298,
+      "desc": "250 ANSI 流明 1280x720 支援 4K。20-150 吋顯示，內置 Netflix/YouTube/Disney+。",
+      "features": [
+        "250 ANSI",
+        "1280x720",
+        "20-150 吋",
+        "Android TV 9.0",
+        "Netflix/YouTube/Disney+",
+        "自動對焦"
+      ]
+    },
+    {
+      "id": "primezone-gc2",
+      "name": "PrimeZone GC2 光能清淨機 2.0",
+      "brand": "PrimeZone",
+      "category": "生活電器",
+      "price": 499,
+      "desc": "等離子+光觸媒+活氧+HEPA 四重淨化。TVOC 感測太陽能充電，適用車內/辦公室。",
+      "features": [
+        "四重空氣淨化",
+        "TVOC 感測",
+        "太陽能充電",
+        "H11 HEPA 水洗",
+        "40dB 靜音"
+      ]
+    },
+    {
+      "id": "nx7-air-purifier",
+      "name": "NX7 空氣清淨吸塵器",
+      "brand": "SIGMA",
+      "category": "生活電器",
+      "price": 990,
+      "desc": "吸塵+空氣清淨二合一。千萬負離子消除異味，HEPA11 過濾 99%。",
+      "features": [
+        "吸塵+清淨二合一",
+        "千萬負離子",
+        "HEPA11 過濾 99%",
+        "輕便小體積"
+      ]
+    },
+    {
+      "id": "airbot-hypersonic-pro",
+      "name": "Airbot Hypersonic Pro 無線吸塵器",
+      "brand": "Airbot",
+      "category": "生活電器",
+      "price": 1499,
+      "desc": "250W 無刷馬達，紅外感應灰塵自動調節吸力。1.1kg 續航 45 分鐘。",
+      "features": [
+        "250W 無刷馬達",
+        "紅外感應自動調節",
+        "1.1kg 輕量",
+        "45 分鐘續航",
+        "HEPA 99.97%"
+      ]
+    },
+    {
+      "id": "airbot-hypersonic-max",
+      "name": "Airbot Hypersonic Max 33000 吸塵拖地機",
+      "brand": "Airbot",
+      "category": "生活電器",
+      "price": 1999,
+      "desc": "智能灰塵感應數碼水箱精確控水。雙滾輪設計，最大吸力 33,000Pa。",
+      "features": [
+        "智能灰塵感應",
+        "數碼水箱",
+        "雙滾輪",
+        "33,000Pa",
+        "BLDC 電機"
+      ]
+    },
+    {
+      "id": "huawei-ax3-pro",
+      "name": "Huawei AX3 Pro Wi-Fi 6 路由器",
+      "brand": "Huawei",
+      "category": "智能家居",
+      "price": 399,
+      "desc": "Wi-Fi 6+ 3000Mbps，一碰即連 NFC。可視化診斷，HomeSec 安全系統。",
+      "features": [
+        "Wi-Fi 6+ 3000Mbps",
+        "一碰即連 NFC",
+        "可視化診斷",
+        "HomeSec 安全"
+      ]
+    },
+    {
+      "id": "huawei-ax3-pro-wifi7",
+      "name": "Huawei AX3 Pro Wi-Fi 7 路由器",
+      "brand": "Huawei",
+      "category": "智能家居",
+      "price": 455,
+      "desc": "新一代 Wi-Fi 7 3600Mbps，4K QAM 120% 提速。雙頻聚合上網。",
+      "features": [
+        "Wi-Fi 7 3600Mbps",
+        "4K QAM",
+        "雙頻聚合",
+        "4 顆信號放大器",
+        "2500M 網口"
+      ]
+    },
+    {
+      "id": "huawei-be3-pro",
+      "name": "Huawei BE3 Pro 2.5GE Wi-Fi 7 路由器",
+      "brand": "Huawei",
+      "category": "智能家居",
+      "price": 899,
+      "desc": "7200Mbps 無線速率，2.4GHz 1376M+5GHz 5765M。4 個千兆口。",
+      "features": [
+        "7200Mbps",
+        "Wi-Fi 7",
+        "1376+5765Mbps",
+        "千兆以太網口"
+      ]
+    },
+    {
+      "id": "huawei-ax6",
+      "name": "Huawei AX6 Wi-Fi 6 路由器",
+      "brand": "Huawei",
+      "category": "智能家居",
+      "price": 325,
+      "desc": "雙頻聚合上網 4 顆信號放大器。4K QAM 覆蓋範圍提升 40%。",
+      "features": [
+        "雙頻聚合",
+        "4 顆信號放大器",
+        "4K QAM",
+        "覆蓋提升 40%"
+      ]
+    },
+    {
+      "id": "huawei-e5573",
+      "name": "Huawei E5573-609 4G 行動 WiFi",
+      "brand": "Huawei",
+      "category": "智能家居",
+      "price": 245,
+      "desc": "支援所有 4G 網路全球版。1500mAh 電池約六小時使用。",
+      "features": [
+        "全球版 4G",
+        "1500mAh 電池",
+        "六小時續航"
+      ]
+    },
+    {
+      "id": "huawei-e5586",
+      "name": "Huawei 4G 隨行WiFi 5 E5586-822",
+      "brand": "Huawei",
+      "category": "智能家居",
+      "price": 270,
+      "desc": "輕薄便攜 2400mAh 電池。最多 16 台裝置連線。",
+      "features": [
+        "輕薄",
+        "2400mAh",
+        "16 台連線",
+        "黑/白/青"
+      ]
+    },
+    {
+      "id": "huawei-e5783",
+      "name": "Huawei E5783-836 4G+ 隨身路由器",
+      "brand": "Huawei",
+      "category": "智能家居",
+      "price": 465,
+      "desc": "4G+ 全網通 300Mbps 高速上網，12 小時續航。",
+      "features": [
+        "4G+ 全網通",
+        "300Mbps",
+        "12 小時續航"
+      ]
+    },
+    {
+      "id": "tplink-ax12",
+      "name": "TP-Link AX12 AX1500 Wi-Fi 6 路由器",
+      "brand": "TP-Link",
+      "category": "智能家居",
+      "price": 299,
+      "desc": "AX1500 雙頻，4 天線 Beamforming。WPA3 安全 MU-MIMO+OFDMA。",
+      "features": [
+        "AX1500 雙頻",
+        "4 天線 Beamforming",
+        "WPA3 安全",
+        "支援 1000M 光纖"
+      ]
+    },
+    {
+      "id": "tplink-ax55",
+      "name": "TP-Link AX55 AX3000 Wi-Fi 6 路由器",
+      "brand": "TP-Link",
+      "category": "智能家居",
+      "price": 488,
+      "desc": "AX3000 3.0Gbps 雙頻，2.5G Multi-Gigabit 連接埠。4 根高增益天線。",
+      "features": [
+        "AX3000 3.0Gbps",
+        "2.5G 連接埠",
+        "波束成形",
+        "4 高增益天線",
+        "HomeShield"
+      ]
+    },
+    {
+      "id": "tplink-ax72-pro",
+      "name": "TP-Link AX72 Pro AX5400 Wi-Fi 6 路由器",
+      "brand": "TP-Link",
+      "category": "智能家居",
+      "price": 769,
+      "desc": "5400Mbps Wi-Fi 6 Plus 4T4R。6 天線波束成形，100+ 設備連接。",
+      "features": [
+        "AX5400",
+        "Wi-Fi 6 Plus 4T4R",
+        "6 天線",
+        "100+ 設備",
+        "HomeShield"
+      ]
+    },
+    {
+      "id": "tplink-xdr3030",
+      "name": "TP-Link XDR3030 AX3000 Wi-Fi 6 路由器",
+      "brand": "TP-Link",
+      "category": "智能家居",
+      "price": 338,
+      "desc": "AX3000 160MHz 頻寬，3T3R 天線。Gigabit 1000MB，Mesh 易展。",
+      "features": [
+        "AX3000 160MHz",
+        "3T3R 天線",
+        "Gigabit 1000MB",
+        "Mesh 易展"
+      ]
+    },
+    {
+      "id": "tapo-p110",
+      "name": "TAPO P110 智能插座",
+      "brand": "TAPO",
+      "category": "智能家居",
+      "price": 108,
+      "desc": "遠程開關時間表計時器，語音控制 Alexa/Google Assistant。離開模式。",
+      "features": [
+        "遠程開關",
+        "時間表",
+        "語音控制",
+        "離開模式",
+        "體積小巧"
+      ]
+    },
+    {
+      "id": "tplink-ub500",
+      "name": "TP-Link UB500 藍牙 5.0 接收器",
+      "brand": "TP-Link",
+      "category": "配件",
+      "price": 58,
+      "desc": "USB 藍牙 5.0 接收器，同時連接 7 個設備。超迷你隨插即用。",
+      "features": [
+        "藍牙 5.0",
+        "7 個設備",
+        "超迷你",
+        "支援 Win 7/8.1/10"
+      ]
+    },
+    {
+      "id": "tplink-ub250",
+      "name": "TP-Link UB250 Bluetooth 5.0",
+      "brand": "TP-Link",
+      "category": "配件",
+      "price": 79,
+      "desc": "高性能藍牙晶片，快速穩定連接藍牙設備。",
+      "features": [
+        "藍牙 5.0",
+        "高性能晶片",
+        "快速穩定"
+      ]
+    },
+    {
+      "id": "tplink-xdn6000h",
+      "name": "TP-Link XDN6000H Wi-Fi 6 接收器",
+      "brand": "TP-Link",
+      "category": "配件",
+      "price": 99,
+      "desc": "Wi-Fi 6 286Mbps 2.4G，5dBi 天線。免驅安裝便捷。",
+      "features": [
+        "Wi-Fi 6 286Mbps",
+        "5dBi 天線",
+        "免驅安裝"
+      ]
+    },
+    {
+      "id": "tplink-xdn6000",
+      "name": "TP-Link XDN6000 Wi-Fi 6 接收器",
+      "brand": "TP-Link",
+      "category": "配件",
+      "price": 99,
+      "desc": "Wi-Fi 6 mini 殼體便攜，USB 2.0 接口。支援模擬 AP + TWT。",
+      "features": [
+        "Wi-Fi 6 286Mbps",
+        "mini 便攜",
+        "USB 2.0",
+        "模擬 AP"
+      ]
+    },
+    {
+      "id": "tplink-ipc43an",
+      "name": "TP-Link IPC43AN-4G IP Cam",
+      "brand": "TP-Link",
+      "category": "智能家居",
+      "price": 349,
+      "desc": "4G 全網通無需寬頻，300 萬 1080P 360°。ICR 紅外夜視 3D 降噪。",
+      "features": [
+        "4G 全網通",
+        "300 萬 1080P",
+        "360° 全景",
+        "ICR 紅外夜視",
+        "SD 卡"
+      ]
+    },
+    {
+      "id": "sp-dbck2k-plus",
+      "name": "SP-DBCK2K-Plus 2K 智能 IP Cam",
+      "brand": "SIGMA",
+      "category": "智能家居",
+      "price": 698,
+      "desc": "新加坡 Server，2K H.264 130° 廣角。PIR 人體檢測 IP54 防水。6700mAh。",
+      "features": [
+        "新加坡 Server",
+        "2K H.264",
+        "130° 廣角",
+        "PIR 人體檢測",
+        "IP54 防水",
+        "6700mAh"
+      ]
+    },
+    {
+      "id": "2k-intelligent-ip-cam",
+      "name": "2K Intelligent IP Cam",
+      "brand": "SIGMA",
+      "category": "智能家居",
+      "price": 490,
+      "desc": "2K H.264 350° 水平 150° 垂直全片幅。自動追蹤動作感應，夜間 10m。",
+      "features": [
+        "2K H.264",
+        "350° 水平 150° 垂直",
+        "自動追蹤",
+        "動作感應",
+        "夜間 10m"
+      ]
+    },
+    {
+      "id": "cooking-pot-1l",
+      "name": "功能煮食寶 1L",
+      "brand": "SIGMA",
+      "category": "生活電器",
+      "price": 198,
+      "desc": "1L 雙層隔熱防燙，不黏內膽。煎煮燜涮多用途，透明鍋蓋。",
+      "features": [
+        "雙層隔熱防燙",
+        "1L 容量",
+        "不黏內膽",
+        "煎煮燜涮",
+        "透明鍋蓋"
+      ]
+    },
+    {
+      "id": "hk-cooking-pot-1l",
+      "name": "Hello Kitty 煮食寶 1L",
+      "brand": "Hello Kitty",
+      "category": "生活電器",
+      "price": 238,
+      "desc": "Hello Kitty 煮食寶，雙層隔熱防燙。煎煮燜涮多用途。",
+      "features": [
+        "Hello Kitty 授權",
+        "雙層隔熱",
+        "1L 容量",
+        "不黏內膽",
+        "煎煮燜涮"
+      ]
+    },
+    {
+      "id": "electric-blanket",
+      "name": "電暖毯 (普通/豪華版)",
+      "brand": "SIGMA",
+      "category": "生活電器",
+      "price": 398,
+      "desc": "3/9 段溫度控制，可洗衣機清洗。可拆式控制器過熱斷電保護。",
+      "features": [
+        "3/9 段溫度",
+        "洗衣機清洗",
+        "可拆式控制器",
+        "過熱斷電"
+      ]
+    },
+    {
+      "id": "electric-water-bottle-kuromi",
+      "name": "Kuromi 智能便攜電水瓶 380ml",
+      "brand": "Kuromi",
+      "category": "生活電器",
+      "price": 398,
+      "desc": "380ml 附手柄，7 分鐘煲滾。40-100℃ 掌控，520g 便攜。",
+      "features": [
+        "Kuromi 授權",
+        "380ml 7 分鐘煲滾",
+        "40-100℃",
+        "520g 便攜",
+        "雙層防熱"
+      ]
+    },
+    {
+      "id": "jnc-hello-kitty-fan",
+      "name": "JNC 5寸負離子座檯風扇 (Hello Kitty)",
+      "brand": "Hello Kitty",
+      "category": "風扇",
+      "price": 298,
+      "desc": "強勁動力負離子淨化，6 檔風力 6 小時定時。伴睡夜燈 90° 擺風。",
+      "features": [
+        "Hello Kitty 授權",
+        "負離子淨化",
+        "6 檔風力",
+        "6 小時定時",
+        "伴睡夜燈",
+        "90° 擺風"
+      ]
+    },
+    {
+      "id": "smart-translation-mouse",
+      "name": "Pro 2.0 智能粵語翻譯滑鼠",
+      "brand": "SIGMA",
+      "category": "智能科技",
+      "price": 199,
+      "desc": "語音/劃詞/截圖翻譯，500 字/min 98% 準確。21 種方言，AI 語音搜索。",
+      "features": [
+        "語音/劃詞/截圖翻譯",
+        "500 字/min 98%",
+        "21 種方言",
+        "AI 語音搜索",
+        "USB/藍牙 5.1"
+      ]
+    },
+    {
+      "id": "usatisfy-ip-cam-pro3",
+      "name": "Usatisfy 360° 巡航全景攝錄機 Pro 3.0",
+      "brand": "Usatisfy",
+      "category": "智能家居",
+      "price": 299,
+      "desc": "340° 雲台全景 2K 高清，人體移動偵測雙向語音。智能夜視超長續航。",
+      "features": [
+        "340° 雲台全景",
+        "2K 高清",
+        "人體偵測",
+        "雙向語音",
+        "夜視"
+      ]
+    },
+    {
+      "id": "360-face-tracking-selfie-stick",
+      "name": "360° 人臉追蹤美拍桿 Pro",
+      "brand": "SIGMA",
+      "category": "影音器材",
+      "price": 399,
+      "desc": "250g 三軸 360° 雲台防抖，最長 70cm 自拍桿。臉部追蹤補光燈。",
+      "features": [
+        "三軸 360° 防抖",
+        "70cm 自拍桿",
+        "臉部追蹤",
+        "補光燈",
+        "藍牙遙控 10m"
+      ]
+    },
+    {
+      "id": "s-body-pro-massager",
+      "name": "S-body Pro 深層肌肉按摩儀",
+      "brand": "SIGMA",
+      "category": "健康產品",
+      "price": 498,
+      "desc": "RED LED 治療 3400RPM 深層肌肉放鬆。6 級振動，8 種按摩頭。韓國 KT 認證。",
+      "features": [
+        "RED LED 治療",
+        "3400RPM",
+        "6 級振動",
+        "8 種按摩頭",
+        "KT 認證"
+      ]
+    },
+    {
+      "id": "philips-sonicare-3100",
+      "name": "Philips Sonicare 3100 電動牙刷",
+      "brand": "Philips",
+      "category": "健康產品",
+      "price": 399,
+      "desc": "去除 3 倍牙菌斑，壓力傳感器保護牙齦。SmartTimer+QuadPacer。",
+      "features": [
+        "去除 3 倍牙菌斑",
+        "壓力傳感器",
+        "SmartTimer",
+        "QuadPacer"
+      ]
+    },
+    {
+      "id": "vocon-white-toothbrush",
+      "name": "Vocon White 音感潔白刷",
+      "brand": "SIGMA",
+      "category": "健康產品",
+      "price": 199,
+      "desc": "45000 次/分鐘震動，2 種醫美刷頭 4 檔模式。IPX7 防水磁吸充電。",
+      "features": [
+        "45000 次/分鐘",
+        "2 種刷頭",
+        "4 檔模式",
+        "IPX7 防水",
+        "磁吸充電"
+      ]
+    },
+    {
+      "id": "electric-callus-remover",
+      "name": "去角質電動磨皮機",
+      "brand": "SIGMA",
+      "category": "健康產品",
+      "price": 138,
+      "desc": "3 段力度選擇 LED 輔助燈，2 個磨砂頭。USB 充電可用 60 分鐘。",
+      "features": [
+        "3 段力度",
+        "LED 輔助燈",
+        "2 個磨砂頭",
+        "60 分鐘使用"
+      ]
+    },
+    {
+      "id": "nose-hair-trimmer-fc032",
+      "name": "充電式電動鼻毛修剪器 FC-032",
+      "brand": "SIGMA",
+      "category": "健康產品",
+      "price": 41,
+      "desc": "充電式高效安全，易於清潔。120mAh 鋰電池。",
+      "features": [
+        "充電式",
+        "高效安全",
+        "易於清潔"
+      ]
+    },
+    {
+      "id": "hyundai-oc012-toothbrush",
+      "name": "Hyundai OC-012 IPX7 電動牙刷",
+      "brand": "Hyundai",
+      "category": "健康產品",
+      "price": 118,
+      "desc": "20000 次/分鐘，IPX7 防水 3 種模式。雙尖刷毛 250mAh。",
+      "features": [
+        "20000 次/分鐘",
+        "IPX7 防水",
+        "3 種模式",
+        "雙尖刷毛"
+      ]
+    },
+    {
+      "id": "portable-water-flosser",
+      "name": "伸縮便攜水牙線機",
+      "brand": "SIGMA",
+      "category": "健康產品",
+      "price": 199,
+      "desc": "60-110psi 4 種模式，200ml 伸縮水箱。IPX7 防水 TYPE-C 充電。",
+      "features": [
+        "60-110psi",
+        "4 種模式",
+        "200ml 伸縮水箱",
+        "IPX7 防水",
+        "TYPE-C 充電",
+        "5 款噴頭"
+      ]
+    },
+    {
+      "id": "gradit-temp-cup",
+      "name": "Gradit 隨行溫控杯 500ml",
+      "brand": "SIGMA",
+      "category": "配件",
+      "price": 569,
+      "desc": "500ml 容量隨心調整溫度，85°C 咖啡 75°C 茶 50°C 溫水。不需插電。",
+      "features": [
+        "500ml 大容量",
+        "隨心調整溫度",
+        "不需插電"
+      ]
+    },
+    {
+      "id": "mg1-pressure-gun",
+      "name": "MG1 增壓滅汙槍",
+      "brand": "SIGMA",
+      "category": "工具",
+      "price": 599,
+      "desc": "L 型三角設計省力 70%，壓縮技術強化水壓。洗車/花園/浴室。",
+      "features": [
+        "L 型省力 70%",
+        "壓縮水壓",
+        "多場景適用"
+      ]
+    },
+    {
+      "id": "omni-air-fan",
+      "name": "OMNI AIR 全域氣流扇",
+      "brand": "SIGMA",
+      "category": "風扇",
+      "price": 799,
+      "desc": "360° 全域出風渦輪大風量。三向出風口零死角送風，循環空氣濾淨。",
+      "features": [
+        "360° 全域出風",
+        "渦輪大風量",
+        "三向出風口",
+        "空氣濾淨",
+        "一部抵三部"
+      ]
+    },
+    {
+      "id": "airbot-hypersonics-pro",
+      "name": "Airbot Hypersonics Pro 輕音吸塵器",
+      "brand": "Airbot",
+      "category": "生活電器",
+      "price": 1299,
+      "desc": "輕音降噪 5 重過濾，1.2kg 續航 45 分鐘。雙檔位 19000PA，HEPA。",
+      "features": [
+        "輕音降噪",
+        "5 重過濾",
+        "1.2kg",
+        "45 分鐘",
+        "19000PA",
+        "HEPA 99.97%"
+      ]
+    },
+    {
+      "id": "visual-mask",
+      "name": "Visual Mask 喚眼儀",
+      "brand": "SIGMA",
+      "category": "健康產品",
+      "price": 699,
+      "desc": "雙軸按摩仿真人揉捏不壓眼球。太陽穴按摩舒壓，4 種模式。開蓋可煲劇。",
+      "features": [
+        "雙軸按摩",
+        "太陽穴按摩",
+        "4 種模式",
+        "開蓋可煲劇",
+        "可調頭帶"
+      ]
+    },
+    {
+      "id": "pet-air-purifier",
+      "name": "寵物除臭殺菌空氣淨化機",
+      "brand": "SIGMA",
+      "category": "生活電器",
+      "price": 999,
+      "desc": "超強吸力除臭吸毛，四層濾網 99.97%。UV 紫外燈+光觸媒，負離子。",
+      "features": [
+        "超強吸力",
+        "四層濾網 99.97%",
+        "UV 紫外燈",
+        "負離子",
+        "360° 循環",
+        "睡眠模式"
+      ]
+    },
+    {
+      "id": "electric-scrubber",
+      "name": "無線電動清潔刷",
+      "brand": "SIGMA",
+      "category": "工具",
+      "price": 269,
+      "desc": "6 種清潔頭雙向轉動，3 角度 3 長度可調。IPX7 防水 2000mAh。",
+      "features": [
+        "6 種清潔頭",
+        "雙向轉動",
+        "3 角度",
+        "3 長度",
+        "IPX7 防水",
+        "2000mAh"
+      ]
+    },
+    {
+      "id": "mini-iron-hy-rn02",
+      "name": "現代迷你摺疊熨斗 HY-RN02",
+      "brand": "SIGMA",
+      "category": "生活電器",
+      "price": 299,
+      "desc": "摺疊手柄掛熨平熨，水霧按鈕。170°C 快速去褶。",
+      "features": [
+        "摺疊手柄",
+        "掛熨平熨",
+        "水霧按鈕",
+        "170°C",
+        "前端尖角"
+      ]
+    },
+    {
+      "id": "bnt-400",
+      "name": "BNT-400 智能插座",
+      "brand": "SIGMA",
+      "category": "智能家居",
+      "price": 99,
+      "desc": "遠程開關控制定時功能，精簡設計。",
+      "features": [
+        "遠程開關",
+        "定時功能"
+      ]
+    },
+    {
+      "id": "china-unicom-vn007",
+      "name": "中國聯通 5G CPE VN007+ WiFi Router",
+      "brand": "中國聯通",
+      "category": "智能家居",
+      "price": 480,
+      "desc": "5G 高速網絡 4G 向後兼容。",
+      "features": [
+        "5G 網絡",
+        "4G 向後兼容"
+      ]
+    },
+    {
+      "id": "huawei-ip-cam",
+      "name": "Huawei 2K 智能 IP Cam",
+      "brand": "Huawei",
+      "category": "智能家居",
+      "price": 358,
+      "desc": "2K H.264 PIR 人體偵測，雙向語音夜間 10m。SD 卡最大 128G。",
+      "features": [
+        "2K H.264",
+        "PIR 人體偵測",
+        "雙向語音",
+        "夜間 10m",
+        "SD 128G"
+      ]
+    },
+    {
+      "id": "vsm-6300h",
+      "name": "沙宣電動旋轉剃鬚刀 VSM-6300H",
+      "brand": "沙宣",
+      "category": "健康產品",
+      "price": 235,
+      "desc": "3D 智能浮動刀頭 IPX7 防水。3 小時快充用 90 分鐘，彈出式修剪刀。",
+      "features": [
+        "3D 智能浮動刀頭",
+        "IPX7 防水可水洗",
+        "3 小時充電 90 分鐘",
+        "彈出式修剪刀"
+      ]
+    },
+    {
+      "id": "purefiltap",
+      "name": "PureFilTap 淨濾濾芯水龍頭",
+      "brand": "SIGMA",
+      "category": "生活電器",
+      "price": 199,
+      "desc": "環保無鉛 PP 濾芯過濾 40μm。氣泡水模式，無需工具安裝。",
+      "features": [
+        "無鉛環保",
+        "PP 濾芯 40μm",
+        "氣泡水模式",
+        "無需工具"
+      ]
+    },
+    {
+      "id": "philips-s1100",
+      "name": "Philips S1101/41 (藍) 電鬚刨",
+      "brand": "Philips",
+      "category": "健康產品",
+      "price": 299,
+      "desc": "27 個 ComfortCut 刀片 3D 浮動頭。Aquatec Seal 乾濕剃，充 8 小時用 40 分鐘。",
+      "features": [
+        "27 ComfortCut 刀片",
+        "3D 浮動頭",
+        "Aquatec Seal",
+        "乾濕剃",
+        "充 8 小時用 40 分鐘"
+      ]
+    },
+    {
+      "id": "mini-shaver-pht051",
+      "name": "PHT-051 迷你鬚刨",
+      "brand": "SIGMA",
+      "category": "健康產品",
+      "price": 98,
+      "desc": "USB Type-C 充電 60g 輕量。滿電約 30 分鐘，體積 7.5x4.5x4.4cm。",
+      "features": [
+        "USB Type-C",
+        "60g 輕量",
+        "30 分鐘使用",
+        "體積超細"
+      ]
+    },
+    {
+      "id": "led-makeup-mirror",
+      "name": "超薄 USB LED 化妝鏡",
+      "brand": "SIGMA",
+      "category": "健康產品",
+      "price": 258,
+      "desc": "三摺式 16x14.3x1.8cm，64 顆 LED 三種光線，三倍數鏡（1x/2x/7x）。",
+      "features": [
+        "三摺式超薄",
+        "64 顆 LED 三種光線",
+        "1x/2x/7x 鏡",
+        "USB 充電"
+      ]
+    },
+    {
+      "id": "mini-hair-straightener",
+      "name": "USB 迷你直髮夾",
+      "brand": "SIGMA",
+      "category": "健康產品",
+      "price": 88,
+      "desc": "3 段熱力 160-200°C，3 分鐘加熱至 180°C。體積細小便攜 USB 充電。",
+      "features": [
+        "3 段熱力",
+        "3 分鐘加熱 180°C",
+        "USB 充電",
+        "便攜"
+      ]
+    },
+    {
+      "id": "chiikawa-magsafe-cable",
+      "name": "Chiikawa 磁吸快充線 C to C 60W",
+      "brand": "Chiikawa",
+      "category": "充電線",
+      "price": 148,
+      "desc": "Chiikawa 授權 PD 60W 磁吸快充，尼龍編織加厚扁線。立體公仔頭造型。",
+      "features": [
+        "Chiikawa 授權",
+        "PD 60W",
+        "磁收納",
+        "尼龍編織",
+        "立體公仔頭"
+      ]
+    },
+    {
+      "id": "magsafe-cable-ccl",
+      "name": "PD 磁吸快充線 C to C / C to L",
+      "brand": "SIGMA",
+      "category": "充電線",
+      "price": 168,
+      "desc": "C to L PD 27W / C to C PD 60W。尼龍編織磁吸收納。Hello Kitty/Kuromi/蠟筆小新/熊大。",
+      "features": [
+        "C to L 27W",
+        "C to C 60W",
+        "磁吸收納",
+        "尼龍編織",
+        "多款可選"
+      ]
+    },
+    {
+      "id": "retractable-3in1-cable",
+      "name": "伸縮三合一充電線 (L/Type-C/Micro)",
+      "brand": "SIGMA",
+      "category": "充電線",
+      "price": 88,
+      "desc": "迷你伸縮一分三接頭，L 27W / Type-C 60W。約 90cm。",
+      "features": [
+        "伸縮收納",
+        "一分三",
+        "L 27W / Type-C 60W",
+        "90cm"
+      ]
+    },
+    {
+      "id": "chiikawa-mousepad",
+      "name": "Chiikawa 大頭滑鼠墊",
+      "brand": "Chiikawa",
+      "category": "手機配件",
+      "price": 99,
+      "desc": "Chiikawa 授權可愛造型，滑順布面車縫包邊。止滑橡膠底。",
+      "features": [
+        "Chiikawa 授權",
+        "滑順布面",
+        "車縫包邊",
+        "止滑橡膠底"
+      ]
     }
   ]
 }
