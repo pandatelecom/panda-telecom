@@ -4700,6 +4700,620 @@
         "支援磁吸無線充電",
         "實機開模"
       ]
+    },
+    {
+      "id": "philips-tat1109wt",
+      "name": "Philips TAT1109WT/00 真無線耳機 (白色)",
+      "brand": "Philips",
+      "category": "耳機",
+      "price": 298,
+      "desc": "Philips TAT1109WT/00 1000系列真無線藍牙耳機，輕巧入耳式設計。IPX4 防水防汗，藍牙連接穩定。",
+      "features": [
+        "1000 系列真無線",
+        "IPX4 防水防汗",
+        "藍牙連接",
+        "輕巧入耳式"
+      ]
+    },
+    {
+      "id": "philips-tat1300bk",
+      "name": "Philips TAT1300BK 真無線耳機 (黑色)",
+      "brand": "Philips",
+      "category": "耳機",
+      "price": 298,
+      "desc": "Philips TAT1300BK 真無線藍牙耳機，入耳式設計。多色可選：黑/白/藍/粉紅。",
+      "features": [
+        "真無線藍牙",
+        "入耳式設計",
+        "多色可選",
+        "舒適佩戴"
+      ]
+    },
+    {
+      "id": "philips-tat2000bk",
+      "name": "Philips TAT2000BK/97 真無線耳機 (黑色)",
+      "brand": "Philips",
+      "category": "耳機",
+      "price": 298,
+      "desc": "Philips TAT2000BK/97 2000系列真無線耳機，8mm 驅動單元 Dynamic Bass。IPX4 防水防汗，藍牙5.4。6+18 小時續航。AI 降噪麥克風。",
+      "features": [
+        "8mm 驅動單元 Dynamic Bass",
+        "AI 降噪麥克風",
+        "IPX4 防水防汗",
+        "藍牙5.4",
+        "6H+18H 續航",
+        "Philips Headphone App"
+      ]
+    },
+    {
+      "id": "philips-tat2139bk",
+      "name": "Philips TAT2139BK/97 真無線耳機 (黑色)",
+      "brand": "Philips",
+      "category": "耳機",
+      "price": 298,
+      "desc": "Philips TAT2139BK/97 真無線藍牙耳機，入耳式設計。舒適佩戴藍牙連接穩定。",
+      "features": [
+        "真無線藍牙",
+        "入耳式設計",
+        "舒適佩戴",
+        "IPX4 防水"
+      ]
+    },
+    {
+      "id": "philips-tat2500bk",
+      "name": "Philips TAT2500BK/00 真無線耳機 (黑色)",
+      "brand": "Philips",
+      "category": "耳機",
+      "price": 298,
+      "desc": "Philips TAT2500BK/00 真無線耳機，In-Ear Bud 設計。8mm 驅動單元，1 AI Mic，IPX4 防水。藍牙5.4，6+18H 續航。ANC 主動降噪，多點連接。",
+      "features": [
+        "8mm 驅動單元",
+        "ANC 主動降噪",
+        "IPX4 防水防汗",
+        "藍牙5.4 多點連接",
+        "6H+18H 續航",
+        "Google/Siri 語音助手"
+      ]
+    },
+    {
+      "id": "philips-tat2149bk",
+      "name": "Philips TAT2149BK/00 真無線耳機 (黑色)",
+      "brand": "Philips",
+      "category": "耳機",
+      "price": 298,
+      "desc": "Philips TAT2149BK/00 真無線藍牙耳機，入耳式設計。高品質音效。",
+      "features": [
+        "真無線藍牙",
+        "入耳式設計",
+        "高品質音效"
+      ]
+    },
+    {
+      "id": "philips-tah5209bk",
+      "name": "Philips TAH5209BK/97 頭戴式無線耳機 (黑色)",
+      "brand": "Philips",
+      "category": "耳機",
+      "price": 498,
+      "desc": "Philips TAH5209BK/97 5000系列頭戴式無線耳機，Over-ear 設計。舒適佩戴，強勁低音。",
+      "features": [
+        "5000 系列",
+        "Over-ear 頭戴式",
+        "無線藍牙",
+        "強勁低音",
+        "舒適耳墊"
+      ]
+    },
+    {
+      "id": "philips-tah7508bk",
+      "name": "Philips TAH7508BK/97 降噪頭戴式耳機 (黑色)",
+      "brand": "Philips",
+      "category": "耳機",
+      "price": 698,
+      "desc": "Philips TAH7508BK/97 降噪頭戴式耳機，Noise Cancelling Pro 技術。高品質音效，舒適佩戴。",
+      "features": [
+        "Noise Cancelling Pro",
+        "頭戴式無線",
+        "高品質音效",
+        "舒適佩戴"
+      ]
+    },
+    {
+      "id": "philips-tah8507bk",
+      "name": "Philips TAH8507BK/00 專業降噪耳機 (黑色)",
+      "brand": "Philips",
+      "category": "耳機",
+      "price": 1298,
+      "desc": "Philips TAH8507BK/00 專業降噪頭戴式耳機。55 小時播放 (ANC 45hrs)，40mm 釹磁鐵驅動單元。多點連接，附藍牙發射器 (Type-C/A) 及飛機轉換頭。可拆式 Boom Mic。頻率 7-40,000Hz。",
+      "features": [
+        "55H 播放 (ANC 45H)",
+        "40mm 釹磁鐵驅動單元",
+        "多點連接",
+        "附藍牙發射器 Type-C/A",
+        "飛機轉換頭",
+        "可拆式 Boom Mic",
+        "7-40,000Hz 頻響"
+      ]
+    },
+    {
+      "id": "philips-tak4200mp",
+      "name": "Philips TAK4200MP 兒童無線耳機 (紫)",
+      "brand": "Philips",
+      "category": "耳機",
+      "price": 298,
+      "desc": "Philips TAK4200MP 兒童無線頭戴式耳機，安全音量限制保護聽力。可愛紫色設計，舒適佩戴。",
+      "features": [
+        "兒童無線耳機",
+        "安全音量限制",
+        "舒適佩戴",
+        "可愛設計"
+      ]
+    },
+    {
+      "id": "philips-tae5008bk",
+      "name": "Philips TAE5008BK/00 USB-C 有線耳機 (黑色)",
+      "brand": "Philips",
+      "category": "耳機",
+      "price": 99,
+      "desc": "Philips TAE5008BK/00 USB-C 有線耳機，1.2M 線長。內置麥克風，線控通話音樂。",
+      "features": [
+        "USB-C 接口",
+        "1.2M 線長",
+        "內置麥克風",
+        "線控通話音樂"
+      ]
+    },
+    {
+      "id": "philips-tae1018bk",
+      "name": "Philips TAE1018BK USB-C 有線耳塞 (黑色)",
+      "brand": "Philips",
+      "category": "耳機",
+      "price": 79,
+      "desc": "Philips TAE1018BK USB-C 有線耳塞，1.2M 線長。內置麥克風，輕巧佩戴。",
+      "features": [
+        "USB-C 接口",
+        "輕巧耳塞設計",
+        "內置麥克風",
+        "1.2M 線長"
+      ]
+    },
+    {
+      "id": "philips-tae2000bk",
+      "name": "Philips TAE2000BK 半入耳 USB-C 有線耳機 (黑色)",
+      "brand": "Philips",
+      "category": "耳機",
+      "price": 89,
+      "desc": "Philips TAE2000BK 半入耳式 USB-C 有線耳機，1.2M 線長。3 按鍵線控，內置麥克風。多色可選。",
+      "features": [
+        "半入耳設計",
+        "USB-C 接口",
+        "3 按鍵線控",
+        "內置麥克風",
+        "多色可選"
+      ]
+    },
+    {
+      "id": "philips-tas2509k",
+      "name": "Philips TAS2509WT/00 卡拉OK 藍牙喇叭 (雙咪)",
+      "brand": "Philips",
+      "category": "音響",
+      "price": 598,
+      "desc": "Philips TAS2509WT/00 卡拉OK 喇叭連雙無線咪，66mm 大喇叭單元高清音效。15 小時超長播放時間。",
+      "features": [
+        "66mm 大喇叭單元",
+        "15 小時播放",
+        "雙無線咪",
+        "卡拉OK 功能",
+        "高清音效"
+      ]
+    },
+    {
+      "id": "philips-tar1509",
+      "name": "Philips TAR1509/00 FM/AM 便攜收音機",
+      "brand": "Philips",
+      "category": "音響",
+      "price": 158,
+      "desc": "Philips TAR1509/00 便攜 FM/AM 收音機，100mW 輸出。旋鈕式音量控制，1.5\" 驅動單元。3.5mm 耳機輸出，3xAAA 電池供電。",
+      "features": [
+        "FM/AM 收音機",
+        "100mW 單聲道",
+        "3.5mm 耳機輸出",
+        "3xAAA 電池",
+        "1.5\" 驅動單元",
+        "旋鈕音量控制"
+      ]
+    },
+    {
+      "id": "philips-tar2509",
+      "name": "Philips TAR2509 FM/AM 便攜收音機 (黑色)",
+      "brand": "Philips",
+      "category": "音響",
+      "price": 368,
+      "desc": "Philips TAR2509 便攜 FM/AM 收音機，300mW 輸出。3\" 驅動單元強勁音效，旋鈕式音量控制。2xD 電池或 AC 電源供電。",
+      "features": [
+        "FM/AM 收音機",
+        "300mW 單聲道",
+        "3\" 驅動單元",
+        "2xD 電池/AC 電源",
+        "3.5mm 耳機輸出",
+        "3-UK Pin 電源線"
+      ]
+    },
+    {
+      "id": "philips-dlm2103",
+      "name": "Philips DLM2103 有線咪高峰 (單支)",
+      "brand": "Philips",
+      "category": "音響",
+      "price": 168,
+      "desc": "Philips DLM2103 有線咪高峰，心形指向金屬網罩。3M 可拆式連接線，附 6.3mm 轉 3.5mm 轉換頭。",
+      "features": [
+        "有線咪高峰",
+        "心形指向",
+        "金屬網罩",
+        "3M 可拆式線",
+        "6.3mm 轉 3.5mm 轉換頭"
+      ]
+    },
+    {
+      "id": "philips-dlm3401tp",
+      "name": "Philips DLM3401TP 無線咪高峰 (雙支)",
+      "brand": "Philips",
+      "category": "音響",
+      "price": 628,
+      "desc": "Philips DLM3401TP 無線咪高峰雙支套裝，2.4GHz 無線連接。可充電接收器，動態咪高峰。人聲靈敏度控制，增強 EQ 設定。全天播放時間。",
+      "features": [
+        "無線 2.4GHz 雙咪",
+        "可充電接收器",
+        "動態咪高峰",
+        "人聲靈敏度控制",
+        "增強 EQ 設定",
+        "兼容 Party 喇叭"
+      ]
+    },
+    {
+      "id": "philips-tam6805",
+      "name": "Philips TAM6805 Micro Music System",
+      "brand": "Philips",
+      "category": "音響",
+      "price": 2088,
+      "desc": "Philips TAM6805 Micro Music System，100W RMS。SMART Radio Spotify 連接，DAB/FM/BT/CD/USB 多功能。",
+      "features": [
+        "100W RMS",
+        "SMART Radio Spotify",
+        "DAB/FM/BT/CD/USB",
+        "高品質音響系統"
+      ]
+    },
+    {
+      "id": "moft-snap-wallet-stand",
+      "name": "MOFT Snap-On iPhone Stand & Wallet MOVAS",
+      "brand": "MOFT",
+      "category": "手機配件",
+      "price": 239,
+      "desc": "MOFT MOVAS Snap-On iPhone 支架銀包。磁吸 MagSafe 兼容，即時變身手機三腳架。2 卡位銀包，支援 NFC。精準角度調節，8\" 抬高鏡頭。94g，9.04mm 超薄。Vegan leather 材質。多色可選。",
+      "features": [
+        "MagSafe 磁吸兼容",
+        "即時手機三腳架",
+        "2 卡銀包支援 NFC",
+        "精準角度調節",
+        "8\" 抬高鏡頭",
+        "Vegan leather",
+        "94g 輕巧",
+        "多色可選"
+      ]
+    },
+    {
+      "id": "moft-snap-tripod-wallet",
+      "name": "MOFT Snap Phone Tripod Stand & Wallet MOVAS",
+      "brand": "MOFT",
+      "category": "手機配件",
+      "price": 349,
+      "desc": "MOFT Snap Phone Tripod Stand & Wallet MOVAS，升級版三腳架支架銀包。MagSafe 兼容，多角度調節。可直立/橫放/懸浮模式。",
+      "features": [
+        "升級三腳架設計",
+        "MagSafe 兼容",
+        "多角度調節",
+        "直立/橫放/懸浮模式",
+        "卡片收納"
+      ]
+    },
+    {
+      "id": "moft-snap-field-wallet",
+      "name": "MOFT Snap Field Wallet 多功能磁吸卡包 MOVAS",
+      "brand": "MOFT",
+      "category": "手機配件",
+      "price": 369,
+      "desc": "MOFT Snap Field Wallet 多功能磁吸卡包，MagSafe 兼容。多卡位設計，可作手機支架使用。Vegan leather 材質。",
+      "features": [
+        "MagSafe 兼容",
+        "多功能卡包",
+        "可作手機支架",
+        "多卡位設計",
+        "Vegan leather"
+      ]
+    },
+    {
+      "id": "moft-adjustable-lanyard",
+      "name": "MOFT Adjustable Long Lanyard 可調節手機掛繩",
+      "brand": "MOFT",
+      "category": "手機配件",
+      "price": 239,
+      "desc": "MOFT 升級版可調節長手機掛繩，多色可選。自由調節長度，可斜揹或掛頸。耐用材質。",
+      "features": [
+        "可調節長度",
+        "斜揹/掛頸兩用",
+        "耐用材質",
+        "多色可選"
+      ]
+    },
+    {
+      "id": "moft-laptop-stand",
+      "name": "MOFT Laptop Stand 隱形電腦支架",
+      "brand": "MOFT",
+      "category": "配件",
+      "price": 199,
+      "desc": "MOFT 隱形電腦支架，3mm 超薄貼於筆電底部。15°/25° 雙角度調節，承重 11lbs。PU+玻璃纖維材質，可重複貼合 200 次。",
+      "features": [
+        "3mm 超薄設計",
+        "15°/25° 雙角度",
+        "承重 11lbs",
+        "PU+玻璃纖維",
+        "重複貼合 200 次",
+        "適用 11.5\"-16\" 筆電"
+      ]
+    },
+    {
+      "id": "moft-sit-stand-desk",
+      "name": "MOFT Sit-stand Laptop Desk 隱形升降桌",
+      "brand": "MOFT",
+      "category": "配件",
+      "price": 469,
+      "desc": "MOFT Sit-stand 隱形升降筆電桌。四段角度調節 15°/25°/45°/60°，三角結構承重 10KG。239x279x12.7mm，960g。",
+      "features": [
+        "四段角度 15°/25°/45°/60°",
+        "三角結構承重 10KG",
+        "隱形設計",
+        "攜帶方便"
+      ]
+    },
+    {
+      "id": "moft-laptop-sleeve-13",
+      "name": "MOFT Laptop Carry Sleeve 13.3\" 筆電保護套連支架",
+      "brand": "MOFT",
+      "category": "配件",
+      "price": 479,
+      "desc": "MOFT Carry Sleeve for 13.3\" Macbook Air/14\" 筆電。保護套+支架二合一，15°/25° 雙角度。400x277x7mm，410g。多色可選。",
+      "features": [
+        "13.3\"/14\" 筆電適用",
+        "保護套+支架二合一",
+        "15°/25° 雙角度",
+        "410g 輕量",
+        "PU+玻璃纖維+磁鐵"
+      ]
+    },
+    {
+      "id": "moft-laptop-sleeve-16",
+      "name": "MOFT Laptop Carry Sleeve 15-16\" 筆電保護套連支架",
+      "brand": "MOFT",
+      "category": "配件",
+      "price": 549,
+      "desc": "MOFT Carry Sleeve for 15\"-16\" 大尺寸筆電。保護套+支架二合一設計。多色可選。",
+      "features": [
+        "15\"-16\" 大尺寸",
+        "保護套+支架二合一",
+        "多色可選",
+        "優質材質"
+      ]
+    },
+    {
+      "id": "moft-folio-ipad-mini",
+      "name": "MOFT Dynamic Folio 漂浮支架 for iPad Mini 6/7",
+      "brand": "MOFT",
+      "category": "配件",
+      "price": 390,
+      "desc": "MOFT Dynamic Folio 靈動漂浮支架 for iPad Mini 6/7。20+ 可調角度，MOVAS 耐用材質。模塊化筆槽，前後保護，自動睡眠/喚醒。",
+      "features": [
+        "20+ 可調角度",
+        "MOVAS 耐用材質",
+        "模塊化筆槽",
+        "前後保護",
+        "自動睡眠/喚醒",
+        "Vegan leather"
+      ]
+    },
+    {
+      "id": "moft-folio-ipad-11",
+      "name": "MOFT Dynamic Folio 漂浮支架 for iPad Pro/Air 11\"",
+      "brand": "MOFT",
+      "category": "配件",
+      "price": 470,
+      "desc": "MOFT Dynamic Folio 靈動漂浮支架 for iPad Pro 11\" (1-4th Gen) / iPad Air 4-5th。20+ 可調角度，模塊化筆槽，前後保護。",
+      "features": [
+        "20+ 可調角度",
+        "模塊化筆槽",
+        "前後保護",
+        "自動睡眠/喚醒",
+        "兼容多代 iPad 11\""
+      ]
+    },
+    {
+      "id": "moft-folio-ipad-13",
+      "name": "MOFT Dynamic Folio 漂浮支架 for iPad Pro/Air 13\"",
+      "brand": "MOFT",
+      "category": "配件",
+      "price": 539,
+      "desc": "MOFT Dynamic Folio 靈動漂浮支架 for iPad Pro 13\" (M4/M5) / iPad Air 13\" (M2/M3)。20+ 可調角度，模塊化筆槽。",
+      "features": [
+        "20+ 可調角度",
+        "模塊化筆槽",
+        "前後保護",
+        "自動睡眠/喚醒",
+        "適用 iPad Pro/Air 13\""
+      ]
+    },
+    {
+      "id": "moft-folio-ipad-10",
+      "name": "MOFT Dynamic Folio 漂浮支架 for iPad 10/11 (A16)",
+      "brand": "MOFT",
+      "category": "配件",
+      "price": 389,
+      "desc": "MOFT Dynamic Folio 靈動漂浮支架 for iPad 10, iPad 11 (A16)。20+ 可調角度設計。",
+      "features": [
+        "20+ 可調角度",
+        "iPad 10/11 適用",
+        "MOVAS 材質",
+        "前後保護"
+      ]
+    },
+    {
+      "id": "moft-folio-ipad-pro-m4",
+      "name": "MOFT Dynamic Folio 漂浮支架 for iPad Pro 11\" (M4)",
+      "brand": "MOFT",
+      "category": "配件",
+      "price": 389,
+      "desc": "MOFT Dynamic Folio 靈動漂浮支架 for iPad Pro 11\" (M4/M5)。20+ 可調角度，模塊化筆槽。",
+      "features": [
+        "20+ 可調角度",
+        "iPad Pro 11\" M4/M5",
+        "模塊化筆槽",
+        "前後保護"
+      ]
+    },
+    {
+      "id": "moft-folio-old-mini",
+      "name": "MOFT Dynamic Folio 漂浮支架 for iPad Mini 6-7 (舊版)",
+      "brand": "MOFT",
+      "category": "配件",
+      "price": 299,
+      "desc": "MOFT Dynamic Folio 靈動漂浮支架 for iPad Mini 6-7（標準版）。多色可選：Cement/Jet Black/Navy Blue/Beach White。",
+      "features": [
+        "iPad Mini 6-7 適用",
+        "多色可選",
+        "前後保護",
+        "自動睡眠/喚醒"
+      ]
+    },
+    {
+      "id": "moft-folio-ipad-11-old",
+      "name": "MOFT Dynamic Folio 漂浮支架 iPad Pro 11\" (1-4th Gen)",
+      "brand": "MOFT",
+      "category": "配件",
+      "price": 389,
+      "desc": "MOFT Dynamic Folio 靈動漂浮支架 iPad Pro 11\" (1-4th Gen)/iPad Air (4-5th)/iPad Air 11\" (M2/M3)。多色可選。",
+      "features": [
+        "兼容多代 iPad 11\"",
+        "多色可選",
+        "20+ 可調角度",
+        "模塊化筆槽"
+      ]
+    },
+    {
+      "id": "moft-float-folio-pro11",
+      "name": "MOFT FLOAT FOLIO CASE for iPad Pro 11\" (M4/M5)",
+      "brand": "MOFT",
+      "category": "配件",
+      "price": 479,
+      "desc": "MOFT FLOAT FOLIO CASE for iPad Pro 11\" (M4/M5)。超薄設計，保護四角及 Apple Pencil。輕量便攜，可調節高度。",
+      "features": [
+        "iPad Pro 11\" M4/M5",
+        "四角保護 + Apple Pencil",
+        "超薄設計",
+        "可調節高度"
+      ]
+    },
+    {
+      "id": "moft-pen-holder",
+      "name": "MOFT Modular Pen Holder 模塊化筆槽",
+      "brand": "MOFT",
+      "category": "配件",
+      "price": 99,
+      "desc": "MOFT Modular Pen Holder 模塊化筆槽配件，Black/White 兩色可選。配合 Dynamic Folio 使用。",
+      "features": [
+        "配合 Dynamic Folio 使用",
+        "黑/白兩色",
+        "磁吸安裝"
+      ]
+    },
+    {
+      "id": "ringke-flip8-fusion",
+      "name": "Ringke Fusion Flap Magnetic Samsung Z Flip 8 保護殼 (透明)",
+      "brand": "Ringke",
+      "category": "手機配件",
+      "price": 238,
+      "desc": "Ringke Fusion Flap Magnetic Samsung Galaxy Z Flip 8 保護殼，透明設計磁吸款。精準開孔，防摔保護。",
+      "features": [
+        "Samsung Z Flip 8 專用",
+        "透明設計",
+        "磁吸 Flap",
+        "防摔保護",
+        "精準開孔"
+      ]
+    },
+    {
+      "id": "ringke-flip8-onyx",
+      "name": "Ringke Onyx Flap Magnetic Samsung Z Flip 8 保護殼 (黑色)",
+      "brand": "Ringke",
+      "category": "手機配件",
+      "price": 238,
+      "desc": "Ringke Onyx Flap Magnetic Samsung Galaxy Z Flip 8 保護殼，黑色磨砂磁吸款。精準開孔，防摔保護。",
+      "features": [
+        "Samsung Z Flip 8 專用",
+        "黑色磨砂",
+        "磁吸 Flap",
+        "防摔保護"
+      ]
+    },
+    {
+      "id": "ringke-fold8-fusion",
+      "name": "Ringke Fusion Flap Magnetic Samsung Z Fold 8 Ultra 保護殼 (透明)",
+      "brand": "Ringke",
+      "category": "手機配件",
+      "price": 258,
+      "desc": "Ringke Fusion Flap Magnetic Samsung Galaxy Z Fold 8 Ultra 保護殼，透明磁吸款。",
+      "features": [
+        "Samsung Z Fold 8 Ultra",
+        "透明磁吸",
+        "Flap 設計",
+        "精準開孔"
+      ]
+    },
+    {
+      "id": "ringke-fold8-onyx",
+      "name": "Ringke Onyx Flap Magnetic Samsung Z Fold 8 Ultra 保護殼 (黑色)",
+      "brand": "Ringke",
+      "category": "手機配件",
+      "price": 258,
+      "desc": "Ringke Onyx Flap Magnetic Samsung Galaxy Z Fold 8 Ultra 保護殼，黑色磨砂磁吸款。",
+      "features": [
+        "Samsung Z Fold 8 Ultra",
+        "黑色磨砂磁吸",
+        "Flap 設計"
+      ]
+    },
+    {
+      "id": "ringke-fold8w-fusion",
+      "name": "Ringke Fusion Flap Magnetic Samsung Z Fold 8 Wide 保護殼 (透明)",
+      "brand": "Ringke",
+      "category": "手機配件",
+      "price": 258,
+      "desc": "Ringke Fusion Flap Magnetic Samsung Galaxy Z Fold 8 Wide 保護殼，透明磁吸款。",
+      "features": [
+        "Samsung Z Fold 8 Wide",
+        "透明磁吸",
+        "Flap 設計"
+      ]
+    },
+    {
+      "id": "ringke-fold8w-onyx",
+      "name": "Ringke Onyx Flap Magnetic Samsung Z Fold 8 Wide 保護殼 (黑色)",
+      "brand": "Ringke",
+      "category": "手機配件",
+      "price": 258,
+      "desc": "Ringke Onyx Flap Magnetic Samsung Galaxy Z Fold 8 Wide 保護殼，黑色磨砂磁吸款。",
+      "features": [
+        "Samsung Z Fold 8 Wide",
+        "黑色磨砂磁吸",
+        "Flap 設計"
+      ]
     }
   ]
 }
