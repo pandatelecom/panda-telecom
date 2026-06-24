@@ -8,7 +8,7 @@
 :root{--bg:#0d0d0d;--card:#1a1a1a;--text:#e5e5e5;--muted:#888;--border:#2a2a2a;--accent:#111;--green:#22c55e;--radius:12px;--shadow:0 2px 16px rgba(0,0,0,.3)}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans TC","Microsoft JhengHei",sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans TC","Microsoft JhengHei",sans-serif;background:var(--bg);color:var(--text);min-height:100vh;scroll-padding-top:140px}
 
 /* ── Header ── */
 .header{background:#111;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
@@ -165,7 +165,7 @@ function renderProducts(){
     const msg = encodeURIComponent(`你好，我想查詢產品：${p.name}（HKD $${p.price}）`);
     const pimg = imgMap[p.id] || '';
     return `<div class="product-card">
-      ${pimg ? `<img src="${pimg}" alt="${p.name}" style="width:100%;height:200px;object-fit:contain;padding:12px;background:#222;border-bottom:1px solid var(--border);display:block" onerror="this.style.display='none'">` : `<div style="height:200px;background:#222;display:flex;align-items:center;justify-content:center;font-size:48px">${emoji}</div>`}
+      ${pimg ? `<img src="${pimg}" alt="${p.name}" style="width:100%;height:200px;object-fit:contain;padding:16px;background:#2a2a2a;border-bottom:1px solid var(--border);display:block;border-radius:12px 12px 0 0" onerror="this.style.display='none'">` : `<div style="height:200px;background:#222;display:flex;align-items:center;justify-content:center;font-size:48px">${emoji}</div>`}
       <div class="p-body">
         <div class="p-cat">${emoji} ${p.category || '其他'}</div>
         <div class="p-brand">${p.brand || ''}</div>

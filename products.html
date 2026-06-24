@@ -8,7 +8,7 @@
 :root{--bg:#0d0d0d;--card:#1a1a1a;--text:#e5e5e5;--muted:#888;--border:#2a2a2a;--accent:#111;--gold:#d4a02b;--green:#22c55e;--radius:12px;--shadow:0 2px 16px rgba(0,0,0,.3)}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans TC","Microsoft JhengHei",sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans TC","Microsoft JhengHei",sans-serif;background:var(--bg);color:var(--text);min-height:100vh;scroll-padding-top:140px}
 
 /* ── Header ── */
 .header{background:#111;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
@@ -284,9 +284,9 @@ function renderProducts() {
     const brandColor = isNiuwang ? 'var(--gold)' : 'var(--green)';
     
     return `<div class="product-card">
-      <div style="height:200px;background:#222;display:flex;align-items:center;justify-content:center;overflow:hidden;border-bottom:1px solid var(--border);position:relative">
+      <div style="height:200px;background:#2a2a2a;display:flex;align-items:center;justify-content:center;overflow:hidden;border-bottom:1px solid var(--border);position:relative;border-radius:12px 12px 0 0">
         <div style="position:absolute;top:8px;left:8px;font-size:10px;font-weight:700;padding:3px 8px;border-radius:4px;background:${brandColor};color:#fff;z-index:2">${brandLabel}</div>
-        ${imgSrc ? `<img src="${imgSrc}" alt="${p.name}" style="max-width:100%;max-height:100%;object-fit:contain" onerror="this.style.display='none';this.parentNode.innerHTML+='<span style=font-size:48px>${emoji}</span>'">` : `<span style="font-size:48px">${emoji}</span>`}
+        ${imgSrc ? `<img src="${imgSrc}" alt="${p.name}" style="max-width:90%;max-height:90%;object-fit:contain;filter:drop-shadow(0 2px 4px rgba(0,0,0,.3))" onerror="this.style.display='none';this.parentNode.innerHTML+='<span style=font-size:48px>${emoji}</span>'">` : `<span style="font-size:48px">${emoji}</span>`}
       </div>
       <div class="p-body">
         <div class="p-cat" style="color:${brandColor}">${emoji} ${p.category || '其他'}</div>
