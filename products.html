@@ -25,15 +25,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans T
 .hero h2{font-size:28px;font-weight:800;margin-bottom:6px}
 .hero p{color:var(--muted);font-size:14px;max-width:600px;margin:0 auto 16px;line-height:1.7}
 
-/* ── Brand Tabs ── */
-.brand-tabs{display:flex;gap:8px;justify-content:center;margin:0 auto 16px;flex-wrap:wrap}
-.brand-tab{padding:8px 24px;border-radius:20px;border:2px solid var(--border);background:transparent;color:var(--muted);font-size:14px;font-weight:600;cursor:pointer;transition:all .2s;font-family:inherit}
-.brand-tab:hover{border-color:#555;color:#fff}
-.brand-tab.active{color:#fff}
-.brand-tab.active[data-brand="sigma"]{background:var(--green);border-color:var(--green)}
-.brand-tab.active[data-brand="niuwang"]{background:var(--gold);border-color:var(--gold)}
-.brand-tab.active[data-brand="all"]{background:#555;border-color:#555}
-
 /* ── Controls ── */
 .controls{position:sticky;top:60px;z-index:90;background:var(--bg);padding:8px 24px 8px;border-bottom:1px solid var(--border)}
 .controls-inner{max-width:1200px;margin:0 auto}
@@ -46,7 +37,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans T
 .cat-tabs::after{content:'';position:sticky;right:0;width:40px;flex-shrink:0;background:linear-gradient(90deg,transparent,var(--bg));pointer-events:none}
 .cat-tab{padding:4px 10px;border-radius:14px;border:1px solid var(--border);background:transparent;color:var(--muted);font-size:11px;cursor:pointer;transition:all .2s;font-family:inherit;white-space:nowrap;flex-shrink:0}
 .cat-tab:hover{border-color:#555;color:#fff}
-.cat-tab.active{background:var(--green);border-color:var(--green);color:#fff;font-weight:600}
+.cat-tab.active{background:var(--gold);border-color:var(--gold);color:#fff;font-weight:600}
 
 /* ── Product Grid ── */
 .products{max-width:1200px;margin:0 auto;padding:24px;display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:16px}
@@ -63,13 +54,10 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans T
 .p-price{font-size:20px;font-weight:800;color:#fff}
 .p-price small{font-size:12px;font-weight:400;color:var(--muted)}
 .p-btn{color:#fff;border:none;padding:10px 18px;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none;font-family:inherit;transition:all .2s;display:inline-flex;align-items:center;gap:6px}
-.p-btn.sigma{background:var(--green)}
-.p-btn.sigma:hover{background:#16a34a;transform:scale(1.02)}
 .p-btn.niuwang{background:var(--gold)}
 .p-btn.niuwang:hover{background:#b8922a;transform:scale(1.02)}
 
 .count{text-align:center;padding:8px 24px 0;font-size:13px;color:var(--muted)}
-
 .back-link{display:inline-flex;align-items:center;gap:6px;color:var(--muted);text-decoration:none;font-size:14px;margin-bottom:16px;transition:color .2s}
 .back-link:hover{color:#fff}
 
@@ -78,7 +66,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans T
   .hero h2{font-size:22px}
   .products{grid-template-columns:1fr;padding:16px}
   .controls{padding:10px 16px 12px}
-  .brand-tab{padding:6px 16px;font-size:13px}
 }
 </style>
 </head>
@@ -97,12 +84,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans T
 <div class="hero">
   <a href="https://pandatelecom.github.io/" class="back-link">← 返回主頁</a>
   <h2>🛒 熊貓商城 Panda Mall</h2>
-  <p>SIGMA × 牛魔王 — 全線產品，批發零售價，歡迎查詢訂購</p>
-  <div class="brand-tabs" id="brandTabs">
-    <button class="brand-tab active" data-brand="all" onclick="setBrand('all')">✨ 全部</button>
-    <button class="brand-tab" data-brand="sigma" onclick="setBrand('sigma')">🟢 SIGMA</button>
-    <button class="brand-tab" data-brand="niuwang" onclick="setBrand('niuwang')">⚡ 牛魔王</button>
-  </div>
+  <p>牛魔王 — 全線產品，批發零售價，歡迎查詢訂購</p>
 </div>
 
 <!-- ═══ CONTROLS ═══ -->
@@ -117,16 +99,11 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans T
 <div class="products" id="products"></div>
 
 <script>
-/* ── SIGMA Image Map ── */
-const sigmaImgMap = {};
-
 /* ── Data ── */
-let sigmaProducts = [];
-let niuwangProducts = [];
-let currentBrand = 'all';
+let products = [];
 let currentCat = 'all';
 
-/* ── Category config: label, emoji, subcategory keywords ── */
+/* ── Category config ── */
 const catConfig = [
   { id:'充電器', label:'充電器', emoji:'🔌', match:['充電器','火牛','充電頭'] },
   { id:'充電寶', label:'充電寶', emoji:'🔋', match:['充電寶','電源','power'] },
@@ -168,12 +145,6 @@ function matchCategory(prodCat) {
   return '其他';
 }
 
-function getBrand(p) {
-  const b = (p.brand||'').toLowerCase();
-  if(b.includes('牛魔王')||b.includes('2themax')) return 'niuwang';
-  return 'sigma';
-}
-
 function getCatEmoji(catId) {
   for(const c of catConfig) {
     if(c.id === catId) return c.emoji;
@@ -182,43 +153,21 @@ function getCatEmoji(catId) {
 }
 
 /* ── Init ── */
-Promise.all([
-  fetch('sigma_products.json').then(r => r.json()),
-  fetch('niuwang_products.json').then(r => r.json())
-]).then(([sigma, niuwang]) => {
-  // Tag products with their brand
-  sigma.products.forEach(p => p._brand = 'sigma');
-  niuwang.products.forEach(p => p._brand = 'niuwang');
-  sigmaProducts = sigma.products;
-  niuwangProducts = niuwang.products;
-  renderCatTabs();
-  // Check URL param for brand selection
-  const urlParams = new URLSearchParams(window.location.search);
-  const brandParam = urlParams.get('brand');
-  if(brandParam === 'sigma' || brandParam === 'niuwang') {
-    setBrand(brandParam);
-  }
-  renderProducts();
-}).catch(() => {
-  document.getElementById('products').innerHTML = '<p style="text-align:center;color:var(--muted);padding:40px">⚠️ 產品資料載入失敗，請稍後再試</p>';
-});
-
-/* ── Brand Filter ── */
-function setBrand(brand) {
-  currentBrand = brand;
-  currentCat = 'all';
-  document.querySelectorAll('.brand-tab').forEach(t => t.classList.toggle('active', t.dataset.brand === brand));
-  renderCatTabs();
-  document.getElementById('search').value = '';
-  renderProducts();
-}
+fetch('niuwang_products.json')
+  .then(r => r.json())
+  .then(data => {
+    products = data.products;
+    renderCatTabs();
+    renderProducts();
+  })
+  .catch(() => {
+    document.getElementById('products').innerHTML = '<p style="text-align:center;color:var(--muted);padding:40px">⚠️ 產品資料載入失敗，請稍後再試</p>';
+  });
 
 /* ── Category Tabs ── */
 function renderCatTabs() {
-  const allProds = getFilteredProducts(true);
   const cats = new Set();
-  allProds.forEach(p => cats.add(matchCategory(p.category)));
-  
+  products.forEach(p => cats.add(matchCategory(p.category)));
   const ordered = catConfig.filter(c => cats.has(c.id) || c.id === '其他');
   const container = document.getElementById('catTabs');
   container.innerHTML = `<button class="cat-tab active" data-cat="all" onclick="setCategory('all')">全部</button>` +
@@ -236,69 +185,46 @@ function setCategory(cat) {
 
 function filterProducts() { renderProducts(); }
 
-function getFilteredProducts(ignoreCat) {
-  let pool;
-  if(currentBrand === 'sigma') pool = sigmaProducts;
-  else if(currentBrand === 'niuwang') pool = niuwangProducts;
-  else pool = [...sigmaProducts, ...niuwangProducts];
-  
-  if(ignoreCat) return pool;
-  
+/* ── Render ── */
+function renderProducts() {
   const q = (document.getElementById('search').value || '').toLowerCase().trim();
   const targetCat = currentCat;
-  
-  return pool.filter(p => {
-    // Category filter
+
+  let filtered = products.filter(p => {
     if(targetCat !== 'all') {
       const matched = matchCategory(p.category);
       if(matched !== targetCat) return false;
     }
-    // Search
     if(q) {
       const haystack = (p.name + ' ' + p.brand + ' ' + (p.desc||'') + ' ' + (p.category||'') + ' ' + p.id).toLowerCase();
       return haystack.includes(q);
     }
     return true;
   });
-}
 
-/* ── Render ── */
-function renderProducts() {
-  const filtered = getFilteredProducts(false);
   document.getElementById('count').textContent = `共 ${filtered.length} 件產品`;
-  
+
   const grid = document.getElementById('products');
   grid.innerHTML = filtered.map(p => {
-    const isNiuwang = p._brand === 'niuwang';
     const catId = matchCategory(p.category);
     const emoji = getCatEmoji(catId);
     const msg = encodeURIComponent(`你好，我想查詢產品：${p.name}（HKD $${p.price}）`);
-    
-    // Image source
-    let imgSrc = '';
-    if(isNiuwang) {
-      imgSrc = 'assets/niuwang/' + encodeURIComponent(p.id) + '.png';
-    } else {
-      imgSrc = sigmaImgMap[p.id] || '';
-    }
-    
-    const brandLabel = isNiuwang ? '⚡ 牛魔王' : 'SIGMA';
-    const brandColor = isNiuwang ? 'var(--gold)' : 'var(--green)';
-    
+    const imgSrc = 'assets/niuwang/' + encodeURIComponent(p.id) + '.png';
+
     return `<div class="product-card">
       <div style="height:220px;background:#333;display:flex;align-items:center;justify-content:center;overflow:hidden;border-bottom:1px solid var(--border);position:relative;border-radius:12px 12px 0 0">
-        <div style="position:absolute;top:8px;left:8px;font-size:10px;font-weight:700;padding:3px 8px;border-radius:4px;background:${brandColor};color:#fff;z-index:2">${brandLabel}</div>
-        ${imgSrc ? `<img src="${imgSrc}" alt="${p.name}" style="max-width:90%;max-height:90%;object-fit:contain;filter:drop-shadow(0 2px 4px rgba(0,0,0,.3))" onerror="this.style.display='none';this.parentNode.innerHTML+='<span style=font-size:48px>${emoji}</span>'">` : `<span style="font-size:48px">${emoji}</span>`}
+        <div style="position:absolute;top:8px;left:8px;font-size:10px;font-weight:700;padding:3px 8px;border-radius:4px;background:var(--gold);color:#fff;z-index:2">⚡ 牛魔王</div>
+        <img src="${imgSrc}" alt="${p.name}" style="max-width:90%;max-height:90%;object-fit:contain;filter:drop-shadow(0 2px 4px rgba(0,0,0,.3))" onerror="this.style.display='none';this.parentNode.innerHTML+='<span style=font-size:48px>${emoji}</span>'">
       </div>
       <div class="p-body">
-        <div class="p-cat" style="color:${brandColor}">${emoji} ${p.category || '其他'}</div>
+        <div class="p-cat" style="color:var(--gold)">${emoji} ${p.category || '其他'}</div>
         <div class="p-brand">${p.brand || ''} · ${p.id.toUpperCase()}</div>
         <div class="p-name">${p.name}</div>
         <div class="p-desc">${p.desc || ''}</div>
         ${p.features && p.features.length ? `<ul class="p-features">${p.features.slice(0,4).map(f => `<li>${f}</li>`).join('')}</ul>` : ''}
         <div class="p-foot">
           <div class="p-price">$${p.price}<small> SRP</small></div>
-          <a href="https://wa.me/85268557181?text=${msg}" class="p-btn ${isNiuwang ? 'niuwang' : 'sigma'}" target="_blank" rel="noopener">
+          <a href="https://wa.me/85268557181?text=${msg}" class="p-btn niuwang" target="_blank" rel="noopener">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             查詢
           </a>
@@ -310,4 +236,3 @@ function renderProducts() {
 </script>
 </body>
 </html>
-
