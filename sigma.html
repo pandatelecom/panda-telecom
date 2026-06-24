@@ -34,6 +34,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans T
 .search-wrap input::placeholder{color:var(--muted)}
 .cat-tabs{display:flex;gap:6px;overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px;scrollbar-width:none;-ms-overflow-style:none}
 .cat-tabs::-webkit-scrollbar{display:none}
+.cat-tabs::after{content:'';position:sticky;right:0;width:40px;flex-shrink:0;background:linear-gradient(90deg,transparent,var(--bg));pointer-events:none}
 .cat-tab{padding:4px 10px;border-radius:14px;border:1px solid var(--border);background:transparent;color:var(--muted);font-size:11px;cursor:pointer;transition:all .2s;font-family:inherit;white-space:nowrap;flex-shrink:0}
 .cat-tab:hover{border-color:#555;color:#fff}
 .cat-tab.active{background:var(--green);border-color:var(--green);color:#fff;font-weight:600}
