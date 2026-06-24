@@ -183,7 +183,7 @@ function getCatEmoji(catId) {
 Promise.all([
   fetch('sigma_products.json').then(r => r.json()),
   fetch('niuwang_products.json').then(r => r.json())
-}).then(([sigma, niuwang]) => {
+]).then(([sigma, niuwang]) => {
   // Tag products with their brand
   sigma.products.forEach(p => p._brand = 'sigma');
   niuwang.products.forEach(p => p._brand = 'niuwang');
@@ -308,3 +308,4 @@ function renderProducts() {
 </script>
 </body>
 </html>
+
