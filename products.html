@@ -192,11 +192,12 @@ function renderProducts() {
     const catId = matchCategory(p.category);
     const emoji = getCatEmoji(catId);
     const msg = encodeURIComponent(`你好，我想查詢產品：${p.name}（HKD $${p.price}）`);
+    const imgSrc = 'images/prod/' + p.id + '.png';
     return `<div class="product-card">
-      <div style="height:220px;background:#333;display:flex;align-items:center;justify-content:center;overflow:hidden;border-bottom:1px solid var(--border);position:relative;border-radius:12px 12px 0 0">
+      <div style="height:220px;background:#1a1a1a;display:flex;align-items:center;justify-content:center;overflow:hidden;border-bottom:1px solid var(--border);position:relative;border-radius:12px 12px 0 0">
         <div style="position:absolute;top:8px;left:8px;font-size:10px;font-weight:700;padding:3px 8px;border-radius:4px;background:var(--green);color:#fff;z-index:2">${brand}</div>
-        <span style="font-size:48px">${emoji}</span>
-      </div>
+        <img src="${imgSrc}" alt="${p.name}" style="max-width:90%;max-height:90%;object-fit:contain;filter:drop-shadow(0 2px 8px rgba(0,0,0,.5))" onerror="this.style.display='none';this.parentElement.innerHTML='<div style=\\'font-size:48px;color:#555;display:flex;align-items:center;justify-content:center;width:100%%;height:100%%\\'>${emoji}</div>'">
+      </div>`
       <div class="p-body">
         <div class="p-cat" style="color:var(--green)">${emoji} ${p.category || '其他'}</div>
         <div class="p-brand">${brand} · ${p.id.toUpperCase()}</div>
