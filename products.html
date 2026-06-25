@@ -32,6 +32,11 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans T
 .cat-tab{padding:4px 10px;border-radius:14px;border:1px solid var(--border);background:transparent;color:var(--muted);font-size:11px;cursor:pointer;transition:all .2s;font-family:inherit;white-space:nowrap;flex-shrink:0}
 .cat-tab:hover{border-color:#555;color:#fff}
 .cat-tab.active{background:var(--green);border-color:var(--green);color:#fff;font-weight:600}
+.brand-tabs{display:flex;gap:4px;overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px;margin-top:4px;scrollbar-width:none;-ms-overflow-style:none}
+.brand-tabs::-webkit-scrollbar{display:none}
+.brand-tab{padding:3px 9px;border-radius:12px;border:1px solid var(--border);background:transparent;color:var(--muted);font-size:10px;cursor:pointer;transition:all .2s;font-family:inherit;white-space:nowrap;flex-shrink:0}
+.brand-tab:hover{border-color:var(--gold);color:var(--gold)}
+.brand-tab.active{background:var(--gold);border-color:var(--gold);color:#fff;font-weight:600}
 .products{max-width:1200px;margin:0 auto;padding:24px;display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:16px}
 .product-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:transform .2s,border-color .2s;display:flex;flex-direction:column}
 .product-card:hover{transform:translateY(-2px);border-color:#444}
@@ -79,6 +84,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans T
     <input type="text" id="search" placeholder="🔍 搜尋產品名稱、型號或品牌..." oninput="filterProducts()">
   </div>
   <div class="cat-tabs" id="catTabs"></div>
+  <div class="brand-tabs" id="brandTabs"></div>
 </div></div>
 <div class="count" id="count"></div>
 <div class="products" id="products"></div>
@@ -86,6 +92,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans T
 /* ── Data ── */
 let sigmaProducts = [];
 let currentCat = 'all';
+let currentBrand = 'all';
 
 const catConfig = [
   { id:'充電器', label:'充電器', emoji:'🔌', match:['充電器','火牛','充電頭'] },
@@ -133,6 +140,52 @@ function getCatEmoji(catId) {
   }
   return '📦';
 }
+const brandConfig = [
+  { id:'牛魔王', emoji:'🐂' },
+  { id:'Philips', emoji:'💡' },
+  { id:'Sincos', emoji:'🤖' },
+  { id:'JBL', emoji:'🔊' },
+  { id:'MOFT', emoji:'📐' },
+  { id:'SAVEWO', emoji:'🔌' },
+  { id:'Sanrio', emoji:'🎀' },
+  { id:'ARGO', emoji:'⚡' },
+  { id:'Clue Box', emoji:'📦' },
+  { id:'Ismartdigi', emoji:'🔋' },
+  { id:'BOYA', emoji:'🎤' },
+  { id:'TP-Link', emoji:'🌐' },
+  { id:'Creative', emoji:'🎵' },
+  { id:'SMARTCOBY', emoji:'📱' },
+  { id:'Huawei', emoji:'📶' },
+  { id:'Miffy', emoji:'🐰' },
+  { id:'Ringke', emoji:'📱' },
+  { id:'GaN', emoji:'⚡' },
+  { id:'AMG', emoji:'🔊' },
+  { id:'Airmars', emoji:'🎧' },
+  { id:'Airbot', emoji:'🤖' },
+  { id:'Nokia', emoji:'📱' },
+  { id:'Sony', emoji:'🎧' },
+  { id:'10Denki', emoji:'🔋' },
+];
+function getBrandEmoji(brandId) {
+  for(const b of brandConfig) if(b.id === brandId) return b.emoji;
+  return '🏷️';
+}
+function renderBrandTabs() {
+  const allProds = getFilteredProducts(true);
+  const brands = new Set();
+  allProds.forEach(p => { if(p.brand) brands.add(p.brand); });
+  const ordered = brandConfig.filter(b => brands.has(b.id));
+  const others = [...brands].filter(b => !brandConfig.some(c => c.id === b));
+  const container = document.getElementById('brandTabs');
+  container.innerHTML = `<button class="brand-tab active" data-brand="all" onclick="setBrand('all')">🏷️ 全部品牌</button>` +
+    ordered.map(b => `<button class="brand-tab" data-brand="${b.id}" onclick="setBrand('${b.id}')">${b.emoji} ${b.id}</button>`).join('') +
+    (others.length ? `<button class="brand-tab" data-brand="__other__" onclick="setBrand('__other__')">🏷️ 其他</button>` : '');
+}
+function setBrand(brand) {
+  currentBrand = brand;
+  document.querySelectorAll('.brand-tab').forEach(t => t.classList.toggle('active', t.dataset.brand === brand));
+  renderProducts();
+}
 
 /* ── Init (load data from external files) ── */
 Promise.all([
@@ -142,6 +195,7 @@ Promise.all([
   .then(([sigma, niuwang]) => {
     sigmaProducts = (sigma.products || sigma).concat(niuwang.products || niuwang);
     renderCatTabs();
+    renderBrandTabs();
     renderProducts();
   })
   .catch(err => {
@@ -174,10 +228,18 @@ function getFilteredProducts(ignoreCat) {
   if(ignoreCat) return pool;
   const q = (document.getElementById('search').value || '').toLowerCase().trim();
   const targetCat = currentCat;
+  const targetBrand = currentBrand;
   return pool.filter(p => {
     if(targetCat !== 'all') {
       const matched = matchCategory(p.category);
       if(matched !== targetCat) return false;
+    }
+    if(targetBrand !== 'all') {
+      if(targetBrand === '__other__') {
+        if(brandConfig.some(c => c.id === p.brand)) return false;
+      } else {
+        if(p.brand !== targetBrand) return false;
+      }
     }
     if(q) {
       const haystack = (p.name + ' ' + p.brand + ' ' + (p.desc||'') + ' ' + (p.category||'') + ' ' + p.id).toLowerCase();
