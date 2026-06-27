@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>熊貓商城 Panda Mall — 熊貓電訊 Panda Telecom</title>
 <style>
-:root{--bg:#0d0d0d;--card:#1a1a1a;--text:#e5e5e5;--muted:#888;--border:#2a2a2a;--accent:#111;--gold:#d4a02b;--green:#22c55e;--radius:12px;--shadow:0 2px 16px rgba(0,0,0,.3)}
+:root{--bg:#0d0d0d;--card:#1a1a1a;--text:#e5e5e5;--muted:#888;--border:#2a2a2a;--gold:#d4a02b;--green:#22c55e;--red:#ef4444;--radius:12px;--shadow:0 2px 16px rgba(0,0,0,.3)}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans TC","Microsoft JhengHei",sans-serif;background:var(--bg);color:var(--text);min-height:100vh;scroll-padding-top:120px}
@@ -15,8 +15,86 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans T
 .logo-img{width:40px;height:40px;border-radius:50%;object-fit:cover}
 .logo h1{font-size:16px;font-weight:700}
 .logo p{font-size:10px;color:#888}
+.hdr-actions{display:flex;align-items:center;gap:10px}
 .hdr-cta{background:#fff;color:#111;border:none;padding:8px 18px;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none;font-family:inherit;transition:transform .15s}
 .hdr-cta:hover{transform:scale(1.03)}
+/* ── Cart Button ── */
+.cart-btn{position:relative;background:var(--card);border:1px solid var(--border);width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .2s;color:var(--text);font-size:18px}
+.cart-btn:hover{border-color:var(--green);color:var(--green)}
+.cart-badge{position:absolute;top:-4px;right:-4px;background:var(--green);color:#fff;font-size:10px;font-weight:700;width:18px;height:18px;border-radius:50%;display:none;align-items:center;justify-content:center}
+.cart-badge.show{display:flex}
+/* ── Cart Sidebar ── */
+.cart-overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:2000;opacity:0;visibility:hidden;transition:all .3s}
+.cart-overlay.active{opacity:1;visibility:visible}
+.cart-sidebar{position:fixed;top:0;right:0;bottom:0;width:440px;max-width:90vw;background:var(--card);border-left:1px solid var(--border);z-index:2001;transform:translateX(100%);transition:all .3s;display:flex;flex-direction:column}
+.cart-sidebar.active{transform:translateX(0)}
+.cart-sidebar .cart-hdr{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;border-bottom:1px solid var(--border)}
+.cart-sidebar .cart-hdr h3{font-size:16px;font-weight:700}
+.cart-close{background:none;border:none;color:var(--muted);font-size:24px;cursor:pointer;padding:4px;transition:color .2s}
+.cart-close:hover{color:#fff}
+.cart-items{flex:1;overflow-y:auto;padding:12px 24px}
+.cart-empty{text-align:center;padding:60px 0;color:var(--muted);font-size:14px}
+.cart-item{display:flex;gap:12px;padding:14px 0;border-bottom:1px solid var(--border);align-items:center}
+.cart-item-emoji{font-size:28px;width:44px;text-align:center;flex-shrink:0}
+.cart-item-info{flex:1;min-width:0}
+.cart-item-name{font-size:14px;font-weight:600;margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cart-item-price{font-size:13px;color:var(--gold);margin-bottom:4px}
+.cart-item-qty{display:flex;align-items:center;gap:8px}
+.qty-btn{width:26px;height:26px;border-radius:50%;border:1px solid var(--border);background:transparent;color:var(--text);font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s}
+.qty-btn:hover{background:var(--green);border-color:var(--green)}
+.qty-num{font-size:14px;font-weight:600;min-width:20px;text-align:center}
+.cart-item-del{background:none;border:none;color:var(--muted);font-size:16px;cursor:pointer;padding:4px;transition:color .2s}
+.cart-item-del:hover{color:var(--red)}
+.cart-footer{border-top:1px solid var(--border);padding:18px 24px}
+.cart-total{display:flex;justify-content:space-between;font-size:16px;font-weight:700;margin-bottom:14px}
+.cart-total span:last-child{color:var(--gold)}
+.cart-actions{display:flex;gap:8px}
+.cart-actions .btn{flex:1;padding:12px;border-radius:25px;border:none;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;transition:all .2s;text-align:center}
+.btn-checkout{background:var(--gold);color:#111}
+.btn-checkout:hover{background:#c4961a;transform:scale(1.02)}
+.btn-whatsapp{background:transparent;border:1px solid var(--border)!important;color:var(--text)}
+.btn-whatsapp:hover{border-color:var(--green)!important;color:var(--green)}
+/* ── Checkout Modal ── */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:3000;opacity:0;visibility:hidden;transition:all .3s}
+.modal-overlay.active{opacity:1;visibility:visible}
+.modal{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) scale(.92);width:560px;max-width:92vw;max-height:88vh;background:#1a1a1a;border:1px solid var(--border);border-radius:var(--radius);z-index:3001;opacity:0;visibility:hidden;transition:all .3s;overflow-y:auto}
+.modal.active{opacity:1;visibility:visible;transform:translate(-50%,-50%) scale(1)}
+.modal-hdr{display:flex;justify-content:space-between;align-items:center;padding:20px 24px 14px;border-bottom:1px solid var(--border)}
+.modal-hdr h3{font-size:17px;font-weight:700}
+.modal-close-btn{background:none;border:none;color:var(--muted);font-size:24px;cursor:pointer;padding:4px;transition:color .2s}
+.modal-close-btn:hover{color:#fff}
+.modal-body{padding:20px 24px}
+.modal-body h4{font-size:13px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;margin-top:20px}
+.modal-body h4:first-child{margin-top:0}
+.form-group{margin-bottom:14px}
+.form-group label{display:block;font-size:12px;font-weight:600;color:var(--muted);margin-bottom:4px}
+.form-group input,.form-group textarea,.form-group select{width:100%;padding:10px 14px;border-radius:8px;border:1px solid var(--border);background:var(--card);color:var(--text);font-size:14px;font-family:inherit;outline:none;transition:border-color .2s}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--gold)}
+.form-group textarea{resize:vertical;min-height:50px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+/* ── Payment Options ── */
+.pay-options{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.pay-opt{padding:12px;border-radius:10px;border:1px solid var(--border);background:var(--card);cursor:pointer;transition:all .2s;text-align:center;font-size:13px;font-weight:600}
+.pay-opt:hover{border-color:#555}
+.pay-opt.selected{border-color:var(--gold);background:rgba(212,160,43,.1);color:var(--gold)}
+.pay-opt .pay-emoji{font-size:24px;display:block;margin-bottom:4px}
+.pay-detail{display:none;margin-top:12px;padding:12px 16px;border-radius:8px;background:var(--card);border:1px solid var(--border);font-size:13px;line-height:1.7;color:var(--muted)}
+.pay-detail.show{display:block}
+.pay-detail strong{color:var(--text)}
+/* ── Order Summary ── */
+.order-summary{border:1px solid var(--border);border-radius:8px;padding:12px 16px;background:var(--card);margin-bottom:14px;max-height:180px;overflow-y:auto}
+.order-summary .os-item{display:flex;justify-content:space-between;font-size:13px;padding:4px 0;color:var(--muted)}
+.order-summary .os-item span:last-child{color:var(--text)}
+.order-summary .os-total{display:flex;justify-content:space-between;font-size:15px;font-weight:700;padding-top:8px;margin-top:8px;border-top:1px solid var(--border)}
+.order-summary .os-total span:last-child{color:var(--gold)}
+.submit-btn{width:100%;padding:14px;border-radius:25px;border:none;background:var(--gold);color:#111;font-size:15px;font-weight:700;cursor:pointer;font-family:inherit;transition:all .2s;margin-top:4px}
+.submit-btn:hover{background:#c4961a;transform:scale(1.02)}
+.submit-btn:disabled{opacity:.4;cursor:not-allowed;transform:none}
+/* ─── Success Toast ── */
+.toast{position:fixed;top:24px;left:50%;transform:translateX(-50%) translateY(-80px);background:var(--green);color:#fff;padding:14px 28px;border-radius:10px;font-size:14px;font-weight:600;z-index:9999;transition:transform .4s;box-shadow:0 4px 20px rgba(34,197,94,.3)}
+.toast.show{transform:translateX(-50%) translateY(0)}
+.toast.error{background:var(--red);box-shadow:0 4px 20px rgba(239,68,68,.3)}
+/* ── Hero / Controls ── */
 .hero{text-align:center;padding:40px 24px 20px;max-width:1200px;margin:0 auto}
 .hero h2{font-size:28px;font-weight:800;margin-bottom:6px}
 .hero p{color:var(--muted);font-size:14px;max-width:600px;margin:0 auto 16px;line-height:1.7}
@@ -26,13 +104,12 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans T
 .search-wrap input{flex:1;background:var(--card);border:1px solid var(--border);border-radius:8px;padding:10px 14px;color:#fff;font-size:14px;font-family:inherit;outline:none}
 .search-wrap input:focus{border-color:var(--green)}
 .search-wrap input::placeholder{color:var(--muted)}
-.cat-tabs{display:flex;gap:6px;overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px;scrollbar-width:none;-ms-overflow-style:none}
+.cat-tabs{display:flex;gap:6px;overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px;scrollbar-width:none}
 .cat-tabs::-webkit-scrollbar{display:none}
-.cat-tabs::after{content:'';position:sticky;right:0;width:40px;flex-shrink:0;background:linear-gradient(90deg,transparent,var(--bg));pointer-events:none}
 .cat-tab{padding:4px 10px;border-radius:14px;border:1px solid var(--border);background:transparent;color:var(--muted);font-size:11px;cursor:pointer;transition:all .2s;font-family:inherit;white-space:nowrap;flex-shrink:0}
 .cat-tab:hover{border-color:#555;color:#fff}
 .cat-tab.active{background:var(--green);border-color:var(--green);color:#fff;font-weight:600}
-.brand-tabs{display:flex;gap:4px;overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px;margin-top:4px;scrollbar-width:none;-ms-overflow-style:none}
+.brand-tabs{display:flex;gap:4px;overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px;margin-top:4px;scrollbar-width:none}
 .brand-tabs::-webkit-scrollbar{display:none}
 .brand-tab{padding:3px 9px;border-radius:12px;border:1px solid var(--border);background:transparent;color:var(--muted);font-size:10px;cursor:pointer;transition:all .2s;font-family:inherit;white-space:nowrap;flex-shrink:0}
 .brand-tab:hover{border-color:var(--gold);color:var(--gold)}
@@ -50,11 +127,13 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans T
 .p-foot{display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--border);padding-top:14px;margin-top:auto}
 .p-price{font-size:20px;font-weight:800;color:#fff}
 .p-price small{font-size:12px;font-weight:400;color:var(--muted)}
-.p-btn{color:#fff;border:none;padding:10px 18px;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none;font-family:inherit;transition:all .2s;display:inline-flex;align-items:center;gap:6px}
-.p-btn.sigma{background:var(--green)}
-.p-btn.sigma:hover{background:#16a34a;transform:scale(1.02)}
-.p-btn.niuwang{background:var(--gold)}
-.p-btn.niuwang:hover{background:#b8922a;transform:scale(1.02)}
+.p-actions{display:flex;gap:6px}
+.p-btn{color:#fff;border:none;padding:9px 14px;border-radius:20px;font-size:12px;font-weight:600;cursor:pointer;text-decoration:none;font-family:inherit;transition:all .2s;display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
+.p-btn.add-cart{background:var(--gold)}
+.p-btn.add-cart:hover{background:#c4961a;transform:scale(1.02)}
+.p-btn.add-cart.added{background:var(--green)}
+.p-btn.inquiry{background:transparent;border:1px solid var(--border);color:var(--muted);font-size:11px;padding:9px 10px}
+.p-btn.inquiry:hover{border-color:var(--green);color:var(--green)}
 .count{text-align:center;padding:8px 24px 0;font-size:13px;color:var(--muted)}
 .back-link{display:inline-flex;align-items:center;gap:6px;color:var(--muted);text-decoration:none;font-size:14px;margin-bottom:16px;transition:color .2s}
 .back-link:hover{color:#fff}
@@ -63,22 +142,37 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans T
   .hero h2{font-size:22px}
   .products{grid-template-columns:1fr;padding:16px}
   .controls{padding:10px 16px 12px}
+  .modal{width:100vw;max-height:95vh;border-radius:12px 12px 0 0;top:auto;bottom:0;left:0;right:0;transform:translateY(100%)}
+  .modal.active{transform:translateY(0)}
+  .form-row{grid-template-columns:1fr}
+  .pay-options{grid-template-columns:1fr}
+  .cart-sidebar{width:100vw}
 }
 </style>
 </head>
 <body>
+
+<!-- ═══ HEADER ═══ -->
 <header class="header"><div class="hdr">
   <a href="https://pandatelecom.github.io/" class="logo">
     <img class="logo-img" src="assets/panda-logo.jpg" alt="熊貓電訊">
     <div><h1>熊貓電訊</h1><p>PANDA TELECOM</p></div>
   </a>
-  <a href="https://wa.me/85268557181" class="hdr-cta">📱 WhatsApp 查詢</a>
+  <div class="hdr-actions">
+    <button class="cart-btn" onclick="toggleCart()" aria-label="購物車">
+      <span>🛒</span>
+      <span class="cart-badge" id="cartBadge">0</span>
+    </button>
+    <a href="https://wa.me/85268557181" class="hdr-cta">📱 WhatsApp</a>
+  </div>
 </div></header>
+
 <div class="hero">
   <a href="https://pandatelecom.github.io/" class="back-link">← 返回主頁</a>
   <h2>🛒 熊貓商城 Panda Mall</h2>
-  <p>全線產品，批發零售價，歡迎查詢訂購</p>
+  <p>全線產品，批發零售價｜🛍️ 加入購物車落單，多種付款方法</p>
 </div>
+
 <div class="controls"><div class="controls-inner">
   <div class="search-wrap">
     <input type="text" id="search" placeholder="🔍 搜尋產品名稱、型號或品牌..." oninput="filterProducts()">
@@ -86,10 +180,113 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans T
   <div class="cat-tabs" id="catTabs"></div>
   <div class="brand-tabs" id="brandTabs"></div>
 </div></div>
+
 <div class="count" id="count"></div>
 <div class="products" id="products"></div>
+
+<!-- ═══ CART SIDEBAR ═══ -->
+<div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+<div class="cart-sidebar" id="cartSidebar">
+  <div class="cart-hdr">
+    <h3>🛒 購物車</h3>
+    <button class="cart-close" onclick="toggleCart()">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <div class="cart-empty" id="cartEmpty">購物車係空嘅 🐼<br>去揀啲產品啦！</div>
+  </div>
+  <div class="cart-footer" id="cartFooter" style="display:none">
+    <div class="cart-total">
+      <span>合計</span>
+      <span id="cartTotal">HK$0</span>
+    </div>
+    <div class="cart-actions">
+      <button class="btn btn-whatsapp" onclick="whatsappCart()">📱 查詢報價</button>
+      <button class="btn btn-checkout" onclick="openCheckout()">💳 結帳</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ CHECKOUT MODAL ═══ -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeCheckout()"></div>
+<div class="modal" id="checkoutModal">
+  <div class="modal-hdr">
+    <h3>💳 結帳</h3>
+    <button class="modal-close-btn" onclick="closeCheckout()">✕</button>
+  </div>
+  <div class="modal-body">
+    <!-- Order Summary -->
+    <div class="order-summary" id="checkoutSummary"></div>
+
+    <!-- Customer Info -->
+    <h4>📋 收貨資料</h4>
+    <div class="form-row">
+      <div class="form-group">
+        <label>姓名 *</label>
+        <input type="text" id="coName" placeholder="陳大文" required>
+      </div>
+      <div class="form-group">
+        <label>電話 *</label>
+        <input type="tel" id="coPhone" placeholder="61234567" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>取貨方式</label>
+      <select id="coDelivery">
+        <option value="自取">🏪 紅磡黃埔門市自取</option>
+        <option value="順豐">📦 順豐寄貨（運費到付）</option>
+      </select>
+    </div>
+    <div class="form-group" id="coAddressGroup" style="display:none">
+      <label>送貨地址</label>
+      <textarea id="coAddress" placeholder="順豐站/智能櫃編號 或 詳細地址"></textarea>
+    </div>
+    <div class="form-group">
+      <label>備註</label>
+      <textarea id="coNote" placeholder="例如：放低俾管理處、特定時間先送到等"></textarea>
+    </div>
+
+    <!-- Payment -->
+    <h4>💳 付款方式</h4>
+    <div class="pay-options" id="payOptions"></div>
+    <div class="pay-detail" id="payDetail"></div>
+
+    <button class="submit-btn" id="submitBtn" onclick="submitOrder()">📱 提交訂單</button>
+  </div>
+</div>
+
+<!-- ═══ TOAST ═══ -->
+<div class="toast" id="toast"></div>
+
 <script>
-/* ── Data ── */
+/* ═══════════════════════════════════════════
+   💳 付款設定 — 億萬富翁自己改呢度就得！
+   ═══════════════════════════════════════════ */
+const PAYMENT_CONFIG = {
+  payme: {
+    label: 'PayMe',
+    emoji: '💚',
+    detail: '撳下面連結或掃 QR Code 俾錢：<br>🔗 <a href="https://payme.hsbc/pandatelecom" target="_blank" style="color:var(--gold)">payme.hsbc/pandatelecom</a><br><br>俾完錢 Cap 圖俾我哋確認就得 👍'
+  },
+  fps: {
+    label: 'FPS 轉數快',
+    emoji: '💳',
+    detail: '📱 FPS 電話號碼：<strong>6855 7181</strong><br>🏦 收款銀行：<strong>HSBC 滙豐銀行</strong><br><br>轉完 Cap 圖 WhatsApp 俾我哋確認 ✅'
+  },
+  bank: {
+    label: '銀行過數',
+    emoji: '🏦',
+    detail: '🏧 銀行戶口資料：<br><strong>銀行：</strong>HSBC 滙豐銀行<br><strong>戶口名稱：</strong>（請 WhatsApp 查詢）<br><strong>戶口號碼：</strong>（請 WhatsApp 查詢）<br><br>或直接 WhatsApp 我哋索取戶口資料 📱'
+  },
+  cash: {
+    label: '到店付款',
+    emoji: '💰',
+    detail: '🏪 門市俾現金<br><strong>紅磡黃埔108商場54號舖</strong><br>星期一至六 09:00-19:00<br><br>🅿️ 可以俾現金、PayMe、FPS、八達通'
+  }
+};
+
+/* ═══════════════════════════════════════
+   DATA
+   ═══════════════════════════════════════ */
 let sigmaProducts = [];
 let currentCat = 'all';
 let currentBrand = 'all';
@@ -97,7 +294,7 @@ let currentBrand = 'all';
 const catConfig = [
   { id:'充電器', label:'充電器', emoji:'🔌', match:['充電器','火牛','充電頭'] },
   { id:'充電寶', label:'充電寶', emoji:'🔋', match:['充電寶','電源','power'] },
-  { id:'充電線', label:'充電線', emoji:'🔌', match:['充電線','線材','cable'] },
+  { id:'充電線', label:'充電線', emoji:'🔗', match:['充電線','線材','cable'] },
   { id:'無線充電器', label:'無線充', emoji:'📡', match:['無線充電器'] },
   { id:'旅遊插座', label:'旅遊插座', emoji:'🌍', match:['旅遊插座'] },
   { id:'流動AC電源', label:'AC電源', emoji:'🔋', match:['流動AC電源'] },
@@ -121,7 +318,7 @@ const catConfig = [
   { id:'手機配件', label:'手機配件', emoji:'📱', match:['手機配件','保護貼','保護殼'] },
   { id:'工具', label:'工具', emoji:'🧰', match:['工具','螺絲','門鈴'] },
   { id:'袋/磅', label:'袋/磅', emoji:'🎒', match:['袋','磅'] },
-  { id:'線材配件', label:'線材配件', emoji:'🔌', match:['線材配件'] },
+  { id:'線材配件', label:'線材配件', emoji:'🔗', match:['線材配件'] },
   { id:'其他', label:'其他', emoji:'📦', match:[] },
 ];
 
@@ -135,11 +332,10 @@ function matchCategory(prodCat) {
   return '其他';
 }
 function getCatEmoji(catId) {
-  for(const c of catConfig) {
-    if(c.id === catId) return c.emoji;
-  }
+  for(const c of catConfig) if(c.id === catId) return c.emoji;
   return '📦';
 }
+
 const brandConfig = [
   { id:'牛魔王', emoji:'🐂' },
   { id:'Philips', emoji:'💡' },
@@ -170,6 +366,245 @@ function getBrandEmoji(brandId) {
   for(const b of brandConfig) if(b.id === brandId) return b.emoji;
   return '🏷️';
 }
+
+/* ═══════════════════════════════════════
+   CART (localStorage)
+   ═══════════════════════════════════════ */
+function getCart() {
+  try { return JSON.parse(localStorage.getItem('pandaMallCart')) || []; } catch { return []; }
+}
+function saveCart(cart) {
+  localStorage.setItem('pandaMallCart', JSON.stringify(cart));
+  updateCartBadge();
+}
+function updateCartBadge() {
+  const cart = getCart();
+  const total = cart.reduce((s,i) => s + i.qty, 0);
+  const badge = document.getElementById('cartBadge');
+  if(total > 0) { badge.textContent = total; badge.classList.add('show'); }
+  else { badge.classList.remove('show'); }
+}
+function addToCart(pid, name, price) {
+  let cart = getCart();
+  const existing = cart.find(i => i.id === pid);
+  if(existing) { existing.qty += 1; }
+  else { cart.push({ id: pid, name, price, qty: 1 }); }
+  saveCart(cart);
+  renderCart();
+  showToast(`✅ ${name} 已加入購物車`);
+  // Button feedback
+  const btn = document.querySelector(`[data-pid="${pid}"]`);
+  if(btn) {
+    btn.textContent = '✓ 已加入';
+    btn.classList.add('added');
+    setTimeout(() => {
+      btn.textContent = '🛒 加入購物車';
+      btn.classList.remove('added');
+    }, 1500);
+  }
+}
+function removeFromCart(pid) {
+  let cart = getCart().filter(i => i.id !== pid);
+  saveCart(cart);
+  renderCart();
+}
+function updateQty(pid, delta) {
+  let cart = getCart();
+  const item = cart.find(i => i.id === pid);
+  if(!item) return;
+  item.qty += delta;
+  if(item.qty <= 0) { cart = cart.filter(i => i.id !== pid); }
+  saveCart(cart);
+  renderCart();
+}
+function clearCart() {
+  localStorage.removeItem('pandaMallCart');
+  updateCartBadge();
+  renderCart();
+}
+function getCartTotal() {
+  return getCart().reduce((s,i) => s + i.price * i.qty, 0);
+}
+
+/* ═══ Render Cart Sidebar ═══ */
+function renderCart() {
+  const cart = getCart();
+  const container = document.getElementById('cartItems');
+  const footer = document.getElementById('cartFooter');
+  const empty = document.getElementById('cartEmpty');
+
+  // Remove old items
+  container.querySelectorAll('.cart-item').forEach(el => el.remove());
+
+  if(cart.length === 0) {
+    empty.style.display = 'block';
+    footer.style.display = 'none';
+    return;
+  }
+  empty.style.display = 'none';
+  footer.style.display = 'block';
+  document.getElementById('cartTotal').textContent = 'HK$' + getCartTotal().toLocaleString();
+
+  cart.forEach(item => {
+    const div = document.createElement('div');
+    div.className = 'cart-item';
+    div.innerHTML = `
+      <div class="cart-item-emoji">📦</div>
+      <div class="cart-item-info">
+        <div class="cart-item-name">${item.name}</div>
+        <div class="cart-item-price">HK$${item.price.toLocaleString()}</div>
+        <div class="cart-item-qty">
+          <button class="qty-btn" onclick="updateQty('${item.id}', -1)">−</button>
+          <span class="qty-num">${item.qty}</span>
+          <button class="qty-btn" onclick="updateQty('${item.id}', 1)">+</button>
+        </div>
+      </div>
+      <button class="cart-item-del" onclick="removeFromCart('${item.id}')">✕</button>
+    `;
+    container.appendChild(div);
+  });
+}
+
+function toggleCart(force) {
+  const s = document.getElementById('cartSidebar');
+  const o = document.getElementById('cartOverlay');
+  if(force === true) { s.classList.add('active'); o.classList.add('active'); }
+  else if(s.classList.contains('active')) { s.classList.remove('active'); o.classList.remove('active'); }
+  else { s.classList.add('active'); o.classList.add('active'); }
+}
+
+function whatsappCart() {
+  const cart = getCart();
+  if(!cart.length) return;
+  let msg = '你好，我想查詢以下產品：%0A%0A';
+  cart.forEach(i => { msg += `- ${i.name} x${i.qty} (HK$${(i.price*i.qty).toLocaleString()})%0A`; });
+  msg += `%0A總額：HK$${getCartTotal().toLocaleString()}`;
+  window.open(`https://wa.me/85268557181?text=${msg}`, '_blank');
+}
+
+/* ═══════════════════════════════════════
+   CHECKOUT
+   ═══════════════════════════════════════ */
+function openCheckout() {
+  const cart = getCart();
+  if(!cart.length) { showToast('購物車係空嘅 🐼', true); return; }
+
+  // Build summary
+  const summary = document.getElementById('checkoutSummary');
+  summary.innerHTML = cart.map(i => `<div class="os-item"><span>${i.name} ×${i.qty}</span><span>HK$${(i.price*i.qty).toLocaleString()}</span></div>`).join('') +
+    `<div class="os-total"><span>合計</span><span>HK$${getCartTotal().toLocaleString()}</span></div>`;
+
+  // Build payment options
+  const payOpts = document.getElementById('payOptions');
+  payOpts.innerHTML = Object.entries(PAYMENT_CONFIG).map(([k,v]) =>
+    `<div class="pay-opt" data-pay="${k}" onclick="selectPay('${k}')"><span class="pay-emoji">${v.emoji}</span>${v.label}</div>`
+  ).join('');
+
+  // Reset
+  document.getElementById('coName').value = '';
+  document.getElementById('coPhone').value = '';
+  document.getElementById('coDelivery').value = '自取';
+  document.getElementById('coAddressGroup').style.display = 'none';
+  document.getElementById('coNote').value = '';
+  document.getElementById('payDetail').className = 'pay-detail';
+  document.querySelectorAll('.pay-opt').forEach(el => el.classList.remove('selected'));
+  document.getElementById('submitBtn').disabled = false;
+  document.getElementById('submitBtn').textContent = '📱 提交訂單';
+
+  // Show modal
+  document.getElementById('checkoutModal').classList.add('active');
+  document.getElementById('modalOverlay').classList.add('active');
+}
+
+function closeCheckout() {
+  document.getElementById('checkoutModal').classList.remove('active');
+  document.getElementById('modalOverlay').classList.remove('active');
+}
+
+function selectPay(key) {
+  document.querySelectorAll('.pay-opt').forEach(el => el.classList.toggle('selected', el.dataset.pay === key));
+  const detail = document.getElementById('payDetail');
+  const cfg = PAYMENT_CONFIG[key];
+  if(cfg) {
+    detail.innerHTML = `💳 <strong>${cfg.emoji} ${cfg.label}</strong><br><br>${cfg.detail}`;
+    detail.className = 'pay-detail show';
+  } else {
+    detail.className = 'pay-detail';
+  }
+}
+
+// Show/hide address field based on delivery
+document.addEventListener('change', function(e) {
+  if(e.target.id === 'coDelivery') {
+    document.getElementById('coAddressGroup').style.display = e.target.value === '順豐' ? 'block' : 'none';
+  }
+});
+
+function submitOrder() {
+  const name = document.getElementById('coName').value.trim();
+  const phone = document.getElementById('coPhone').value.trim();
+  const delivery = document.getElementById('coDelivery').value;
+  const address = document.getElementById('coAddress').value.trim();
+  const note = document.getElementById('coNote').value.trim();
+
+  if(!name || !phone) { showToast('請填姓名同電話 📝', true); return; }
+
+  const btn = document.getElementById('submitBtn');
+  btn.disabled = true;
+  btn.textContent = '⏳ 處理中...';
+
+  const cart = getCart();
+  const selectedPay = document.querySelector('.pay-opt.selected');
+  const payMethod = selectedPay ? selectedPay.dataset.pay : '未選擇';
+
+  const now = new Date();
+  const dateStr = now.toLocaleDateString('zh-HK');
+  const timeStr = now.toLocaleTimeString('zh-HK', { hour:'2-digit', minute:'2-digit' });
+  const orderId = 'PM' + now.getTime().toString(36).toUpperCase();
+
+  let msg = `🛒 *新訂單 #${orderId}*%0A`;
+  msg += `━━━━━━━━━━━━━━━%0A`;
+  msg += `👤 *${name}*%0A`;
+  msg += `📞 ${phone}%0A`;
+  msg += `📅 ${dateStr} ${timeStr}%0A%0A`;
+  msg += `*🛍️ 產品：*%0A`;
+  cart.forEach(i => { msg += `  ${i.name} ×${i.qty} = HK$${(i.price*i.qty).toLocaleString()}%0A`; });
+  msg += `%0A💵 *總額：HK$${getCartTotal().toLocaleString()}*%0A`;
+  msg += `━━━━━━━━━━━━━━━%0A`;
+  msg += `📦 *取貨：*${delivery}%0A`;
+  if(address) msg += `📍 *地址：*${address}%0A`;
+  msg += `💳 *付款：*${PAYMENT_CONFIG[payMethod] ? PAYMENT_CONFIG[payMethod].emoji + ' ' + PAYMENT_CONFIG[payMethod].label : payMethod}%0A`;
+  if(note) msg += `📝 *備註：*${note}%0A`;
+  msg += `━━━━━━━━━━━━━━━%0A`;
+  msg += `🐼 熊貓電訊 Panda Telecom`;
+
+  // Open WhatsApp and clear cart
+  window.open(`https://wa.me/85268557181?text=${msg}`, '_blank');
+
+  setTimeout(() => {
+    clearCart();
+    closeCheckout();
+    showToast('🎉 訂單已送出！我哋會盡快 WhatsApp 你確認');
+    renderCart();
+  }, 500);
+}
+
+/* ═══════════════════════════════════════
+   TOAST
+   ═══════════════════════════════════════ */
+let toastTimer;
+function showToast(msg, isError) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = 'toast' + (isError ? ' error' : '');
+  clearTimeout(toastTimer);
+  requestAnimationFrame(() => { t.classList.add('show'); });
+  toastTimer = setTimeout(() => { t.classList.remove('show'); }, 3000);
+}
+
+/* ═══════════════════════════════════════
+   PRODUCT RENDERING
+   ═══════════════════════════════════════ */
 function renderBrandTabs() {
   const allProds = getFilteredProducts(true);
   const brands = new Set();
@@ -187,7 +622,7 @@ function setBrand(brand) {
   renderProducts();
 }
 
-/* ── Init (load data from external files) ── */
+/* ── Init ── */
 Promise.all([
   fetch('sigma_products.json').then(r => r.json()),
   fetch('niuwang_products.json').then(r => r.json())
@@ -197,6 +632,8 @@ Promise.all([
     renderCatTabs();
     renderBrandTabs();
     renderProducts();
+    updateCartBadge();
+    renderCart();
   })
   .catch(err => {
     document.getElementById('count').textContent = '⚠️ 無法載入產品數據，請稍後再試';
@@ -272,15 +709,23 @@ function renderProducts() {
         ${p.features && p.features.length ? `<ul class="p-features">${p.features.slice(0,4).map(f => `<li>${f}</li>`).join('')}</ul>` : ''}
         <div class="p-foot">
           <div class="p-price">$${p.price}<small> SRP</small></div>
-          <a href="https://wa.me/85268557181?text=${msg}" class="p-btn sigma" target="_blank" rel="noopener">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            查詢
-          </a>
+          <div class="p-actions">
+            <button class="p-btn add-cart" data-pid="${p.id}" onclick="addToCart('${p.id}','${p.name.replace(/'/g,"\\'")}',${p.price})">🛒 加入購物車</button>
+            <a href="https://wa.me/85268557181?text=${msg}" class="p-btn inquiry" target="_blank" rel="noopener" title="WhatsApp 查詢">💬</a>
+          </div>
         </div>
       </div>
     </div>`;
   }).join('');
 }
+
+/* ── Keyboard shortcut ── */
+document.addEventListener('keydown', e => {
+  if(e.key === 'Escape') {
+    if(document.getElementById('checkoutModal').classList.contains('active')) closeCheckout();
+    else if(document.getElementById('cartSidebar').classList.contains('active')) toggleCart();
+  }
+});
 </script>
 </body>
 </html>
