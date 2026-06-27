@@ -59,6 +59,27 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans T
 .btn-save{width:100%;padding:12px;border-radius:25px;border:none;background:var(--gold);color:#111;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;transition:all .2s;margin-top:8px}
 .btn-save:hover{background:#c4961a}
 .btn-save:disabled{opacity:.4;cursor:not-allowed}
+/* ── Product Modal ── */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:3000;opacity:0;visibility:hidden;transition:all .3s}
+.modal-overlay.active{opacity:1;visibility:visible}
+.modal{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) scale(.92);width:560px;max-width:92vw;max-height:88vh;background:#1a1a1a;border:1px solid var(--border);border-radius:var(--radius);z-index:3001;opacity:0;visibility:hidden;transition:all .3s;overflow-y:auto}
+.modal.active{opacity:1;visibility:visible;transform:translate(-50%,-50%) scale(1)}
+.modal-hdr{display:flex;justify-content:space-between;align-items:center;padding:20px 24px 14px;border-bottom:1px solid var(--border)}
+.modal-hdr h3{font-size:17px;font-weight:700}
+.modal-close-btn{background:none;border:none;color:var(--muted);font-size:24px;cursor:pointer;padding:4px;transition:color .2s}
+.modal-close-btn:hover{color:#fff}
+.modal-body{padding:20px 24px}
+/* ── Product List Items ── */
+.prod-item{display:flex;align-items:center;padding:10px 14px;border-bottom:1px solid var(--border);cursor:pointer;transition:background .2s;gap:10px}
+.prod-item:hover{background:var(--card)}
+.prod-item:last-child{border-bottom:none}
+.prod-item .pi-info{flex:1;min-width:0}
+.prod-item .pi-name{font-size:13px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.prod-item .pi-meta{font-size:11px;color:var(--muted);margin-top:2px}
+.prod-item .pi-price{font-size:15px;font-weight:700;color:var(--gold);white-space:nowrap}
+.prod-item .pi-status{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.prod-item .pi-status.on{background:var(--green)}
+.prod-item .pi-status.off{background:var(--red)}
 /* ── Toast ── */
 .toast{position:fixed;top:20px;left:50%;transform:translateX(-50%) translateY(-80px);background:var(--green);color:#fff;padding:12px 24px;border-radius:8px;font-size:13px;font-weight:600;z-index:9999;transition:transform .4s;box-shadow:0 4px 20px rgba(34,197,94,.3)}
 .toast.show{transform:translateX(-50%) translateY(0)}
@@ -110,6 +131,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans T
     <div class="tabs">
       <button class="tab active" onclick="switchTab('store',this)">🏪 商店設定</button>
       <button class="tab" onclick="switchTab('payment',this)">💳 付款設定</button>
+      <button class="tab" onclick="switchTab('products',this)">📦 產品管理</button>
       <button class="tab" onclick="switchTab('deploy',this)">🚀 發布</button>
     </div>
 
@@ -285,7 +307,80 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans T
       </div>
     </div>
 
-    <!-- ═══ TAB 3: DEPLOY ═══ -->
+    <!-- ═══ TAB 3: PRODUCTS ═══ -->
+    <div class="tab-content" id="tab-products">
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;flex-wrap:wrap;gap:10px">
+          <h3 style="margin:0">📦 產品列表 <small id="prodCount">(0 件)</small></h3>
+          <button class="btn-save" style="width:auto;padding:8px 20px;margin:0" onclick="openProductModal()">➕ 新增產品</button>
+        </div>
+        <div class="form-row" style="margin-bottom:12px">
+          <div class="form-group">
+            <input type="text" id="prodSearch" placeholder="🔍 搜尋產品名、型號、品牌..." oninput="renderProductList()">
+          </div>
+          <div class="form-group">
+            <select id="prodBrandFilter" onchange="renderProductList()">
+              <option value="all">全部品牌</option>
+            </select>
+          </div>
+        </div>
+        <div id="prodList" style="max-height:500px;overflow-y:auto;border:1px solid var(--border);border-radius:8px"></div>
+      </div>
+
+      <!-- Product Edit Modal -->
+      <div class="modal-overlay" id="prodModalOverlay" onclick="closeProductModal()"></div>
+      <div class="modal" id="prodModal">
+        <div class="modal-hdr">
+          <h3 id="prodModalTitle">📦 編輯產品</h3>
+          <button class="modal-close-btn" onclick="closeProductModal()">✕</button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label>產品名稱 *</label>
+            <input type="text" id="pe_name">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>品牌</label>
+              <input type="text" id="pe_brand" placeholder="ARGO">
+            </div>
+            <div class="form-group">
+              <label>產品型號 (ID)</label>
+              <input type="text" id="pe_id" placeholder="argo-kc240">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>分類</label>
+              <input type="text" id="pe_category" placeholder="充電線">
+            </div>
+            <div class="form-group">
+              <label>價錢 (HKD) *</label>
+              <input type="number" id="pe_price" placeholder="109" min="0">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>產品描述</label>
+            <textarea id="pe_desc" rows="3" placeholder="產品特色描述..."></textarea>
+          </div>
+          <div class="form-group">
+            <label>功能特點（每行一個）</label>
+            <textarea id="pe_features" rows="4" placeholder="支援PD 3.1 240W超級快充&#10;USB4數據傳輸高達40Gbps&#10;PU荔枝紋皮質裁縫"></textarea>
+          </div>
+          <div class="toggle-group">
+            <label class="toggle">
+              <input type="checkbox" id="pe_available" checked>
+              <span class="toggle-slider"></span>
+            </label>
+            <span class="toggle-label">上架（顯示喺商城）</span>
+          </div>
+          <div style="display:flex;gap:8px;margin-top:16px">
+            <button class="btn-save" style="flex:1" onclick="saveProduct()">💾 儲存產品</button>
+            <button class="btn-save" style="flex:0;background:var(--red);color:#fff;width:auto;padding:12px 20px" id="prodDeleteBtn" onclick="deleteProduct()">🗑️ 刪除</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="tab-content" id="tab-deploy">
       <div class="deploy-section" id="deploySection">
         <h3>🚀 一鍵發布到 GitHub Pages</h3>
@@ -354,6 +449,8 @@ function switchTab(name, btn) {
   document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
   btn.classList.add('active');
   document.getElementById('tab-' + name).classList.add('active');
+  // Load products on first visit
+  if(name === 'products') ensureProductsLoaded();
 }
 
 /* ═══════════════════════════════════════
@@ -529,6 +626,177 @@ function saveCash() {
 }
 
 /* ═══════════════════════════════════════
+   PRODUCT MANAGEMENT
+   ═══════════════════════════════════════ */
+let productsData = [];
+let editingProductId = null;
+let productsLoaded = false;
+
+async function ensureProductsLoaded() {
+  if(productsLoaded) return;
+  try {
+    const r = await fetch('mall-products.json?' + Date.now());
+    let data = await r.json();
+    productsData = data.products || data;
+    // Ensure every product has available field
+    productsData.forEach(p => { if(p.available === undefined) p.available = true; });
+    productsLoaded = true;
+    populateBrandFilter();
+    showToast('✅ 已載入 ' + productsData.length + ' 件產品');
+  } catch(e) {
+    // Fall back to old files
+    try {
+      const [sigma, niuwang] = await Promise.all([
+        fetch('sigma_products.json').then(r => r.json()),
+        fetch('niuwang_products.json').then(r => r.json())
+      ]);
+      let s = sigma.products || sigma;
+      let n = niuwang.products || niuwang;
+      productsData = s.concat(n);
+      productsData.forEach(p => { if(p.available === undefined) p.available = true; });
+      productsLoaded = true;
+      populateBrandFilter();
+      showToast('✅ 已載入 ' + productsData.length + ' 件產品（舊格式）');
+    } catch(e2) {
+      showToast('❌ 無法載入產品資料', true);
+    }
+  }
+}
+
+function populateBrandFilter() {
+  const brands = new Set();
+  productsData.forEach(p => { if(p.brand) brands.add(p.brand); });
+  const sel = document.getElementById('prodBrandFilter');
+  const currentVal = sel.value;
+  sel.innerHTML = '<option value="all">全部品牌</option>' +
+    [...brands].sort().map(b => '<option value="' + b + '">' + b + '</option>').join('');
+  sel.value = currentVal;
+  renderProductList();
+}
+
+function renderProductList() {
+  const q = document.getElementById('prodSearch').value.trim().toLowerCase();
+  const brand = document.getElementById('prodBrandFilter').value;
+  document.getElementById('prodCount').textContent = '(' + productsData.length + ' 件)';
+
+  let filtered = productsData;
+  if(brand !== 'all') filtered = filtered.filter(p => p.brand === brand);
+  if(q) filtered = filtered.filter(p => {
+    const s = (p.name + ' ' + p.brand + ' ' + p.id + ' ' + (p.category||'')).toLowerCase();
+    return s.includes(q);
+  });
+
+  const list = document.getElementById('prodList');
+  list.innerHTML = filtered.map(p => `
+    <div class="prod-item" onclick="openProductModal('${p.id}')">
+      <span class="pi-status ${p.available !== false ? 'on' : 'off'}"></span>
+      <div class="pi-info">
+        <div class="pi-name">${(p.brand||'')} ${p.name}</div>
+        <div class="pi-meta">${p.id} · ${p.category || ''}</div>
+      </div>
+      <div class="pi-price">$${p.price}</div>
+    </div>
+  `).join('');
+
+  if(!filtered.length) {
+    list.innerHTML = '<div style="text-align:center;padding:40px;color:var(--muted);font-size:13px">🔍 搵唔到相關產品</div>';
+  }
+}
+
+function openProductModal(id) {
+  editingProductId = id || null;
+  const isNew = !id;
+  document.getElementById('prodModalTitle').textContent = isNew ? '➕ 新增產品' : '📦 編輯產品';
+  document.getElementById('prodDeleteBtn').style.display = isNew ? 'none' : 'block';
+
+  if(isNew) {
+    document.getElementById('pe_name').value = '';
+    document.getElementById('pe_brand').value = '';
+    document.getElementById('pe_id').value = '';
+    document.getElementById('pe_category').value = '';
+    document.getElementById('pe_price').value = '';
+    document.getElementById('pe_desc').value = '';
+    document.getElementById('pe_features').value = '';
+    document.getElementById('pe_available').checked = true;
+  } else {
+    const p = productsData.find(x => x.id === id);
+    if(!p) { showToast('❌ 搵唔到產品', true); return; }
+    document.getElementById('pe_name').value = p.name || '';
+    document.getElementById('pe_brand').value = p.brand || '';
+    document.getElementById('pe_id').value = p.id || '';
+    document.getElementById('pe_category').value = p.category || '';
+    document.getElementById('pe_price').value = p.price || '';
+    document.getElementById('pe_desc').value = p.desc || '';
+    document.getElementById('pe_features').value = (p.features||[]).join('\n');
+    document.getElementById('pe_available').checked = p.available !== false;
+  }
+
+  document.getElementById('prodModal').classList.add('active');
+  document.getElementById('prodModalOverlay').classList.add('active');
+}
+
+function closeProductModal() {
+  document.getElementById('prodModal').classList.remove('active');
+  document.getElementById('prodModalOverlay').classList.remove('active');
+}
+
+function saveProduct() {
+  const name = document.getElementById('pe_name').value.trim();
+  const price = parseFloat(document.getElementById('pe_price').value);
+  const brand = document.getElementById('pe_brand').value.trim();
+  const id = document.getElementById('pe_id').value.trim().toLowerCase().replace(/[^a-z0-9-]/g,'-');
+  const category = document.getElementById('pe_category').value.trim();
+  const desc = document.getElementById('pe_desc').value.trim();
+  const features = document.getElementById('pe_features').value.split('\n').filter(l => l.trim()).map(l => l.trim());
+  const available = document.getElementById('pe_available').checked;
+
+  if(!name) { showToast('❌ 請輸入產品名稱', true); return; }
+  if(!price || price <= 0) { showToast('❌ 請輸入有效嘅價錢', true); return; }
+  if(!id) { showToast('❌ 請輸入產品型號 (ID)', true); return; }
+
+  const product = { id, name, brand, category, price, desc, features, available };
+
+  if(editingProductId) {
+    // Update existing
+    const idx = productsData.findIndex(p => p.id === editingProductId);
+    if(idx !== -1) {
+      // Preserve the original ID if changed
+      if(id !== editingProductId) {
+        // ID changed - check if new ID already exists
+        if(productsData.some(p => p.id === id && p.id !== editingProductId)) {
+          showToast('❌ 產品型號 ' + id + ' 已存在', true);
+          return;
+        }
+      }
+      productsData[idx] = { ...productsData[idx], ...product };
+      showToast('✅ 已更新：' + name);
+    }
+  } else {
+    // Check duplicate ID
+    if(productsData.some(p => p.id === id)) {
+      showToast('❌ 產品型號 ' + id + ' 已存在', true);
+      return;
+    }
+    productsData.push(product);
+    showToast('✅ 已新增：' + name);
+    populateBrandFilter();
+  }
+
+  renderProductList();
+  closeProductModal();
+}
+
+function deleteProduct() {
+  if(!editingProductId) return;
+  if(!confirm('確定要刪除 ' + editingProductId + '？')) return;
+  productsData = productsData.filter(p => p.id !== editingProductId);
+  renderProductList();
+  populateBrandFilter();
+  closeProductModal();
+  showToast('🗑️ 已刪除產品');
+}
+
+/* ═══════════════════════════════════════
    DEPLOY TO GITHUB
    ═══════════════════════════════════════ */
 function scrollToDeploy() {
@@ -543,7 +811,6 @@ async function doDeploy() {
   if(!token) { showToast('❌ 請先填 GitHub Token', true); return; }
   if(!repo) { showToast('❌ 請填 Repository', true); return; }
 
-  // Save token
   localStorage.setItem('mallGitHubToken', token);
 
   const btn = document.getElementById('deployBtn');
@@ -555,51 +822,55 @@ async function doDeploy() {
 
   function logLine(msg) { log.textContent += msg + '\n'; log.scrollTop = log.scrollHeight; }
 
-  try {
-    // Build final config
-    const cfg = buildConfig();
-    const jsonContent = JSON.stringify(cfg, null, 2);
-    logLine('✅ 設定已打包 (' + jsonContent.length + ' bytes)');
-
-    // Get current file SHA
-    logLine('📡 連接 GitHub...');
-    const getResp = await fetch(`https://api.github.com/repos/${repo}/contents/mall-config.json?ref=main`, {
+  async function uploadFile(path, content, commitMsg) {
+    logLine('📡 檢查 ' + path + '...');
+    const getResp = await fetch(`https://api.github.com/repos/${repo}/contents/${path}?ref=main`, {
       headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github.v3+json' }
     });
-
     let sha = '';
     if(getResp.ok) {
       const data = await getResp.json();
       sha = data.sha;
-      logLine('✅ 找到現有 mall-config.json (SHA: ' + sha.substring(0,7) + '...)');
-    } else if(getResp.status === 404) {
-      logLine('📝 mall-config.json 未存在，將建立新檔');
-    } else {
+    } else if(getResp.status !== 404) {
       const err = await getResp.text();
-      throw new Error('GitHub GET failed: ' + err.substring(0,200));
+      throw new Error(path + ' GET failed: ' + err.substring(0,200));
     }
-
-    // Upload
-    logLine('📤 上傳 mall-config.json...');
-    const putResp = await fetch(`https://api.github.com/repos/${repo}/contents/mall-config.json`, {
+    logLine('📤 上傳 ' + path + '...');
+    const putResp = await fetch(`https://api.github.com/repos/${repo}/contents/${path}`, {
       method: 'PUT',
       headers: { 'Authorization': 'Bearer ' + token, 'Content-Type': 'application/json', 'Accept': 'application/vnd.github.v3+json' },
       body: JSON.stringify({
-        message: '🔄 更新收款設定 (via Admin)',
-        content: btoa(unescape(encodeURIComponent(jsonContent))),
+        message: commitMsg,
+        content: btoa(unescape(encodeURIComponent(content))),
         sha: sha || undefined
       })
     });
-
     if(!putResp.ok) {
       const err = await putResp.text();
-      throw new Error('GitHub PUT failed: ' + err.substring(0,300));
+      throw new Error(path + ' PUT failed: ' + err.substring(0,300));
+    }
+    logLine('✅ ' + path + ' 已更新到 GitHub!');
+  }
+
+  try {
+    // 1. Upload config
+    const cfg = buildConfig();
+    await uploadFile('mall-config.json', JSON.stringify(cfg, null, 2), '🔄 更新收款設定 (via Admin)');
+
+    // 2. Upload products if loaded
+    if(productsLoaded && productsData.length > 0) {
+      const prodContent = JSON.stringify({ products: productsData }, null, 2);
+      await uploadFile('mall-products.json', prodContent, '📦 更新產品資料 (via Admin)');
+    } else {
+      logLine('⏭️ 產品資料冇改動，跳過');
     }
 
-    logLine('✅ mall-config.json 已更新到 GitHub!');
+    logLine('');
+    logLine('✅ 全部完成！');
     logLine('⏳ GitHub Pages 自動部署中，約 1-2 分鐘...');
     logLine('');
     logLine('🔗 https://pandatelecom.github.io/products.html');
+    logLine('🔗 https://pandatelecom.github.io/mall-admin.html');
 
     btn.textContent = '✅ 發布成功！';
     setTimeout(() => {
@@ -607,7 +878,7 @@ async function doDeploy() {
       btn.textContent = '🚀 發布到 GitHub';
     }, 3000);
 
-    showToast('🎉 發布成功！1-2分鐘後網站會自動更新');
+    showToast('🎉 发布成功！1-2分鐘後網站會自動更新');
 
   } catch(e) {
     logLine('❌ 錯誤: ' + e.message);

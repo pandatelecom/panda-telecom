@@ -602,26 +602,40 @@ function setBrand(brand) {
 }
 
 /* ── Init (load products + config) ── */
-Promise.all([
-  fetch('sigma_products.json').then(r => r.json()),
-  fetch('niuwang_products.json').then(r => r.json()),
-  fetch('mall-config.json?' + Date.now()).then(r => r.json()).catch(() => ({}))
-])
-  .then(([sigma, niuwang, config]) => {
+async function loadProducts() {
+  // Try unified mall-products.json first, fall back to old files
+  let data;
+  try {
+    const r = await fetch('mall-products.json?' + Date.now());
+    data = await r.json();
+    sigmaProducts = data.products || data;
+  } catch(e) {
+    const [sigma, niuwang] = await Promise.all([
+      fetch('sigma_products.json').then(r => r.json()),
+      fetch('niuwang_products.json').then(r => r.json())
+    ]);
     sigmaProducts = (sigma.products || sigma).concat(niuwang.products || niuwang);
-    // Apply config
-    if(config.payment) PAYMENT_CONFIG = config.payment;
-    else PAYMENT_CONFIG = {}; // will use fallback
-    renderCatTabs();
-    renderBrandTabs();
-    renderProducts();
-    updateCartBadge();
-    renderCart();
-  })
-  .catch(err => {
-    document.getElementById('count').textContent = '⚠️ 無法載入產品數據，請稍後再試';
-    console.error('Failed to load products:', err);
-  });
+  }
+  // Load config
+  try {
+    const r = await fetch('mall-config.json?' + Date.now());
+    const cfg = await r.json();
+    if(cfg.payment) PAYMENT_CONFIG = cfg.payment;
+  } catch(e) {
+    // Config file may not exist yet
+  }
+}
+
+loadProducts().then(() => {
+  renderCatTabs();
+  renderBrandTabs();
+  renderProducts();
+  updateCartBadge();
+  renderCart();
+}).catch(err => {
+  document.getElementById('count').textContent = '⚠️ 無法載入產品數據，請稍後再試';
+  console.error('Failed to load products:', err);
+});
 
 function renderCatTabs() {
   const allProds = getFilteredProducts(true);
@@ -650,6 +664,8 @@ function getFilteredProducts(ignoreCat) {
   const targetCat = currentCat;
   const targetBrand = currentBrand;
   return pool.filter(p => {
+    // Hide unavailable products
+    if(p.available === false) return false;
     if(targetCat !== 'all') {
       const matched = matchCategory(p.category);
       if(matched !== targetCat) return false;
